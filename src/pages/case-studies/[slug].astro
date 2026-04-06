@@ -1,0 +1,109 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+import { caseStudies } from "../../data/caseStudies";
+
+export async function getStaticPaths() {
+  return caseStudies.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+---
+
+<PageLayout
+  title={entry.title}
+  description={entry.summary}
+  pathname={`/case-studies/${entry.slug}`}
+>
+  <section class="page-hero">
+    <div class="shell page-hero__inner">
+      <div class="eyebrow">{entry.sector}</div>
+      <h1 class="page-title">{entry.title}</h1>
+      <p class="page-intro">{entry.summary}</p>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="shell case-study-layout">
+      <aside class="surface-card case-study-sidebar">
+        <div>
+          <strong>Client context</strong>
+          <span>{entry.client}</span>
+        </div>
+        <div>
+          <strong>Outcome</strong>
+          <span>{entry.outcome}</span>
+        </div>
+        <div>
+          <strong>Tags</strong>
+          <ul class="list-reset">
+            {entry.tags.map((tag) => <li>{tag}</li>)}
+          </ul>
+        </div>
+      </aside>
+
+      <article class="surface-card case-study-body">
+        <div class="prose">
+          {entry.sections.map((section) => (
+            <section>
+              <h2>{section.heading}</h2>
+              {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+              {section.bullets && (
+                <ul>
+                  {section.bullets.map((bullet) => <li>{bullet}</li>)}
+                </ul>
+              )}
+            </section>
+          ))}
+        </div>
+      </article>
+    </div>
+  </section>
+</PageLayout>
+
+<style>
+  .case-study-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 20px;
+  }
+
+  .case-study-sidebar,
+  .case-study-body {
+    padding: 24px;
+  }
+
+  .case-study-sidebar {
+    display: grid;
+    align-content: start;
+    gap: 20px;
+  }
+
+  .case-study-sidebar strong {
+    display: block;
+    font-family: var(--brand-font-mono);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--brand-secondary);
+  }
+
+  .case-study-sidebar span,
+  .case-study-sidebar li {
+    display: block;
+    margin-top: 8px;
+    color: rgba(19, 32, 24, 0.72);
+  }
+
+  .case-study-sidebar ul {
+    margin-top: 8px;
+  }
+
+  @media (max-width: 920px) {
+    .case-study-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

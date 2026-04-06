@@ -1,0 +1,50 @@
+---
+import Button from "../ui/Button.astro";
+---
+
+<section class="section reveal-on-scroll" data-reveal>
+  <div class="shell">
+    <div class="cta-band surface-card ambient-zone ambient-zone--band" data-ambient-zone="cta-band">
+      <div>
+        <div class="eyebrow">Next step</div>
+        <h2 class="section-title">If the AI conversation is still vague, start there.</h2>
+        <p class="section-copy">
+          AI4comms is built for teams that need sharper judgment, clearer operating decisions, and a credible path from exploration to responsible use.
+        </p>
+      </div>
+      <div class="button-row">
+        <Button href="/contact" variant="primary">Start the conversation</Button>
+        <Button href="/services" variant="secondary">Review services</Button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta-band {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 24px;
+    align-items: end;
+    padding: 28px;
+  }
+
+  .cta-band .section-copy {
+    margin: 18px 0 0;
+  }
+
+  .cta-band .button-row {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  @media (max-width: 900px) {
+    .cta-band {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-band .button-row {
+      justify-content: flex-start;
+    }
+  }
+</style>

@@ -1,0 +1,79 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+import { caseStudies } from "../../data/caseStudies";
+
+const orderedCaseStudies = [...caseStudies].sort((a, b) => a.order - b.order);
+---
+
+<PageLayout
+  title="Case Studies"
+  description="Concrete AI use cases and application patterns for communications teams."
+  pathname="/case-studies"
+>
+  <section class="page-hero">
+    <div class="shell page-hero__inner">
+      <div class="eyebrow">Case studies</div>
+      <h1 class="page-title">A use-case library for serious communications work.</h1>
+      <p class="page-intro">
+        This section is built to describe real projects later. For launch, it already works as a concrete application library so the site can speak in examples instead of abstractions.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="shell">
+      <div class="grid-2">
+        {orderedCaseStudies.map((entry) => (
+          <article class="surface-card case-card">
+            <div class="eyebrow">{entry.sector}</div>
+            <h2>{entry.title}</h2>
+            <p>{entry.summary}</p>
+            <div class="case-card__meta">
+              <strong>{entry.client}</strong>
+              <span>{entry.outcome}</span>
+            </div>
+            <a href={`/case-studies/${entry.slug}`}>Read use case</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</PageLayout>
+
+<style>
+  .case-card {
+    padding: 24px;
+  }
+
+  .case-card h2 {
+    margin: 14px 0 0;
+    font-family: var(--brand-font-heading);
+    font-size: 2rem;
+    color: var(--text-dark);
+    letter-spacing: -0.03em;
+  }
+
+  .case-card p {
+    color: rgba(19, 32, 24, 0.72);
+    line-height: 1.72;
+  }
+
+  .case-card__meta {
+    margin: 18px 0;
+  }
+
+  .case-card__meta strong,
+  .case-card__meta span {
+    display: block;
+    color: rgba(19, 32, 24, 0.68);
+  }
+
+  .case-card a {
+    color: var(--brand-secondary);
+    text-decoration: none;
+    font-family: var(--brand-font-mono);
+    font-size: 0.82rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+</style>

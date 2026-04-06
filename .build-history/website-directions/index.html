@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI4comms Style Directions</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Syne:wght@700;800&display=swap");
+
+      :root {
+        --midnight: #0c1410;
+        --canopy: #15311a;
+        --paper: #f4f6f1;
+        --phosphor: #44e88a;
+        --line: rgba(184, 216, 138, 0.18);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        color: var(--paper);
+        background:
+          radial-gradient(circle at top left, rgba(68, 232, 138, 0.14), transparent 32%),
+          linear-gradient(180deg, #132118 0%, #0c1410 100%);
+      }
+
+      .shell {
+        width: min(1040px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 36px 0 56px;
+      }
+
+      .eyebrow {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--phosphor);
+      }
+
+      h1,
+      h2 {
+        margin: 0;
+        font-family: "Syne", sans-serif;
+      }
+
+      h1 {
+        margin-top: 14px;
+        font-size: clamp(3rem, 7vw, 5.2rem);
+        line-height: 0.95;
+        letter-spacing: -0.05em;
+      }
+
+      .intro {
+        max-width: 62ch;
+        margin-top: 18px;
+        color: rgba(244, 246, 241, 0.78);
+        line-height: 1.7;
+      }
+
+      .grid {
+        display: grid;
+        gap: 18px;
+        margin-top: 30px;
+      }
+
+      .card {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 18px;
+        align-items: center;
+        padding: 22px;
+        border: 1px solid var(--line);
+        background: rgba(244, 246, 241, 0.05);
+      }
+
+      .card p {
+        margin: 12px 0 0;
+        color: rgba(244, 246, 241, 0.72);
+        line-height: 1.65;
+      }
+
+      .meta {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 12px;
+      }
+
+      .tag {
+        padding: 8px 10px;
+        border: 1px solid var(--line);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .card a {
+        color: var(--midnight);
+        background: var(--phosphor);
+        text-decoration: none;
+        padding: 14px 18px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .note {
+        margin-top: 26px;
+        padding: 20px 22px;
+        border-left: 3px solid var(--phosphor);
+        background: rgba(244, 246, 241, 0.04);
+        color: rgba(244, 246, 241, 0.76);
+        line-height: 1.7;
+      }
+
+      @media (max-width: 760px) {
+        .card {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <div class="eyebrow">AI4comms / Phase 1 Style Boards</div>
+      <h1>Choose a direction, or mix the parts.</h1>
+      <p class="intro">
+        All three boards use the agreed structure, page order, and static launch logic. What changes is the web expression:
+        the hero, navigation, card behavior, typography handling, and texture treatment.
+      </p>
+
+      <section class="grid">
+        <article class="card">
+          <div>
+            <h2>Direction A - Signal Chamber</h2>
+            <p>
+              Closest to the core brand: dark-first, typographic, glass surfaces, subtle grid texture, and controlled phosphor highlights.
+            </p>
+            <div class="meta">
+              <div class="tag">transparent nav</div>
+              <div class="tag">glass cards</div>
+              <div class="tag">typographic hero</div>
+            </div>
+          </div>
+          <a href="./direction-a-core-signal-chamber.html">Open Board A</a>
+        </article>
+
+        <article class="card">
+          <div>
+            <h2>Direction B - Command Grid</h2>
+            <p>
+              The boldest option: stronger system language, hard edges, denser rhythm, and a more operational feel.
+            </p>
+            <div class="meta">
+              <div class="tag">command nav</div>
+              <div class="tag">sharp cards</div>
+              <div class="tag">data rail hero</div>
+            </div>
+          </div>
+          <a href="./direction-b-bold-command-grid.html">Open Board B</a>
+        </article>
+
+        <article class="card">
+          <div>
+            <h2>Direction C - Signal Brief</h2>
+            <p>
+              The most restrained and advisory-led option: paper surfaces, split bands, outlined components, and a calmer boardroom tone.
+            </p>
+            <div class="meta">
+              <div class="tag">split brief</div>
+              <div class="tag">outlined cards</div>
+              <div class="tag">lighter rhythm</div>
+            </div>
+          </div>
+          <a href="./direction-c-refined-signal-brief.html">Open Board C</a>
+        </article>
+      </section>
+
+      <div class="note">
+        Recommended review method: pick hero, nav, cards, typography, and overall atmosphere separately. You do not need to choose one board wholesale.
+      </div>
+    </main>
+  </body>
+</html>

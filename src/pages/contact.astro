@@ -1,0 +1,127 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import Button from "../components/ui/Button.astro";
+import { company, contactRoutes } from "../data/company";
+
+const createMailto = (recipient: string, subject: string, body: string) =>
+  `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+const email = company.contact.email;
+---
+
+<PageLayout
+  title="Contact"
+  description="Contact AI4comms to discuss strategy, team enablement, or governance for AI in communications."
+  pathname="/contact"
+>
+  <section class="page-hero">
+    <div class="shell page-hero__inner">
+      <div class="eyebrow">Contact</div>
+      <h1 class="page-title">Start with one clear conversation.</h1>
+      <p class="page-intro">
+        The site is set up for a simple mailto-style contact flow. Final email and phone details are still being confirmed, so the draft routes below are structurally ready even while the live contact fields remain provisional.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell contact-grid">
+      <article class="surface-card contact-card">
+        <div class="eyebrow">Primary route</div>
+        <h2>Direct and simple.</h2>
+        <p>
+          This page is intentionally light. For a GitHub Pages launch, the preferred pattern is an email-first route rather than a hosted form.
+        </p>
+        <div class="contact-meta">
+          <div>
+            <strong>Email</strong>
+            <span>{email ?? "Pending confirmation"}</span>
+          </div>
+          <div>
+            <strong>Phone</strong>
+            <span>{company.contact.phone ?? "Pending confirmation"}</span>
+          </div>
+          <div>
+            <strong>Base</strong>
+            <span>{company.office.label}</span>
+          </div>
+        </div>
+      </article>
+
+      <div class="contact-routes">
+        {contactRoutes.map((route) => (
+          <article class="surface-card contact-route">
+            <div class="eyebrow">{route.title}</div>
+            <p>{route.description}</p>
+            <Button
+              href={email ? createMailto(email, route.subject, route.body) : "#"}
+              variant="secondary"
+              disabled={!email}
+            >
+              {email ? "Open draft email" : "Email route pending"}
+            </Button>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</PageLayout>
+
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .contact-card,
+  .contact-route {
+    padding: 24px;
+  }
+
+  .contact-card h2 {
+    margin: 14px 0 0;
+    font-family: var(--brand-font-heading);
+    font-size: 2.4rem;
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+  }
+
+  .contact-card p,
+  .contact-route p {
+    color: var(--text-secondary);
+    line-height: 1.72;
+  }
+
+  .contact-meta {
+    display: grid;
+    gap: 14px;
+    margin-top: 22px;
+  }
+
+  .contact-meta strong {
+    display: block;
+    font-family: var(--brand-font-mono);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--brand-accent);
+  }
+
+  .contact-meta span {
+    display: block;
+    margin-top: 8px;
+    color: rgba(244, 246, 241, 0.78);
+  }
+
+  .contact-routes {
+    display: grid;
+    gap: 18px;
+  }
+
+  @media (max-width: 920px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

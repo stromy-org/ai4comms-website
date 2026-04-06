@@ -1,0 +1,58 @@
+---
+import "../styles/global.css";
+import { company } from "../data/company";
+import { site } from "../data/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+  pathname?: string;
+  image?: string;
+}
+
+const {
+  title = site.title,
+  description = site.description,
+  pathname = "/",
+  image = site.ogImage,
+} = Astro.props;
+
+const pageTitle = title === site.title ? title : `${title} | ${site.title}`;
+const canonical = new URL(pathname, Astro.site ?? "https://stromy-org.github.io/ai4comms-website").toString();
+const ogImage = new URL(image, Astro.site ?? "https://stromy-org.github.io/ai4comms-website").toString();
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: company.legalName,
+  description: company.description,
+  url: canonical,
+  slogan: company.tagline,
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#0C1410" />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+  </head>
+  <body>
+    <slot />
+    <script is:inline src="/ambient.js"></script>
+  </body>
+</html>

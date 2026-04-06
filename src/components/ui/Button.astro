@@ -1,0 +1,29 @@
+---
+interface Props {
+  href?: string;
+  variant?: "primary" | "secondary";
+  disabled?: boolean;
+}
+
+const { href = "#", variant = "secondary", disabled = false } = Astro.props;
+const className = `button button--${variant}`;
+---
+
+{
+  disabled ? (
+    <span class={`${className} is-disabled`} aria-disabled="true">
+      <slot />
+    </span>
+  ) : (
+    <a href={href} class={className}>
+      <slot />
+    </a>
+  )
+}
+
+<style>
+  .is-disabled {
+    opacity: 0.54;
+    cursor: not-allowed;
+  }
+</style>

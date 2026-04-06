@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AI4comms</title>
+  <desc id="desc">Signal through the noise.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#112117" />
+      <stop offset="100%" stop-color="#0C1410" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <g fill="none" stroke="rgba(68,232,138,0.16)" opacity="0.55">
+    <path d="M0 90h1200M0 180h1200M0 270h1200M0 360h1200M0 450h1200M0 540h1200" />
+    <path d="M100 0v630M240 0v630M380 0v630M520 0v630M660 0v630M800 0v630M940 0v630M1080 0v630" />
+  </g>
+  <g transform="translate(110 146)">
+    <text x="0" y="0" fill="#44E88A" font-family="'JetBrains Mono', monospace" font-size="22" letter-spacing="6">SIGNAL AUTHORITY</text>
+    <text x="0" y="132" fill="#F4F6F1" font-family="'Syne', sans-serif" font-weight="700" font-size="98">AI4comms</text>
+    <text x="0" y="220" fill="#F4F6F1" font-family="'Syne', sans-serif" font-weight="700" font-size="66">Signal through the noise.</text>
+    <text x="0" y="308" fill="#B8D88A" font-family="'Inter', sans-serif" font-size="30">
+      Strategy, enablement, and governance for communications teams.
+    </text>
+  </g>
+</svg>

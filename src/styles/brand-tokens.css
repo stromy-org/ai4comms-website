@@ -1,0 +1,19 @@
+/* Auto-generated from charter.json — do not edit manually */
+:root {
+  --brand-primary: #15311A;
+  --brand-secondary: #1F4A2A;
+  --brand-accent: #44E88A;
+  --brand-background: #0C1410;
+  --brand-background-alt: #F4F6F1;
+  --brand-text: #F4F6F1;
+  --brand-text-light: #929C8E;
+  --brand-success: #3B7A4E;
+  --brand-warning: #C89B3E;
+  --brand-error: #B85648;
+  --brand-font-heading: 'Syne', "Space Grotesk", "Avenir Next", "Segoe UI", sans-serif;
+  --brand-font-heading-weight: 700;
+  --brand-font-body: 'Inter', "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --brand-font-body-weight: 400;
+  --brand-font-mono: 'JetBrains Mono', "SFMono-Regular", Consolas, monospace;
+  --brand-font-mono-weight: 500;
+}

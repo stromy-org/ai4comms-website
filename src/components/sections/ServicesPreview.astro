@@ -1,0 +1,101 @@
+---
+import { services } from "../../data/company";
+---
+
+<section class="section reveal-on-scroll" data-reveal>
+  <div class="shell">
+    <div class="eyebrow">Services</div>
+    <h2 class="section-title">Advisory, enablement, and governance built for communications teams.</h2>
+    <p class="section-copy">
+      AI4comms is structured as a consulting offer, not a toolbox pitch. Each service turns a fuzzy AI conversation into a clearer operating decision.
+    </p>
+
+    <div class="services-list">
+      {services.map((service, index) => (
+        <article class="surface-card services-list__item" class:list={{ "is-offset": index % 2 === 1 }}>
+          <div class="services-list__meta">
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <strong>{service.typicalDuration}</strong>
+          </div>
+          <div class="services-list__body">
+            <h3>{service.name}</h3>
+            <p>{service.description}</p>
+            <ul class="services-list__deliverables list-reset">
+              {service.deliverables.map((deliverable) => <li>{deliverable}</li>)}
+            </ul>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .services-list {
+    display: grid;
+    gap: 18px;
+    margin-top: 2.5rem;
+  }
+
+  .services-list__item {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .services-list__item.is-offset {
+    margin-left: 5rem;
+  }
+
+  .services-list__meta {
+    display: grid;
+    align-content: start;
+    gap: 12px;
+  }
+
+  .services-list__meta span,
+  .services-list__meta strong {
+    font-family: var(--brand-font-mono);
+    font-size: 0.82rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--brand-accent);
+  }
+
+  .services-list__body h3 {
+    margin: 0;
+    font-family: var(--brand-font-heading);
+    font-size: 2rem;
+    letter-spacing: -0.03em;
+  }
+
+  .services-list__body p {
+    margin: 14px 0 0;
+    color: var(--text-secondary);
+    line-height: 1.72;
+  }
+
+  .services-list__deliverables {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .services-list__deliverables li {
+    padding: 10px 12px;
+    border: 1px solid rgba(184, 216, 138, 0.18);
+    border-radius: 999px;
+    font-size: 0.92rem;
+    color: rgba(244, 246, 241, 0.76);
+  }
+
+  @media (max-width: 900px) {
+    .services-list__item,
+    .services-list__item.is-offset {
+      grid-template-columns: 1fr;
+      margin-left: 0;
+    }
+  }
+</style>

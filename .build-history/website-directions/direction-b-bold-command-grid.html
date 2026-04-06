@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI4comms Style Board B - Command Grid</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Syne:wght@700;800&display=swap");
+
+      :root {
+        --midnight: #0c1410;
+        --canopy: #15311a;
+        --pine: #1f4a2a;
+        --phosphor: #44e88a;
+        --sage: #b8d88a;
+        --paper: #f4f6f1;
+        --muted: #adc0b0;
+        --grid: rgba(68, 232, 138, 0.14);
+        --line: rgba(68, 232, 138, 0.28);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        color: var(--paper);
+        background:
+          linear-gradient(rgba(68, 232, 138, 0.07) 1px, transparent 1px) 0 0 / 100% 34px,
+          linear-gradient(90deg, rgba(68, 232, 138, 0.07) 1px, transparent 1px) 0 0 / 34px 100%,
+          linear-gradient(180deg, #061009 0%, #0a1610 54%, #0e1912 100%);
+      }
+
+      .shell {
+        width: min(1240px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .frame {
+        margin: 22px 0;
+        border: 1px solid var(--line);
+        background: rgba(2, 8, 5, 0.56);
+        box-shadow: inset 0 0 0 1px rgba(68, 232, 138, 0.08);
+      }
+
+      .topbar {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 18px;
+        align-items: center;
+        padding: 18px 24px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .topbar img {
+        width: 144px;
+      }
+
+      .nav {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .nav a,
+      .pill,
+      .meta-tag {
+        padding: 10px 14px;
+        border: 1px solid var(--line);
+        color: var(--paper);
+        text-decoration: none;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.35fr 0.65fr;
+        gap: 0;
+        min-height: 630px;
+      }
+
+      .hero-copy {
+        padding: 44px 28px 36px;
+        position: relative;
+      }
+
+      .hero-copy::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, rgba(68, 232, 138, 0.05) 1px, transparent 1px) 0 0 / 68px 100%,
+          linear-gradient(180deg, transparent 0, transparent calc(100% - 1px), rgba(68, 232, 138, 0.05) calc(100% - 1px));
+        pointer-events: none;
+      }
+
+      .eyebrow,
+      .metric-label,
+      .section-label {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--phosphor);
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: "Syne", sans-serif;
+      }
+
+      h1 {
+        margin-top: 20px;
+        max-width: 10ch;
+        font-size: clamp(3.8rem, 7vw, 6.6rem);
+        line-height: 0.9;
+        text-transform: uppercase;
+        letter-spacing: -0.06em;
+      }
+
+      .intro {
+        margin-top: 22px;
+        max-width: 58ch;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.65;
+      }
+
+      .cta-row {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 26px;
+      }
+
+      .cta-row a {
+        text-decoration: none;
+        padding: 14px 18px;
+        font-weight: 700;
+      }
+
+      .cta-primary {
+        background: var(--phosphor);
+        color: var(--midnight);
+      }
+
+      .cta-secondary {
+        color: var(--paper);
+        border: 1px solid var(--line);
+      }
+
+      .panel-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 34px;
+      }
+
+      .mini-panel {
+        min-height: 170px;
+        padding: 18px;
+        border: 1px solid var(--line);
+        background: rgba(11, 20, 15, 0.66);
+      }
+
+      .mini-panel p {
+        margin: 12px 0 0;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .hero-rail {
+        border-left: 1px solid var(--line);
+        background:
+          linear-gradient(rgba(68, 232, 138, 0.09), rgba(68, 232, 138, 0.03)),
+          linear-gradient(180deg, rgba(6, 16, 9, 0.64), rgba(6, 16, 9, 0.9)),
+          url("../../../brand-tokens/clients/ai4comms/images/signal-03-nwNjeZ0WA6w--16x9-textsafe.jpg") center/cover;
+        display: grid;
+        align-content: space-between;
+        padding: 26px;
+      }
+
+      .rail-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        gap: 16px;
+      }
+
+      .metric-card {
+        padding: 18px;
+        border: 1px solid var(--line);
+        background: rgba(5, 11, 8, 0.74);
+        margin-top: 12px;
+      }
+
+      .metric-value {
+        font-family: "Syne", sans-serif;
+        font-size: 42px;
+        line-height: 1;
+        margin-top: 12px;
+      }
+
+      .rail-note {
+        padding-top: 22px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .strip {
+        padding: 22px 24px 28px;
+        border-top: 1px solid var(--line);
+      }
+
+      .section-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .tile,
+      .service {
+        border: 1px solid var(--line);
+        background: rgba(8, 16, 12, 0.7);
+      }
+
+      .tile {
+        padding: 18px;
+      }
+
+      .swatch {
+        height: 88px;
+        margin-bottom: 12px;
+      }
+
+      .service {
+        padding: 20px;
+        min-height: 192px;
+        display: grid;
+        align-content: space-between;
+      }
+
+      .service h3 {
+        font-size: 24px;
+      }
+
+      .service p {
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .service a {
+        color: var(--phosphor);
+        text-decoration: none;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+
+      .footer {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 20px;
+        align-items: end;
+        padding: 26px 24px 34px;
+        border-top: 1px solid var(--line);
+      }
+
+      .footer p {
+        margin: 14px 0 0;
+        color: var(--muted);
+      }
+
+      @media (max-width: 980px) {
+        .topbar,
+        .hero,
+        .footer,
+        .section-grid,
+        .panel-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-rail {
+          border-left: 0;
+          border-top: 1px solid var(--line);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="frame">
+        <div class="topbar">
+          <img src="../../../brand-tokens/clients/ai4comms/logos/ai4comms-logo-white.svg" alt="AI4comms" />
+          <nav class="nav">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Case Studies</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </nav>
+          <div class="pill">Direction B / Bold</div>
+        </div>
+
+        <div class="hero">
+          <div class="hero-copy">
+            <div class="eyebrow">Command Grid</div>
+            <h1>Lead AI with clarity. Run it with discipline.</h1>
+            <p class="intro">
+              This direction leans harder into the Ruler side of AI4comms: sharper system language, denser information framing,
+              and a command-center rhythm that makes the brand feel operational, not just conceptual.
+            </p>
+            <div class="cta-row">
+              <a class="cta-primary" href="#">View Priority Use Cases</a>
+              <a class="cta-secondary" href="#">Open Advisory Email</a>
+            </div>
+
+            <div class="panel-grid">
+              <div class="mini-panel">
+                <div class="metric-label">Hero treatment</div>
+                <p>Full-width command canvas with data rail, hard edges, and directional overlays.</p>
+              </div>
+              <div class="mini-panel">
+                <div class="metric-label">Navigation</div>
+                <p>Top command bar with segmented labels, suitable for a compact GitHub Pages brochure site.</p>
+              </div>
+              <div class="mini-panel">
+                <div class="metric-label">Button style</div>
+                <p>Filled phosphor primary actions and sharp secondary outlines for clear hierarchy.</p>
+              </div>
+            </div>
+          </div>
+
+          <aside class="hero-rail">
+            <div class="rail-header">
+              <div class="meta-tag">Signal Status</div>
+              <div class="meta-tag">Live Accent</div>
+            </div>
+
+            <div>
+              <div class="metric-card">
+                <div class="metric-label">Core posture</div>
+                <div class="metric-value">Practical</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Risk lens</div>
+                <div class="metric-value">Visible</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Tone</div>
+                <div class="metric-value">Senior</div>
+              </div>
+            </div>
+
+            <div class="rail-note">
+              Stronger UI language than Direction A. Best if you want AI4comms to feel like a control layer for leadership teams.
+            </div>
+          </aside>
+        </div>
+
+        <div class="strip">
+          <div class="section-label">Typography + color application</div>
+          <div class="section-grid" style="margin-top:16px;">
+            <div class="tile">
+              <div class="swatch" style="background:#0c1410;"></div>
+              <strong>Midnight grid base</strong>
+              <p>Dark wall, phosphor lines, minimal light intrusion.</p>
+            </div>
+            <div class="tile">
+              <div class="swatch" style="background:linear-gradient(135deg,#15311a,#1f4a2a);"></div>
+              <strong>Canopy to pine</strong>
+              <p>Used for depth, not decoration.</p>
+            </div>
+            <div class="tile">
+              <div class="swatch" style="background:#44e88a;"></div>
+              <strong style="color:#0c1410;">Phosphor signal</strong>
+              <p style="color:#0c1410;">For tags, primaries, and data moments only.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="strip">
+          <div class="section-label">Service card pattern</div>
+          <div class="section-grid" style="margin-top:16px;">
+            <article class="service">
+              <div>
+                <h3>AI Strategy</h3>
+                <p>Frame where AI creates value across corporate comms, public affairs, media relations, and content operations.</p>
+              </div>
+              <a href="#">Roadmap / briefing / prioritization</a>
+            </article>
+            <article class="service">
+              <div>
+                <h3>Team Enablement</h3>
+                <p>Turn policy and experimentation into working habits, training sessions, and usable prompt playbooks.</p>
+              </div>
+              <a href="#">Workshops / playbooks / adoption</a>
+            </article>
+            <article class="service">
+              <div>
+                <h3>Governance</h3>
+                <p>Build approval flows, usage policy, and risk controls before teams start improvising at scale.</p>
+              </div>
+              <a href="#">Framework / workflow / policy</a>
+            </article>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div>
+            <div class="section-label">Footer preview</div>
+            <h2 style="margin-top:14px;font-size:34px;">Signal, standards, and next actions.</h2>
+            <p>Simple mailto launch path. Contact details slot in later without changing the structural logic of the page.</p>
+          </div>
+          <div class="nav">
+            <a href="#">Open General Email</a>
+            <a href="#">Services</a>
+            <a href="#">Case Studies</a>
+          </div>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>

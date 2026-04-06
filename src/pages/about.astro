@@ -1,0 +1,128 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import { company } from "../data/company";
+import aboutImage from "../brand/images/comms-env-06-GP7SH7RRkqo--16x9-textsafe.jpg";
+---
+
+<PageLayout
+  title="About"
+  description="About AI4comms and its operating posture for strategy, enablement, and responsible AI adoption in communications."
+  pathname="/about"
+>
+  <section class="page-hero">
+    <div class="shell page-hero__inner">
+      <div class="eyebrow">About</div>
+      <h1 class="page-title">A calmer, stricter way to lead AI in communications.</h1>
+      <p class="page-intro">
+        AI4comms is positioned as an advisory and enablement partner for leaders who need clarity, not performance. The proposition is strategic, practical, and governance-aware by design.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell about-grid">
+      <article class="surface-card about-copy">
+        <div class="eyebrow">Operating posture</div>
+        <h2>{company.heroTagline}</h2>
+        <p>{company.description}</p>
+        <ul class="about-points list-reset">
+          {company.aboutPoints.map((point) => <li>{point}</li>)}
+        </ul>
+      </article>
+
+      <article class="surface-card about-image">
+        <img src={aboutImage.src} alt="Muted, high-contrast communications environment" />
+      </article>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="shell">
+      <div class="eyebrow">Principles</div>
+      <h2 class="section-title">The work should read as senior advisory, not AI excitement.</h2>
+      <div class="grid-3 principles-grid">
+        {company.principles.map((principle, index) => (
+          <article class="surface-card principle-card">
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <p>{principle}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</PageLayout>
+
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.92fr;
+    gap: 20px;
+  }
+
+  .about-copy,
+  .about-image {
+    overflow: hidden;
+  }
+
+  .about-copy {
+    padding: 26px;
+  }
+
+  .about-copy h2 {
+    margin: 14px 0 0;
+    font-family: var(--brand-font-heading);
+    font-size: 2.6rem;
+    line-height: 0.96;
+    letter-spacing: -0.04em;
+  }
+
+  .about-copy p {
+    color: var(--text-secondary);
+    line-height: 1.72;
+  }
+
+  .about-points {
+    display: grid;
+    gap: 14px;
+    margin-top: 22px;
+  }
+
+  .about-points li {
+    padding-top: 14px;
+    border-top: 1px solid rgba(184, 216, 138, 0.14);
+  }
+
+  .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 420px;
+  }
+
+  .principles-grid {
+    margin-top: 2rem;
+  }
+
+  .principle-card {
+    padding: 22px;
+  }
+
+  .principle-card span {
+    font-family: var(--brand-font-mono);
+    color: var(--brand-secondary);
+    font-size: 0.82rem;
+    letter-spacing: 0.16em;
+  }
+
+  .principle-card p {
+    margin: 14px 0 0;
+    color: rgba(19, 32, 24, 0.72);
+    line-height: 1.72;
+  }
+
+  @media (max-width: 920px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

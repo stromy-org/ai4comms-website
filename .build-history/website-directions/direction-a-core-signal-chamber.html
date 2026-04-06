@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI4comms Style Board A - Signal Chamber</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Syne:wght@500;700;800&display=swap");
+
+      :root {
+        --midnight: #0c1410;
+        --canopy: #15311a;
+        --pine: #1f4a2a;
+        --fern: #3b7a4e;
+        --sage: #b8d88a;
+        --phosphor: #44e88a;
+        --paper: #f4f6f1;
+        --text-dim: #929c8e;
+        --line: rgba(184, 216, 138, 0.16);
+        --glass: rgba(244, 246, 241, 0.08);
+        --glass-strong: rgba(244, 246, 241, 0.14);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        color: var(--paper);
+        background:
+          radial-gradient(circle at 1px 1px, rgba(68, 232, 138, 0.12) 1px, transparent 0) 0 0 / 30px 30px,
+          linear-gradient(180deg, #112117 0%, #0c1410 48%, #111c16 100%);
+      }
+
+      .board {
+        min-height: 100vh;
+      }
+
+      .shell {
+        width: min(1180px, calc(100% - 48px));
+        margin: 0 auto;
+      }
+
+      .hero {
+        padding: 28px 0 72px;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 14px 18px;
+        border: 1px solid var(--line);
+        background: rgba(12, 20, 16, 0.48);
+        backdrop-filter: blur(18px);
+        border-radius: 999px;
+      }
+
+      .nav img {
+        width: 142px;
+      }
+
+      .nav-links,
+      .footer-links {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .nav-links a,
+      .footer-links a {
+        color: var(--paper);
+        text-decoration: none;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+      }
+
+      .nav-chip {
+        border: 1px solid rgba(68, 232, 138, 0.34);
+        padding: 10px 14px;
+        border-radius: 999px;
+        color: var(--phosphor);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 28px;
+        padding-top: 28px;
+      }
+
+      .hero-copy {
+        padding: 34px 0;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--phosphor);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 54px;
+        height: 1px;
+        background: currentColor;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin: 0;
+        font-family: "Syne", sans-serif;
+      }
+
+      h1 {
+        margin-top: 18px;
+        font-size: clamp(3.7rem, 7vw, 6.8rem);
+        line-height: 0.92;
+        letter-spacing: -0.05em;
+        max-width: 9ch;
+      }
+
+      .cursor {
+        color: var(--phosphor);
+      }
+
+      .lede {
+        max-width: 60ch;
+        margin-top: 22px;
+        font-size: 18px;
+        line-height: 1.7;
+        color: rgba(244, 246, 241, 0.84);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        border-radius: 999px;
+        padding: 14px 20px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .btn-primary {
+        color: var(--midnight);
+        background: var(--phosphor);
+      }
+
+      .btn-secondary {
+        color: var(--paper);
+        border: 1px solid var(--glass-strong);
+        background: rgba(244, 246, 241, 0.03);
+      }
+
+      .visual-stack {
+        display: grid;
+        gap: 18px;
+      }
+
+      .image-card,
+      .signal-card,
+      .panel,
+      .footer {
+        border: 1px solid var(--line);
+        background: var(--glass);
+        backdrop-filter: blur(24px);
+      }
+
+      .image-card {
+        overflow: hidden;
+        border-radius: 28px;
+        min-height: 420px;
+        position: relative;
+      }
+
+      .image-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        filter: saturate(0.75) brightness(0.82);
+      }
+
+      .image-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(12, 20, 16, 0.12), rgba(12, 20, 16, 0.66));
+      }
+
+      .image-note {
+        position: absolute;
+        inset: auto 20px 20px 20px;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 20px;
+      }
+
+      .image-note strong {
+        display: block;
+        font-size: 18px;
+      }
+
+      .image-note span {
+        display: block;
+        margin-top: 6px;
+        color: rgba(244, 246, 241, 0.72);
+      }
+
+      .signal-card {
+        border-radius: 24px;
+        padding: 18px;
+      }
+
+      .signal-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+
+      .signal-grid div {
+        padding: 14px;
+        border-radius: 16px;
+        background: rgba(68, 232, 138, 0.08);
+      }
+
+      .signal-grid strong {
+        display: block;
+        font-family: "JetBrains Mono", monospace;
+        color: var(--phosphor);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+
+      .signal-grid span {
+        display: block;
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      .section {
+        padding: 0 0 28px;
+      }
+
+      .section-grid {
+        display: grid;
+        grid-template-columns: 0.95fr 1.05fr;
+        gap: 20px;
+      }
+
+      .panel {
+        border-radius: 24px;
+        padding: 26px;
+      }
+
+      .panel h2 {
+        font-size: 28px;
+        margin-top: 12px;
+      }
+
+      .panel p {
+        color: rgba(244, 246, 241, 0.78);
+        line-height: 1.7;
+      }
+
+      .specimen {
+        display: grid;
+        gap: 18px;
+      }
+
+      .specimen-item {
+        padding-bottom: 18px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .specimen-item:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .specimen-label {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        color: var(--sage);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+
+      .specimen-headline {
+        margin-top: 8px;
+        font-size: clamp(2rem, 4vw, 3.4rem);
+        line-height: 0.95;
+      }
+
+      .color-tiles,
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 18px;
+      }
+
+      .tile,
+      .service {
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+      }
+
+      .tile-swatch {
+        height: 88px;
+      }
+
+      .tile-meta {
+        padding: 12px 14px;
+        background: rgba(12, 20, 16, 0.38);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+      }
+
+      .service {
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .service h3 {
+        font-size: 22px;
+      }
+
+      .service p {
+        margin: 10px 0 0;
+        font-size: 15px;
+      }
+
+      .footer {
+        border-radius: 28px 28px 0 0;
+        padding: 28px 0 34px;
+        margin-top: 18px;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 18px;
+        align-items: end;
+      }
+
+      .footer-note {
+        color: rgba(244, 246, 241, 0.65);
+        font-size: 14px;
+        margin-top: 10px;
+      }
+
+      @media (max-width: 920px) {
+        .hero-grid,
+        .section-grid,
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .nav {
+          border-radius: 28px;
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .signal-grid,
+        .color-tiles,
+        .service-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="board">
+      <section class="hero">
+        <div class="shell">
+          <div class="nav">
+            <img src="../../../brand-tokens/clients/ai4comms/logos/ai4comms-logo-white.svg" alt="AI4comms" />
+            <div class="nav-links">
+              <a href="#">Home</a>
+              <a href="#">Services</a>
+              <a href="#">Case Studies</a>
+              <a href="#">About</a>
+              <a href="#">Contact</a>
+            </div>
+            <div class="nav-chip">Direction A / Core</div>
+          </div>
+
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <div class="eyebrow">Signal Chamber</div>
+              <h1>Turn AI noise into operating clarity<span class="cursor">|</span></h1>
+              <p class="lede">
+                Dark-first, strategic, and precise. This is the closest translation of the AI4comms brand core:
+                typographic authority, subtle grid texture, glass surfaces, and controlled use of phosphor as a live signal.
+              </p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#">See Use Cases</a>
+                <a class="btn btn-secondary" href="#">Open Draft Email</a>
+              </div>
+            </div>
+
+            <div class="visual-stack">
+              <div class="image-card">
+                <img src="../../../brand-tokens/clients/ai4comms/images/comms-env-08-bGo01h57aCE--16x9-textsafe.jpg" alt="Dark architectural communications environment" />
+                <div class="image-note">
+                  <div>
+                    <strong>Hero treatment</strong>
+                    <span>Typographic lead with masked brand imagery and a midnight overlay.</span>
+                  </div>
+                  <span class="nav-chip">transparent-hero + glass</span>
+                </div>
+              </div>
+
+              <div class="signal-card">
+                <div class="signal-grid">
+                  <div>
+                    <strong>Strategy</strong>
+                    <span>Set the AI roadmap for communications teams under pressure.</span>
+                  </div>
+                  <div>
+                    <strong>Training</strong>
+                    <span>Make adoption practical without drowning teams in jargon.</span>
+                  </div>
+                  <div>
+                    <strong>Governance</strong>
+                    <span>Reduce reputational and workflow risk before scale.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell section-grid">
+          <div class="panel">
+            <div class="eyebrow">Typography</div>
+            <h2>Display-led, but still disciplined.</h2>
+            <div class="specimen">
+              <div class="specimen-item">
+                <div class="specimen-label">Heading / Syne 800</div>
+                <div class="specimen-headline">Signal through the noise.</div>
+              </div>
+              <div class="specimen-item">
+                <div class="specimen-label">Body / Inter 400</div>
+                <p>
+                  AI4comms helps communications leaders turn AI from abstract hype into practical advantage through
+                  strategy, training, governance, and hands-on implementation support.
+                </p>
+              </div>
+              <div class="specimen-item">
+                <div class="specimen-label">Meta / JetBrains Mono</div>
+                <p>[ USE CASE PRIORITIZATION ] [ EXECUTIVE BRIEFING ] [ RISK REGISTER ]</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="eyebrow">Color Application</div>
+            <h2>Dark surfaces with targeted live accents.</h2>
+            <div class="color-tiles">
+              <div class="tile">
+                <div class="tile-swatch" style="background:#0c1410;"></div>
+                <div class="tile-meta">Midnight / default surface</div>
+              </div>
+              <div class="tile">
+                <div class="tile-swatch" style="background:#15311a;"></div>
+                <div class="tile-meta">Canopy / deep brand green</div>
+              </div>
+              <div class="tile">
+                <div class="tile-swatch" style="background:#44e88a;"></div>
+                <div class="tile-meta" style="color:#0c1410;background:#c9ffd8;">Phosphor / signal moments only</div>
+              </div>
+              <div class="tile">
+                <div class="tile-swatch" style="background:#f4f6f1;"></div>
+                <div class="tile-meta" style="color:#0c1410;background:#f4f6f1;">Paper / contrast surface</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell panel">
+          <div class="eyebrow">Card Pattern</div>
+          <h2>Glass cards with practical service language.</h2>
+          <div class="service-grid">
+            <article class="service">
+              <h3>AI Strategy for Communications Teams</h3>
+              <p>Define where AI creates real value across corporate communications, public affairs, media relations, and content operations.</p>
+            </article>
+            <article class="service">
+              <h3>AI Training and Team Enablement</h3>
+              <p>Give teams usable methods, working prompts, and adoption guidelines that survive contact with the real world.</p>
+            </article>
+            <article class="service">
+              <h3>Governance and Responsible AI for Comms</h3>
+              <p>Set approval flows, policy boundaries, and decision rules before risk compounds.</p>
+            </article>
+            <article class="service">
+              <h3>Executive AI Advisory</h3>
+              <p>Support leaders who need sharper judgment on how AI is changing communications structures and expectations.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="shell footer-grid">
+          <div>
+            <div class="eyebrow">Footer Preview</div>
+            <h2 style="margin-top:14px;font-size:32px;">Calm authority. Live signal. No hype.</h2>
+            <p class="footer-note">
+              Contact details are still to be confirmed. This footer assumes a simple GitHub Pages launch with a mailto draft route.
+            </p>
+          </div>
+          <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Case Studies</a>
+            <a href="#">About</a>
+            <a href="#">Open Email Draft</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,151 @@
+---
+import Button from "../ui/Button.astro";
+import { company } from "../../data/company";
+import heroImage from "../../brand/images/comms-env-08-bGo01h57aCE--16x9-textsafe.jpg";
+import accentImage from "../../brand/images/data-tex-05-ETiSF2VSRTQ--16x9-textsafe.jpg";
+---
+
+<section class="home-hero ambient-zone ambient-zone--deep" data-ambient-zone="hero">
+  <div class="shell home-hero__grid">
+    <div class="home-hero__copy">
+      <div class="eyebrow">Signal Authority</div>
+      <h1 class="display-title home-hero__title">
+        Turn AI ambition into clear operating decisions for comms teams.
+      </h1>
+      <p class="lede">
+        {company.description}
+      </p>
+      <ul class="home-hero__signals list-reset">
+        <li>Strategy before tooling</li>
+        <li>Governance before scale</li>
+        <li>Enablement that teams actually use</li>
+      </ul>
+      <div class="button-row">
+        <Button href="/case-studies" variant="primary">See Use Cases</Button>
+        <Button href="/contact" variant="secondary">Contact AI4comms</Button>
+      </div>
+    </div>
+
+    <div class="home-hero__visual">
+      <article class="surface-card home-hero__image-card">
+        <img src={heroImage.src} alt="Dark communications environment with architectural structure" />
+      </article>
+      <article class="surface-card home-hero__detail">
+        <img src={accentImage.src} alt="" aria-hidden="true" />
+        <div>
+          <div class="eyebrow">How the site should feel</div>
+          <p>
+            Dark-first and decisive, but with enough paper-toned space to read as a high-end advisory firm rather than a startup landing page.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .home-hero {
+    padding: 9rem 0 6rem;
+  }
+
+  .home-hero__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
+    gap: 32px;
+    align-items: end;
+  }
+
+  .home-hero__copy {
+    padding: 1rem 0;
+  }
+
+  .home-hero__title {
+    margin: 18px 0 0;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 0.9;
+    letter-spacing: -0.055em;
+    max-width: 8.2ch;
+    text-wrap: balance;
+  }
+
+  .home-hero__copy .lede {
+    margin: 1.6rem 0 0;
+    font-size: 1.08rem;
+    max-width: 56ch;
+  }
+
+  .home-hero__signals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 1.6rem 0 0;
+  }
+
+  .home-hero__signals li {
+    padding: 0.85rem 1rem;
+    border: 1px solid rgba(184, 216, 138, 0.14);
+    border-radius: 999px;
+    background: rgba(244, 246, 241, 0.02);
+    color: rgba(244, 246, 241, 0.78);
+    font-size: 0.92rem;
+  }
+
+  .home-hero__copy .button-row {
+    margin-top: 30px;
+  }
+
+  .home-hero__visual {
+    display: grid;
+    gap: 18px;
+  }
+
+  .home-hero__image-card {
+    overflow: hidden;
+    min-height: 500px;
+  }
+
+  .home-hero__image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.72) brightness(0.82) contrast(1.04);
+  }
+
+  .home-hero__detail {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 18px;
+    padding: 18px;
+    background:
+      linear-gradient(135deg, rgba(244, 246, 241, 0.06), rgba(244, 246, 241, 0.03)),
+      linear-gradient(180deg, rgba(68, 232, 138, 0.04), transparent);
+  }
+
+  .home-hero__detail img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    filter: saturate(0.72) brightness(0.9);
+  }
+
+  .home-hero__detail p {
+    color: var(--text-secondary);
+    line-height: 1.68;
+    margin: 14px 0 0;
+  }
+
+  @media (max-width: 960px) {
+    .home-hero__grid,
+    .home-hero__detail {
+      grid-template-columns: 1fr;
+    }
+
+    .home-hero {
+      padding-top: 7rem;
+    }
+
+    .home-hero__title {
+      max-width: 8ch;
+    }
+  }
+</style>

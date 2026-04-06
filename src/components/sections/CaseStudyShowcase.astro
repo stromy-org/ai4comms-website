@@ -1,0 +1,102 @@
+---
+import { caseStudies } from "../../data/caseStudies";
+import caseImage from "../../brand/images/signal-03-nwNjeZ0WA6w--16x9-textsafe.jpg";
+
+const entries = [...caseStudies].sort((a, b) => a.order - b.order);
+const [featured, ...rest] = entries;
+---
+
+<section class="section section--paper reveal-on-scroll" data-reveal>
+  <div class="shell">
+    <div class="eyebrow">Use cases</div>
+    <h2 class="section-title">Concrete applications for teams that need more than AI theatre.</h2>
+    <p class="page-intro">
+      The case-study area is designed as a use-case library. It can later hold named client work, but it already supports structured application patterns from day one.
+    </p>
+
+    <div class="case-grid">
+      {featured && (
+        <article class="case-grid__featured surface-card">
+          <img src={caseImage.src} alt="" aria-hidden="true" />
+          <div class="case-grid__featured-copy">
+            <div class="eyebrow">Featured use case</div>
+            <h3>{featured.title}</h3>
+            <p>{featured.summary}</p>
+            <a href={`/case-studies/${featured.slug}`} class="button button--secondary">Read the use case</a>
+          </div>
+        </article>
+      )}
+
+      <div class="case-grid__list">
+        {rest.map((entry) => (
+          <article class="surface-card case-grid__item">
+            <div class="eyebrow">{entry.sector}</div>
+            <h3>{entry.title}</h3>
+            <p>{entry.summary}</p>
+            <a href={`/case-studies/${entry.slug}`}>Open use case</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .case-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 18px;
+    margin-top: 2.5rem;
+  }
+
+  .case-grid__featured {
+    overflow: hidden;
+  }
+
+  .case-grid__featured img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    filter: saturate(0.76);
+  }
+
+  .case-grid__featured-copy,
+  .case-grid__item {
+    padding: 22px;
+  }
+
+  .case-grid__featured-copy h3,
+  .case-grid__item h3 {
+    margin: 14px 0 0;
+    font-family: var(--brand-font-heading);
+    font-size: 2rem;
+    letter-spacing: -0.03em;
+    color: var(--text-dark);
+  }
+
+  .case-grid__featured-copy p,
+  .case-grid__item p {
+    color: rgba(19, 32, 24, 0.72);
+    line-height: 1.72;
+  }
+
+  .case-grid__list {
+    display: grid;
+    gap: 18px;
+  }
+
+  .case-grid__item a {
+    color: var(--brand-secondary);
+    text-decoration: none;
+    font-family: var(--brand-font-mono);
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 920px) {
+    .case-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

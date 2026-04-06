@@ -1,0 +1,71 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import { services } from "../data/company";
+---
+
+<PageLayout
+  title="Services"
+  description="AI strategy, team enablement, governance, and executive advisory for communications teams."
+  pathname="/services"
+>
+  <section class="page-hero">
+    <div class="shell page-hero__inner">
+      <div class="eyebrow">Services</div>
+      <h1 class="page-title">A consulting offer built for communications leaders, not AI tourism.</h1>
+      <p class="page-intro">
+        AI4comms works across strategy, enablement, governance, and senior advisory. Each engagement is designed to move a team from interest to disciplined use.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="shell">
+      <div class="grid-2">
+        {services.map((service) => (
+          <article class="surface-card service-card">
+            <div class="eyebrow">{service.typicalDuration}</div>
+            <h2>{service.name}</h2>
+            <p>{service.description}</p>
+            <ul class="list-reset service-card__list">
+              {service.deliverables.map((deliverable) => <li>{deliverable}</li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</PageLayout>
+
+<style>
+  .service-card {
+    padding: 24px;
+  }
+
+  .service-card h2 {
+    margin: 14px 0 0;
+    font-family: var(--brand-font-heading);
+    font-size: 2rem;
+    letter-spacing: -0.03em;
+    color: var(--text-dark);
+  }
+
+  .service-card p {
+    color: rgba(19, 32, 24, 0.74);
+    line-height: 1.72;
+  }
+
+  .service-card__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .service-card__list li {
+    padding: 10px 12px;
+    border: 1px solid rgba(19, 32, 24, 0.12);
+    border-radius: 999px;
+    color: rgba(19, 32, 24, 0.72);
+    font-size: 0.95rem;
+  }
+</style>

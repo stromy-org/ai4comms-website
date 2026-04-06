@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI4comms Style Board C - Signal Brief</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Syne:wght@500;700;800&display=swap");
+
+      :root {
+        --midnight: #0c1410;
+        --canopy: #15311a;
+        --pine: #1f4a2a;
+        --phosphor: #44e88a;
+        --sage: #b8d88a;
+        --paper: #f4f6f1;
+        --ink: #14221a;
+        --soft-line: rgba(12, 20, 16, 0.12);
+        --green-line: rgba(31, 74, 42, 0.24);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        color: var(--ink);
+        background:
+          linear-gradient(180deg, #ecf0e8 0%, #f4f6f1 100%);
+      }
+
+      .shell {
+        width: min(1180px, calc(100% - 44px));
+        margin: 0 auto;
+      }
+
+      .top {
+        padding: 22px 0 0;
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 18px;
+        padding: 16px 0 18px;
+        border-bottom: 1px solid var(--soft-line);
+      }
+
+      .nav img {
+        width: 138px;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .nav-links a,
+      .footer-links a {
+        color: var(--ink);
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      .nav-label,
+      .eyebrow {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .nav-label {
+        color: var(--pine);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 0.92fr 1.08fr;
+        margin-top: 26px;
+        min-height: 620px;
+        border: 1px solid var(--soft-line);
+      }
+
+      .hero-band {
+        padding: 38px 34px;
+        background:
+          radial-gradient(circle at 1px 1px, rgba(68, 232, 138, 0.1) 1px, transparent 0) 0 0 / 30px 30px,
+          linear-gradient(180deg, #112117, #0c1410);
+        color: var(--paper);
+        display: grid;
+        align-content: space-between;
+      }
+
+      .hero-band img {
+        width: 164px;
+      }
+
+      .hero-band p {
+        color: rgba(244, 246, 241, 0.72);
+        line-height: 1.7;
+        max-width: 34ch;
+      }
+
+      .hero-paper {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        background: var(--paper);
+      }
+
+      .hero-image {
+        min-height: 230px;
+        background:
+          linear-gradient(180deg, rgba(12, 20, 16, 0.12), rgba(12, 20, 16, 0.38)),
+          url("../../../brand-tokens/clients/ai4comms/images/data-tex-05-ETiSF2VSRTQ--16x9-textsafe.jpg") center/cover;
+      }
+
+      .hero-copy {
+        padding: 34px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin: 0;
+        font-family: "Syne", sans-serif;
+      }
+
+      h1 {
+        margin-top: 14px;
+        font-size: clamp(3.2rem, 6vw, 5.6rem);
+        line-height: 0.93;
+        letter-spacing: -0.05em;
+        max-width: 10ch;
+      }
+
+      .eyebrow {
+        color: var(--pine);
+      }
+
+      .hero-copy p {
+        margin-top: 18px;
+        max-width: 54ch;
+        font-size: 18px;
+        line-height: 1.7;
+        color: rgba(20, 34, 26, 0.82);
+      }
+
+      .button-row {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-top: 24px;
+      }
+
+      .button-row a {
+        text-decoration: none;
+        padding: 0 0 8px;
+        border-bottom: 2px solid currentColor;
+        font-weight: 600;
+      }
+
+      .button-row .primary {
+        color: var(--pine);
+      }
+
+      .button-row .secondary {
+        color: rgba(20, 34, 26, 0.68);
+      }
+
+      .hero-metrics {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        border-top: 1px solid var(--soft-line);
+      }
+
+      .metric {
+        padding: 18px 22px;
+      }
+
+      .metric + .metric {
+        border-left: 1px solid var(--soft-line);
+      }
+
+      .metric strong {
+        display: block;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        color: var(--pine);
+        text-transform: uppercase;
+      }
+
+      .metric span {
+        display: block;
+        margin-top: 10px;
+        font-family: "Syne", sans-serif;
+        font-size: 30px;
+      }
+
+      .sections {
+        padding: 28px 0 42px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .panel {
+        padding: 26px;
+        border: 1px solid var(--soft-line);
+        background: rgba(255, 255, 255, 0.52);
+      }
+
+      .panel p {
+        color: rgba(20, 34, 26, 0.76);
+        line-height: 1.7;
+      }
+
+      .specimen {
+        display: grid;
+        gap: 16px;
+        margin-top: 18px;
+      }
+
+      .specimen-item {
+        padding-top: 16px;
+        border-top: 1px solid var(--soft-line);
+      }
+
+      .specimen-item:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+
+      .specimen-label {
+        font-family: "JetBrains Mono", monospace;
+        color: var(--pine);
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .services {
+        display: grid;
+        gap: 14px;
+        margin-top: 20px;
+      }
+
+      .service {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 16px;
+        padding: 16px 0;
+        border-top: 1px solid var(--green-line);
+      }
+
+      .service:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+
+      .service-index {
+        width: 34px;
+        height: 34px;
+        border-radius: 999px;
+        background: rgba(31, 74, 42, 0.08);
+        color: var(--pine);
+        display: grid;
+        place-items: center;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+      }
+
+      .band {
+        margin-top: 18px;
+        padding: 26px;
+        background: var(--midnight);
+        color: var(--paper);
+      }
+
+      .band p {
+        color: rgba(244, 246, 241, 0.72);
+        line-height: 1.7;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        align-items: end;
+        padding: 24px 0 40px;
+        border-top: 1px solid var(--soft-line);
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 920px) {
+        .hero,
+        .grid,
+        .hero-metrics,
+        .footer {
+          grid-template-columns: 1fr;
+          display: grid;
+        }
+
+        .metric + .metric {
+          border-left: 0;
+          border-top: 1px solid var(--soft-line);
+        }
+
+        .nav {
+          flex-direction: column;
+          align-items: start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="top">
+        <div class="nav">
+          <img src="../../../brand-tokens/clients/ai4comms/logos/ai4comms-logo-primary.svg" alt="AI4comms" />
+          <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Case Studies</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="nav-label">Direction C / Refined</div>
+        </div>
+
+        <div class="hero">
+          <aside class="hero-band">
+            <div>
+              <img src="../../../brand-tokens/clients/ai4comms/logos/ai4comms-logo-white.svg" alt="AI4comms white logo" />
+            </div>
+            <div>
+              <div class="eyebrow" style="color:#44e88a;">Signal Brief</div>
+              <p>
+                A more institutional interpretation: calmer, lighter, and more advisory. It keeps the dark-first brand DNA,
+                but uses paper surfaces and structured split bands to feel board-ready rather than product-like.
+              </p>
+            </div>
+          </aside>
+
+          <section class="hero-paper">
+            <div class="hero-image"></div>
+            <div class="hero-copy">
+              <div class="eyebrow">60/40 split motif</div>
+              <h1>Make AI usable for communications teams.</h1>
+              <p>
+                This direction brings more daylight into the system. It feels measured, premium, and advisory-led while still
+                using the AI4comms cursor, grid, and phosphor highlights in controlled ways.
+              </p>
+              <div class="button-row">
+                <a class="primary" href="#">Read use cases</a>
+                <a class="secondary" href="#">Open draft email</a>
+              </div>
+            </div>
+            <div class="hero-metrics">
+              <div class="metric">
+                <strong>Hero</strong>
+                <span>Split brief</span>
+              </div>
+              <div class="metric">
+                <strong>Cards</strong>
+                <span>Outlined</span>
+              </div>
+              <div class="metric">
+                <strong>Texture</strong>
+                <span>Motif bands</span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="sections">
+        <div class="grid">
+          <article class="panel">
+            <div class="eyebrow">Typography specimen</div>
+            <h2 style="margin-top:12px;font-size:30px;">Premium restraint, not tech theatre.</h2>
+            <div class="specimen">
+              <div class="specimen-item">
+                <div class="specimen-label">Display / Syne</div>
+                <h3 style="margin-top:8px;font-size:42px;line-height:1;">Lead AI with clarity.</h3>
+              </div>
+              <div class="specimen-item">
+                <div class="specimen-label">Body / Inter</div>
+                <p>
+                  Short, scannable sentences. Concrete nouns. Named trade-offs. This version gives the brand a little more boardroom air.
+                </p>
+              </div>
+              <div class="specimen-item">
+                <div class="specimen-label">Meta / JetBrains Mono</div>
+                <p>[ BOARD BRIEFING ] [ TEAM ENABLEMENT ] [ RESPONSIBLE ADOPTION ]</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="eyebrow">Service pattern</div>
+            <h2 style="margin-top:12px;font-size:30px;">Use-case oriented, but quieter.</h2>
+            <div class="services">
+              <div class="service">
+                <div class="service-index">01</div>
+                <div>
+                  <h3 style="font-size:22px;">Strategy</h3>
+                  <p>Clarify where AI belongs in the communications operating model.</p>
+                </div>
+              </div>
+              <div class="service">
+                <div class="service-index">02</div>
+                <div>
+                  <h3 style="font-size:22px;">Enablement</h3>
+                  <p>Train teams in methods that remain useful after the workshop ends.</p>
+                </div>
+              </div>
+              <div class="service">
+                <div class="service-index">03</div>
+                <div>
+                  <h3 style="font-size:22px;">Governance</h3>
+                  <p>Set policies and workflows before shortcuts become habits.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <section class="band">
+          <div class="eyebrow" style="color:#44e88a;">Divider and footer preview</div>
+          <h2 style="margin-top:14px;font-size:34px;">Simple enough for GitHub Pages. Serious enough for senior clients.</h2>
+          <p>
+            This direction is the most restrained. It is probably the safest if AI4comms should feel more advisory firm than specialist AI studio.
+          </p>
+        </section>
+
+        <footer class="footer">
+          <div>
+            <div class="eyebrow">Footer</div>
+            <p style="margin:10px 0 0;max-width:48ch;">
+              Contact links remain placeholder-driven until the real website, email, and phone details are confirmed.
+            </p>
+          </div>
+          <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Case Studies</a>
+            <a href="#">Open Email Draft</a>
+          </div>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>
