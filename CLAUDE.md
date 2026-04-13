@@ -11,6 +11,6 @@ AI4comms corporate website — Astro 6, MDX, Tailwind CSS 4.
 ```bash
 npm run dev     # Dev server (localhost:4321)
 npm run build   # Token generation + production build
-npm run tokens  # Regenerate brand tokens from charter.json
+npm run tokens  # Regenerate brand tokens from client-data charter.json
 npm run check   # Astro TypeScript check
 ```

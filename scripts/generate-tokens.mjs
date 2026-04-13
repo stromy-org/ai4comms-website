@@ -2,7 +2,7 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 
 const ROOT = resolve(dirname(new URL(import.meta.url).pathname), "..");
-const charter = JSON.parse(readFileSync(resolve(ROOT, "src/brand/charter.json"), "utf-8"));
+const charter = JSON.parse(readFileSync(resolve(ROOT, "client-data/clients/ai4comms/charter.json"), "utf-8"));
 
 const cssLines = ["/* Auto-generated from charter.json — do not edit manually */", ":root {"];
 
