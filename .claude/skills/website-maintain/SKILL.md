@@ -44,8 +44,8 @@ ai4comms-website/
 
 ## Architecture Notes
 
-- `src/brand/charter.json` is the repo-local copy of brand data. Do not manually
-  diverge it from `brand-tokens`; sync the source brand artifact when needed.
+- `client-data/clients/ai4comms/charter.json` is the brand source of truth (via git submodule).
+  Edit brand data in the `client-data` repo, then update the submodule here.
 - `src/data/company.ts` is the canonical source for company copy, services, and
   contact-route templates.
 - `src/data/caseStudies.ts` is the canonical source for the use-case library.
@@ -106,15 +106,10 @@ npx --yes playwright@latest screenshot --browser=chromium \
 
 ## Brand Sync Workflow
 
-From `stromy-org` root:
+Update the client-data submodule and regenerate tokens:
 
 ```bash
-bash scripts/sync-brand-data.sh
-```
-
-Then from this repo:
-
-```bash
+git submodule update --remote client-data
 npm run tokens
 npm run build
 ```
