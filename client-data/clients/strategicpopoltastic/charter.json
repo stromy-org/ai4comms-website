@@ -1,0 +1,231 @@
+{
+  "meta": {
+    "tier": "producer",
+    "displayName": "Strategic Popoltastic",
+    "tagline": "Read the market. Find your edge.",
+    "industry": "Management Consulting"
+  },
+  "colors": {
+    "primary": "#1B3A5C",
+    "secondary": "#0A1628",
+    "accent": "#7FB3D3",
+    "background": "#F8F9FA",
+    "backgroundAlt": "#E8EEF5",
+    "text": "#0A1628",
+    "textLight": "#6E7681",
+    "success": "#4A8F7A",
+    "warning": "#B8935A",
+    "error": "#A65454"
+  },
+  "fonts": {
+    "heading": {
+      "family": "Syne",
+      "fallback": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      "weight": "bold"
+    },
+    "body": {
+      "family": "Work Sans",
+      "fallback": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      "weight": "normal"
+    },
+    "mono": {
+      "family": "Space Mono",
+      "fallback": "'SF Mono', 'Fira Code', 'Consolas', monospace",
+      "weight": "normal"
+    }
+  },
+  "logo": {
+    "primary": "logos/sp-logo-primary-dark.svg",
+    "white": "logos/sp-logo-mono-light.svg",
+    "maxWidth": "200pt",
+    "maxHeight": "50pt",
+    "sizing": "contain"
+  },
+  "images": {
+    "catalog": [
+      {
+        "file": "images/arch-geometric-01.jpg",
+        "description": "Geometric architecture — bold angular forms with strong perspective lines",
+        "roles": ["cover", "divider"]
+      },
+      {
+        "file": "images/arch-corner-02.jpg",
+        "description": "Architectural corner detail — minimalist concrete geometry",
+        "roles": ["divider"]
+      },
+      {
+        "file": "images/arch-curved-03.jpg",
+        "description": "Curved architectural form — smooth concrete arc in B&W",
+        "roles": ["divider"]
+      },
+      {
+        "file": "images/arch-triangular-04.jpg",
+        "description": "Triangular architecture — dramatic angular concrete structure",
+        "roles": ["cover", "divider"]
+      },
+      {
+        "file": "images/arch-futuristic-05.jpg",
+        "description": "Futuristic architecture — sleek modern building with sweeping lines",
+        "roles": ["cover"]
+      },
+      {
+        "file": "images/chess-lineup-01.jpg",
+        "description": "Chess pieces in formation — strategic alignment, dark tones",
+        "roles": ["cover", "divider"]
+      },
+      {
+        "file": "images/chess-board-02.jpg",
+        "description": "Chess board perspective — game in progress, tactical framing",
+        "roles": ["divider"]
+      },
+      {
+        "file": "images/chess-checkmate-03.jpg",
+        "description": "Checkmate position — decisive moment, sharp focus",
+        "roles": ["cover", "closing"]
+      },
+      {
+        "file": "images/chess-corner-04.jpg",
+        "description": "Chess corner detail — minimalist piece composition",
+        "roles": ["divider"]
+      },
+      {
+        "file": "images/chess-table-05.jpg",
+        "description": "Chess table scene — atmospheric strategy setting",
+        "roles": ["background"]
+      },
+      {
+        "file": "images/compass-map-01.jpg",
+        "description": "Compass on map — navigation and direction, warm tones",
+        "roles": ["cover", "divider"]
+      },
+      {
+        "file": "images/compass-map-02.jpg",
+        "description": "Compass and cartography — detailed map with brass compass",
+        "roles": ["cover"]
+      },
+      {
+        "file": "images/compass-rose-03.jpg",
+        "description": "Compass rose detail — ornate directional symbol",
+        "roles": ["divider", "closing"]
+      },
+      {
+        "file": "images/dark-marble-01.jpg",
+        "description": "Dark marble surface — rich veined texture, deep tones",
+        "roles": ["background"]
+      },
+      {
+        "file": "images/dark-abstract-02.jpg",
+        "description": "Dark abstract texture — moody layered surface",
+        "roles": ["background"]
+      },
+      {
+        "file": "images/dark-stone-03.jpg",
+        "description": "Dark stone surface — raw natural texture",
+        "roles": ["background"]
+      },
+      {
+        "file": "images/globe-04.jpg",
+        "description": "Globe detail — international perspective, muted tones",
+        "roles": ["divider"]
+      },
+      {
+        "file": "images/vintage-map-05.jpg",
+        "description": "Vintage cartography — aged map with rich detail",
+        "roles": ["cover", "background"]
+      },
+      {
+        "file": "images/brushed-metal-04.jpg",
+        "description": "Brushed metal surface — industrial steel texture",
+        "roles": ["background"]
+      },
+      {
+        "file": "images/concrete-05.jpg",
+        "description": "Raw concrete surface — minimal industrial texture",
+        "roles": ["background"]
+      },
+      {
+        "file": "images/dark-brick-06.jpg",
+        "description": "Dark brick wall — textured urban surface",
+        "roles": ["background"]
+      }
+    ],
+    "overlay": {
+      "color": "primary",
+      "opacity": 0.65
+    },
+    "logoVariantOnImage": "white"
+  },
+  "document": {
+    "margins": { "top": "1in", "bottom": "1in", "left": "1in", "right": "1in" },
+    "header": { "content": "Strategic Popoltastic", "logo": true },
+    "footer": { "content": "Confidential", "pageNumbers": true },
+    "headingColor": "primary",
+    "tableHeaderColor": "secondary"
+  },
+  "presentation": {
+    "slideMargin": "40pt",
+    "titleMargin": "30pt",
+    "contentMargin": "20pt",
+    "aspectRatio": "16:9"
+  },
+  "video": {
+    "resolution": "1920x1080",
+    "fps": 30
+  },
+  "formatting": {
+    "headingThreshold": 24,
+    "accentCycleColors": ["primary", "accent", "success"],
+    "autoContrastText": true
+  },
+  "plotly": {
+    "categoricalPalette": ["#1B3A5C", "#7FB3D3", "#4A8F7A", "#B8935A", "#4A72A0", "#6E7681"],
+    "defaultHeight": 500,
+    "titleFontSize": 18,
+    "axisFontSize": 12,
+    "legendFontSize": 11,
+    "margins": { "top": 80, "bottom": 70, "left": 60, "right": 50 },
+    "baseTemplate": "plotly_white",
+    "gridColor": "#E6EDF3",
+    "secondaryTextColor": "#8B949E",
+    "bar": {
+      "markerColor": "#1B3A5C",
+      "markerLineColor": "#0A1628",
+      "markerLineWidth": 1
+    },
+    "line": {
+      "color": "#1B3A5C",
+      "width": 2.5,
+      "markerColor": "#7FB3D3",
+      "markerSize": 7
+    },
+    "scatter": {
+      "markerColor": "#1B3A5C",
+      "markerSize": 8,
+      "markerLineWidth": 0
+    },
+    "pie": {
+      "hole": 0.4,
+      "textfontSize": 13,
+      "markerLineColor": "#F8F9FA",
+      "markerLineWidth": 2
+    },
+    "sentiment": {
+      "positiveColor": "#4A8F7A",
+      "neutralColor": "#8B949E",
+      "negativeColor": "#A65454"
+    }
+  },
+  "templates": {
+    "pptx": {
+      "default": "templates/pptx/default.pptx"
+    },
+    "docx": {
+      "default": "templates/docx/default.docx",
+      "letterhead": "templates/docx/letterhead.docx"
+    },
+    "html": {
+      "business-cards": "templates/html/business-cards.html",
+      "email-signature": "templates/html/email-signature.html"
+    }
+  }
+}

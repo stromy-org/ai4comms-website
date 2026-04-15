@@ -1,0 +1,23 @@
+[
+  {
+    "id": "test-001",
+    "quote": "The baseline assessment gave us exactly what we needed — a clear, honest picture of where our strategy documentation stood and a concrete path forward. The scoring framework made it impossible to hide behind vague notions of 'we have a strategy'.",
+    "attribution": "CEO, Visscher-Caravelle Group",
+    "context": "Baseline Strategy Documentation Review engagement",
+    "year": 2025
+  },
+  {
+    "id": "test-002",
+    "quote": "Paul-Mattias helped us see that we had all the pieces — strong culture, ambitious initiatives, real entrepreneurial energy — but we were missing the structure to connect them. The strategy house framework changed how our entire leadership team thinks about our direction.",
+    "attribution": "Board Member, Automotive Manufacturing Group",
+    "context": "Strategy Audit & Strategy House development",
+    "year": 2025
+  },
+  {
+    "id": "test-003",
+    "quote": "What sets Strategic Popoltastic apart is the co-creative approach. This wasn't a consultant delivering a deck and walking away — it was a genuine partnership where we built the strategy together. The 85/15 model shows they believe in what they deliver.",
+    "attribution": "Managing Director, W2Support",
+    "context": "Strategy Audit engagement",
+    "year": 2026
+  }
+]

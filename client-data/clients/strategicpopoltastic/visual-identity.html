@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strategic Popoltastic — Phase 2: Visual Identity</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=Work+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dark: #0A1628;
+    --brand: #1B3A5C;
+    --accent: #7FB3D3;
+    --blue-50: #E8EEF5;
+    --blue-100: #C5D4E6;
+    --blue-200: #9BB5D1;
+    --blue-300: #6B90B8;
+    --blue-400: #4A72A0;
+    --blue-500: #1B3A5C;
+    --blue-600: #163252;
+    --blue-700: #112845;
+    --blue-800: #0D1F37;
+    --blue-900: #0A1628;
+    --yellow-50: #EFF6FA;
+    --yellow-100: #D4E8F2;
+    --yellow-200: #B0D5E6;
+    --yellow-300: #7FB3D3;
+    --yellow-400: #5A9AB5;
+    --yellow-500: #5A9AB5;
+    --yellow-600: #2E6880;
+    --yellow-700: #245267;
+    --yellow-800: #1A3D4E;
+    --yellow-900: #112935;
+    --n-950: #0D1117;
+    --n-900: #161B22;
+    --n-800: #21262D;
+    --n-700: #30363D;
+    --n-600: #484F58;
+    --n-500: #6E7681;
+    --n-400: #8B949E;
+    --n-300: #B1BAC4;
+    --n-200: #C9D1D9;
+    --n-100: #E6EDF3;
+    --n-50: #F0F3F6;
+    --n-white: #F8F9FA;
+    --success: #4A8F7A;
+    --warning: #B8935A;
+    --error: #A65454;
+    --info: #4A72A0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Work Sans', sans-serif;
+    background: var(--n-white);
+    color: var(--dark);
+    line-height: 1.6;
+  }
+
+  .page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+
+  .phase-header {
+    background: var(--dark);
+    color: white;
+    padding: 60px 40px;
+    margin: -40px -24px 60px;
+  }
+  .phase-header .overline {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .phase-header h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+  .phase-header .subtitle {
+    font-size: 18px;
+    color: var(--n-300);
+    max-width: 600px;
+  }
+
+  .section {
+    margin-bottom: 80px;
+  }
+  .section-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--brand);
+    margin-bottom: 8px;
+  }
+  .section h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--dark);
+  }
+  .section .desc {
+    color: var(--n-500);
+    font-size: 15px;
+    margin-bottom: 32px;
+    max-width: 700px;
+  }
+
+  .logo-concept {
+    border: 1px solid var(--n-100);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .logo-concept-header {
+    padding: 24px 32px;
+    border-bottom: 1px solid var(--n-100);
+  }
+  .logo-concept-header h3 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .logo-concept-header p {
+    font-size: 14px;
+    color: var(--n-500);
+  }
+  .logo-variants {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+  .logo-variant {
+    padding: 48px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+  }
+  .logo-variant.dark { background: var(--dark); }
+  .logo-variant.light { background: var(--n-white); border-right: 1px solid var(--n-100); border-left: 1px solid var(--n-100); }
+  .logo-variant.brand { background: var(--brand); }
+  .logo-variant .bg-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 16px;
+  }
+  .logo-variant.dark .bg-label { color: var(--n-500); }
+  .logo-variant.light .bg-label { color: var(--n-400); }
+  .logo-variant.brand .bg-label { color: rgba(255,255,255,0.5); }
+
+  .tagline-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-top: 1px solid var(--n-100);
+  }
+  .tagline-variant {
+    padding: 40px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tagline-variant.dark { background: var(--dark); }
+  .tagline-variant.light { background: var(--n-white); }
+
+  .scale-row {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 32px;
+    background: var(--n-50);
+    border-top: 1px solid var(--n-100);
+    flex-wrap: wrap;
+  }
+  .scale-item {
+    text-align: center;
+  }
+  .scale-item .size-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--n-400);
+    margin-top: 8px;
+  }
+
+  .palette-section { margin-bottom: 40px; }
+  .palette-section h4 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .palette-row {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 8px;
+  }
+  .swatch {
+    flex: 1;
+    height: 80px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 8px 10px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+  }
+  .swatch .swatch-name { opacity: 0.7; margin-bottom: 2px; }
+  .swatch .swatch-hex { font-weight: 500; }
+  .swatch.text-light { color: white; }
+  .swatch.text-dark { color: var(--dark); }
+
+  .primary-swatches {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+  .primary-swatch {
+    height: 140px;
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Space Mono', monospace;
+  }
+  .primary-swatch .role {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+  .primary-swatch .hex {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .combo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .combo {
+    border-radius: 12px;
+    padding: 24px 20px;
+    text-align: center;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .combo .combo-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 8px;
+    opacity: 0.6;
+  }
+  .combo .combo-text {
+    font-family: 'Syne', sans-serif;
+    font-size: 20px;
+  }
+
+  .type-specimen {
+    margin-bottom: 40px;
+    border: 1px solid var(--n-100);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .type-specimen-header {
+    padding: 20px 24px;
+    background: var(--n-50);
+    border-bottom: 1px solid var(--n-100);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .type-specimen-header h4 {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .type-specimen-header .type-meta {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    color: var(--n-500);
+  }
+  .type-specimen-body {
+    padding: 32px 24px;
+  }
+
+  .type-scale-row {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--n-100);
+  }
+  .type-scale-row:last-child { border-bottom: none; }
+  .type-scale-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--n-400);
+    width: 100px;
+    flex-shrink: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .type-scale-size {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--n-400);
+    width: 60px;
+    flex-shrink: 0;
+  }
+
+  .brand-divider {
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    margin: 60px 0;
+  }
+
+  .semantic-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  .semantic-swatch {
+    height: 80px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px 12px;
+    color: white;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="phase-header">
+    <div class="overline">Phase 2 — Visual Identity</div>
+    <h1>Strategic Popoltastic</h1>
+    <div class="subtitle">The Edge — selected logo concept with color palette and typography system.</div>
+  </div>
+
+  <!-- ======================== LOGO: THE EDGE ======================== -->
+  <div class="section">
+    <div class="section-label">Logo — The Edge</div>
+    <h2>Final Logo Direction</h2>
+    <p class="desc">Wordmark with a sharp diagonal ice blue slash separating "Strategic" from "Popoltastic". The slash is the brand motif — it becomes the system-wide "edge" element used as dividers, accents, and decorative marks.</p>
+
+    <div class="logo-concept">
+      <div class="logo-concept-header">
+        <h3>The Edge — Primary Lockup</h3>
+        <p>"STRATEGIC" in wide-tracked Work Sans, ice blue diagonal slash, "Popoltastic" in bold Syne. The slash references the tagline directly.</p>
+      </div>
+      <div class="logo-variants">
+        <!-- Dark background -->
+        <div class="logo-variant dark">
+          <svg width="440" height="60" viewBox="0 0 440 60">
+            <text x="0" y="22" font-family="'Work Sans', sans-serif" font-weight="400" font-size="13" letter-spacing="4" fill="#8B949E">STRATEGIC</text>
+            <line x1="130" y1="0" x2="114" y2="60" stroke="#7FB3D3" stroke-width="2.5"/>
+            <text x="142" y="45" font-family="'Syne', sans-serif" font-weight="700" font-size="30" fill="white">Popoltastic</text>
+          </svg>
+          <div class="bg-label">Dark</div>
+        </div>
+        <!-- Light background -->
+        <div class="logo-variant light">
+          <svg width="440" height="60" viewBox="0 0 440 60">
+            <text x="0" y="22" font-family="'Work Sans', sans-serif" font-weight="400" font-size="13" letter-spacing="4" fill="#6E7681">STRATEGIC</text>
+            <line x1="130" y1="0" x2="114" y2="60" stroke="#5A9AB5" stroke-width="2.5"/>
+            <text x="142" y="45" font-family="'Syne', sans-serif" font-weight="700" font-size="30" fill="#0A1628">Popoltastic</text>
+          </svg>
+          <div class="bg-label">Light</div>
+        </div>
+        <!-- Brand background -->
+        <div class="logo-variant brand">
+          <svg width="440" height="60" viewBox="0 0 440 60">
+            <text x="0" y="22" font-family="'Work Sans', sans-serif" font-weight="400" font-size="13" letter-spacing="4" fill="rgba(255,255,255,0.5)">STRATEGIC</text>
+            <line x1="130" y1="0" x2="114" y2="60" stroke="#7FB3D3" stroke-width="2.5"/>
+            <text x="142" y="45" font-family="'Syne', sans-serif" font-weight="700" font-size="30" fill="white">Popoltastic</text>
+          </svg>
+          <div class="bg-label">Brand</div>
+        </div>
+      </div>
+
+      <!-- Tagline variants -->
+      <div class="tagline-row">
+        <div class="tagline-variant dark">
+          <svg width="460" height="80" viewBox="0 0 460 80">
+            <text x="0" y="20" font-family="'Work Sans', sans-serif" font-weight="400" font-size="12" letter-spacing="4" fill="#8B949E">STRATEGIC</text>
+            <line x1="120" y1="0" x2="106" y2="55" stroke="#7FB3D3" stroke-width="2"/>
+            <text x="132" y="42" font-family="'Syne', sans-serif" font-weight="700" font-size="26" fill="white">Popoltastic</text>
+            <text x="132" y="68" font-family="'Work Sans', sans-serif" font-weight="400" font-size="11" letter-spacing="2" fill="#6E7681">Read the market. Find your edge.</text>
+          </svg>
+        </div>
+        <div class="tagline-variant light">
+          <svg width="460" height="80" viewBox="0 0 460 80">
+            <text x="0" y="20" font-family="'Work Sans', sans-serif" font-weight="400" font-size="12" letter-spacing="4" fill="#6E7681">STRATEGIC</text>
+            <line x1="120" y1="0" x2="106" y2="55" stroke="#5A9AB5" stroke-width="2"/>
+            <text x="132" y="42" font-family="'Syne', sans-serif" font-weight="700" font-size="26" fill="#0A1628">Popoltastic</text>
+            <text x="132" y="68" font-family="'Work Sans', sans-serif" font-weight="400" font-size="11" letter-spacing="2" fill="#6E7681">Read the market. Find your edge.</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Scale tests -->
+      <div class="scale-row">
+        <div class="scale-item">
+          <svg width="330" height="45" viewBox="0 0 440 60">
+            <text x="0" y="22" font-family="'Work Sans', sans-serif" font-weight="400" font-size="13" letter-spacing="4" fill="#6E7681">STRATEGIC</text>
+            <line x1="130" y1="0" x2="114" y2="60" stroke="#5A9AB5" stroke-width="2.5"/>
+            <text x="142" y="45" font-family="'Syne', sans-serif" font-weight="700" font-size="30" fill="#0A1628">Popoltastic</text>
+          </svg>
+          <div class="size-label">Full lockup (75%)</div>
+        </div>
+        <div class="scale-item">
+          <svg width="220" height="30" viewBox="0 0 440 60">
+            <text x="0" y="22" font-family="'Work Sans', sans-serif" font-weight="400" font-size="13" letter-spacing="4" fill="#6E7681">STRATEGIC</text>
+            <line x1="130" y1="0" x2="114" y2="60" stroke="#5A9AB5" stroke-width="3.5"/>
+            <text x="142" y="45" font-family="'Syne', sans-serif" font-weight="700" font-size="30" fill="#0A1628">Popoltastic</text>
+          </svg>
+          <div class="size-label">Half size</div>
+        </div>
+        <div class="scale-item">
+          <svg width="48" height="48" viewBox="0 0 48 48">
+            <rect width="48" height="48" rx="8" fill="#0A1628"/>
+            <line x1="24" y1="4" x2="20" y2="44" stroke="#7FB3D3" stroke-width="2"/>
+            <text x="7" y="22" font-family="'Work Sans', sans-serif" font-weight="500" font-size="11" fill="#8B949E">S</text>
+            <text x="27" y="36" font-family="'Syne', sans-serif" font-weight="700" font-size="16" fill="white">P</text>
+          </svg>
+          <div class="size-label">48px icon</div>
+        </div>
+        <div class="scale-item">
+          <svg width="32" height="32" viewBox="0 0 32 32">
+            <rect width="32" height="32" rx="6" fill="#0A1628"/>
+            <line x1="16" y1="3" x2="13" y2="29" stroke="#7FB3D3" stroke-width="1.5"/>
+            <text x="5" y="15" font-family="'Work Sans', sans-serif" font-weight="500" font-size="7.5" fill="#8B949E">S</text>
+            <text x="18" y="24" font-family="'Syne', sans-serif" font-weight="700" font-size="12" fill="white">P</text>
+          </svg>
+          <div class="size-label">32px</div>
+        </div>
+        <div class="scale-item">
+          <svg width="20" height="20" viewBox="0 0 20 20">
+            <rect width="20" height="20" rx="4" fill="#0A1628"/>
+            <line x1="10" y1="2" x2="8" y2="18" stroke="#7FB3D3" stroke-width="1.5"/>
+            <text x="11" y="14" font-family="'Syne', sans-serif" font-weight="700" font-size="10" fill="white">P</text>
+          </svg>
+          <div class="size-label">20px</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brand-divider"></div>
+
+  <!-- ======================== COLOR PALETTE ======================== -->
+  <div class="section">
+    <div class="section-label">Colors</div>
+    <h2>Color Palette</h2>
+    <p class="desc">A dark blue foundation with an ice blue accent. The palette projects authority without coldness — the ice blue keeps it human.</p>
+
+    <div class="palette-section">
+      <h4>Primary Palette</h4>
+      <div class="primary-swatches">
+        <div class="primary-swatch" style="background: var(--dark); color: white;">
+          <div class="role">Dark</div>
+          <div class="hex">#0A1628</div>
+        </div>
+        <div class="primary-swatch" style="background: var(--brand); color: white;">
+          <div class="role">Brand</div>
+          <div class="hex">#1B3A5C</div>
+        </div>
+        <div class="primary-swatch" style="background: var(--accent); color: var(--dark);">
+          <div class="role">Accent</div>
+          <div class="hex">#7FB3D3</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="palette-section">
+      <h4>Brand Blue Scale</h4>
+      <div class="palette-row">
+        <div class="swatch text-dark" style="background: var(--blue-50);"><span class="swatch-name">50</span><span class="swatch-hex">#E8EEF5</span></div>
+        <div class="swatch text-dark" style="background: var(--blue-100);"><span class="swatch-name">100</span><span class="swatch-hex">#C5D4E6</span></div>
+        <div class="swatch text-dark" style="background: var(--blue-200);"><span class="swatch-name">200</span><span class="swatch-hex">#9BB5D1</span></div>
+        <div class="swatch text-light" style="background: var(--blue-300);"><span class="swatch-name">300</span><span class="swatch-hex">#6B90B8</span></div>
+        <div class="swatch text-light" style="background: var(--blue-400);"><span class="swatch-name">400</span><span class="swatch-hex">#4A72A0</span></div>
+        <div class="swatch text-light" style="background: var(--blue-500);"><span class="swatch-name">500</span><span class="swatch-hex">#1B3A5C</span></div>
+        <div class="swatch text-light" style="background: var(--blue-600);"><span class="swatch-name">600</span><span class="swatch-hex">#163252</span></div>
+        <div class="swatch text-light" style="background: var(--blue-700);"><span class="swatch-name">700</span><span class="swatch-hex">#112845</span></div>
+        <div class="swatch text-light" style="background: var(--blue-800);"><span class="swatch-name">800</span><span class="swatch-hex">#0D1F37</span></div>
+        <div class="swatch text-light" style="background: var(--blue-900);"><span class="swatch-name">900</span><span class="swatch-hex">#0A1628</span></div>
+      </div>
+    </div>
+
+    <div class="palette-section">
+      <h4>Accent Ice Blue Scale</h4>
+      <div class="palette-row">
+        <div class="swatch text-dark" style="background: var(--yellow-50);"><span class="swatch-name">50</span><span class="swatch-hex">#EFF6FA</span></div>
+        <div class="swatch text-dark" style="background: var(--yellow-100);"><span class="swatch-name">100</span><span class="swatch-hex">#D4E8F2</span></div>
+        <div class="swatch text-dark" style="background: var(--yellow-200);"><span class="swatch-name">200</span><span class="swatch-hex">#B0D5E6</span></div>
+        <div class="swatch text-dark" style="background: var(--yellow-300);"><span class="swatch-name">300</span><span class="swatch-hex">#7FB3D3</span></div>
+        <div class="swatch text-dark" style="background: var(--yellow-400);"><span class="swatch-name">400</span><span class="swatch-hex">#5A9AB5</span></div>
+        <div class="swatch text-dark" style="background: var(--yellow-500);"><span class="swatch-name">500</span><span class="swatch-hex">#5A9AB5</span></div>
+        <div class="swatch text-light" style="background: var(--yellow-600);"><span class="swatch-name">600</span><span class="swatch-hex">#2E6880</span></div>
+        <div class="swatch text-light" style="background: var(--yellow-700);"><span class="swatch-name">700</span><span class="swatch-hex">#245267</span></div>
+        <div class="swatch text-light" style="background: var(--yellow-800);"><span class="swatch-name">800</span><span class="swatch-hex">#1A3D4E</span></div>
+        <div class="swatch text-light" style="background: var(--yellow-900);"><span class="swatch-name">900</span><span class="swatch-hex">#112935</span></div>
+      </div>
+    </div>
+
+    <div class="palette-section">
+      <h4>Neutral Scale (Cool)</h4>
+      <div class="palette-row">
+        <div class="swatch text-dark" style="background: var(--n-white);"><span class="swatch-name">White</span><span class="swatch-hex">#F8F9FA</span></div>
+        <div class="swatch text-dark" style="background: var(--n-50);"><span class="swatch-name">50</span><span class="swatch-hex">#F0F3F6</span></div>
+        <div class="swatch text-dark" style="background: var(--n-100);"><span class="swatch-name">100</span><span class="swatch-hex">#E6EDF3</span></div>
+        <div class="swatch text-dark" style="background: var(--n-200);"><span class="swatch-name">200</span><span class="swatch-hex">#C9D1D9</span></div>
+        <div class="swatch text-dark" style="background: var(--n-300);"><span class="swatch-name">300</span><span class="swatch-hex">#B1BAC4</span></div>
+        <div class="swatch text-light" style="background: var(--n-400);"><span class="swatch-name">400</span><span class="swatch-hex">#8B949E</span></div>
+        <div class="swatch text-light" style="background: var(--n-500);"><span class="swatch-name">500</span><span class="swatch-hex">#6E7681</span></div>
+        <div class="swatch text-light" style="background: var(--n-600);"><span class="swatch-name">600</span><span class="swatch-hex">#484F58</span></div>
+        <div class="swatch text-light" style="background: var(--n-700);"><span class="swatch-name">700</span><span class="swatch-hex">#30363D</span></div>
+        <div class="swatch text-light" style="background: var(--n-800);"><span class="swatch-name">800</span><span class="swatch-hex">#21262D</span></div>
+        <div class="swatch text-light" style="background: var(--n-900);"><span class="swatch-name">900</span><span class="swatch-hex">#161B22</span></div>
+        <div class="swatch text-light" style="background: var(--n-950);"><span class="swatch-name">950</span><span class="swatch-hex">#0D1117</span></div>
+      </div>
+    </div>
+
+    <div class="palette-section">
+      <h4>Semantic Colors</h4>
+      <div class="semantic-row">
+        <div class="semantic-swatch" style="background: var(--success);"><span>Success</span><span>#4A8F7A</span></div>
+        <div class="semantic-swatch" style="background: var(--warning);"><span>Warning</span><span>#B8935A</span></div>
+        <div class="semantic-swatch" style="background: var(--error);"><span>Error</span><span>#A65454</span></div>
+        <div class="semantic-swatch" style="background: var(--info);"><span>Info</span><span>#4A72A0</span></div>
+      </div>
+    </div>
+
+    <div class="palette-section">
+      <h4>Brand Combinations</h4>
+      <div class="combo-grid">
+        <div class="combo" style="background: var(--dark); color: white;">
+          <div class="combo-text">Popoltastic</div>
+          <div class="combo-label">White on Dark</div>
+        </div>
+        <div class="combo" style="background: var(--dark); color: var(--accent);">
+          <div class="combo-text">Popoltastic</div>
+          <div class="combo-label">Ice Blue on Dark</div>
+        </div>
+        <div class="combo" style="background: var(--n-white); color: var(--dark);">
+          <div class="combo-text">Popoltastic</div>
+          <div class="combo-label">Dark on Light</div>
+        </div>
+        <div class="combo" style="background: var(--brand); color: var(--accent);">
+          <div class="combo-text">Popoltastic</div>
+          <div class="combo-label">Ice Blue on Brand</div>
+        </div>
+        <div class="combo" style="background: var(--accent); color: var(--dark);">
+          <div class="combo-text">Popoltastic</div>
+          <div class="combo-label">Dark on Ice Blue</div>
+        </div>
+        <div class="combo" style="background: var(--blue-50); color: var(--brand);">
+          <div class="combo-text">Popoltastic</div>
+          <div class="combo-label">Brand on Tint</div>
+        </div>
+        <div class="combo" style="background: var(--yellow-50); color: var(--dark);">
+          <div class="combo-text">Popoltastic</div>
+          <div class="combo-label">Dark on Ice Tint</div>
+        </div>
+        <div class="combo" style="background: var(--brand); color: white;">
+          <div class="combo-text">Popoltastic</div>
+          <div class="combo-label">White on Brand</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="palette-section" style="background: var(--n-50); padding: 24px; border-radius: 12px;">
+      <h4 style="margin-bottom: 16px;">Color Rules</h4>
+      <ul style="list-style: none; font-size: 14px; line-height: 2;">
+        <li><strong style="color: var(--brand);">Rule 1:</strong> Never use pure black (#000). Use Dark (#0A1628) instead.</li>
+        <li><strong style="color: var(--brand);">Rule 2:</strong> Never use pure white (#FFF). Use Near-white (#F8F9FA) instead.</li>
+        <li><strong style="color: var(--brand);">Rule 3:</strong> Ice blue accent is used sparingly — rules, highlights, the logo slash. Never as a full background except for small tags/badges.</li>
+        <li><strong style="color: var(--brand);">Rule 4:</strong> Section divider slides use Dark (#0A1628) background with white text and ice blue accent.</li>
+        <li><strong style="color: var(--brand);">Rule 5:</strong> Content slides use Near-white or Blue-50 backgrounds.</li>
+        <li><strong style="color: var(--brand);">Rule 6:</strong> The ice-blue-on-dark combination is the signature brand pairing.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="brand-divider"></div>
+
+  <!-- ======================== TYPOGRAPHY ======================== -->
+  <div class="section">
+    <div class="section-label">Typography</div>
+    <h2>Type System</h2>
+    <p class="desc">A bold geometric display paired with warm, functional body text: Syne Bold for display, Work Sans for body, Space Mono for data. The "Bold Disruptor" pairing.</p>
+
+    <div class="type-specimen">
+      <div class="type-specimen-header">
+        <h4>Display — Syne Bold</h4>
+        <div class="type-meta">Headlines, section titles, hero text</div>
+      </div>
+      <div class="type-specimen-body">
+        <div style="font-family: 'Syne', sans-serif; font-weight: 700; font-size: 48px; color: var(--dark); margin-bottom: 16px; line-height: 1.1;">
+          Read the market.<br>Find your edge.
+        </div>
+        <div style="font-family: 'Syne', sans-serif; font-weight: 700; font-size: 32px; color: var(--brand); margin-bottom: 16px;">
+          Strategy Audit & Positioning
+        </div>
+        <div style="font-family: 'Syne', sans-serif; font-weight: 700; font-size: 24px; color: var(--dark); margin-bottom: 24px;">
+          Executive Summary
+        </div>
+        <div style="font-family: 'Work Sans', sans-serif; font-style: italic; font-size: 18px; color: var(--n-500);">
+          Assessing strategic documentation to strengthen clarity, alignment and execution
+        </div>
+      </div>
+    </div>
+
+    <div class="type-specimen">
+      <div class="type-specimen-header">
+        <h4>Body — Work Sans</h4>
+        <div class="type-meta">Paragraphs, UI, labels, navigation</div>
+      </div>
+      <div class="type-specimen-body">
+        <div style="font-family: 'Work Sans', sans-serif; font-size: 12px; letter-spacing: 4px; text-transform: uppercase; color: var(--n-400); margin-bottom: 16px;">
+          STRATEGIC POPOLTASTIC
+        </div>
+        <div style="font-family: 'Work Sans', sans-serif; font-size: 15px; color: var(--dark); margin-bottom: 16px; max-width: 600px;">
+          We have conducted a baseline strategy documentation review that evaluates the current strategy documentation and assesses the quality, clarity and relevance of the documentation and strategic plans.
+        </div>
+        <div style="font-family: 'Work Sans', sans-serif; font-weight: 500; font-size: 14px; color: var(--brand); margin-bottom: 8px;">
+          Key Findings &bull; Recommendations &bull; Next Steps
+        </div>
+        <div style="font-family: 'Work Sans', sans-serif; font-size: 13px; color: var(--n-500);">
+          Read the market. Find your edge. — Strategic Popoltastic, 2026
+        </div>
+      </div>
+    </div>
+
+    <div class="type-specimen">
+      <div class="type-specimen-header">
+        <h4>Data — Space Mono</h4>
+        <div class="type-meta">Metrics, scores, metadata, page numbers</div>
+      </div>
+      <div class="type-specimen-body">
+        <div style="font-family: 'Space Mono', monospace; font-size: 14px; color: var(--dark); margin-bottom: 16px;">
+          <span style="color: var(--success);">8.2</span> / 10 — Strategic Coherence Score
+        </div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 12px; color: var(--n-500); margin-bottom: 8px;">
+          PHASE 01 — BASELINE ASSESSMENT &nbsp;&nbsp;&nbsp; MAR 2026
+        </div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 11px; color: var(--n-400);">
+          47% coherent companies report above-average profits
+        </div>
+      </div>
+    </div>
+
+    <div class="type-specimen">
+      <div class="type-specimen-header">
+        <h4>Type Scale</h4>
+        <div class="type-meta">Complete hierarchy</div>
+      </div>
+      <div class="type-specimen-body">
+        <div class="type-scale-row">
+          <div class="type-scale-label">Display XL</div>
+          <div class="type-scale-size">48px</div>
+          <div style="font-family: 'Syne', sans-serif; font-weight: 700; font-size: 48px; line-height: 1.1; color: var(--dark);">Strategy</div>
+        </div>
+        <div class="type-scale-row">
+          <div class="type-scale-label">Display LG</div>
+          <div class="type-scale-size">36px</div>
+          <div style="font-family: 'Syne', sans-serif; font-weight: 700; font-size: 36px; line-height: 1.1; color: var(--dark);">Market Analysis</div>
+        </div>
+        <div class="type-scale-row">
+          <div class="type-scale-label">Display MD</div>
+          <div class="type-scale-size">24px</div>
+          <div style="font-family: 'Syne', sans-serif; font-weight: 700; font-size: 24px; color: var(--dark);">Competitive Position</div>
+        </div>
+        <div class="type-scale-row">
+          <div class="type-scale-label">Display SM</div>
+          <div class="type-scale-size">20px</div>
+          <div style="font-family: 'Work Sans', sans-serif; font-weight: 500; font-size: 20px; color: var(--dark);">Key Findings</div>
+        </div>
+        <div class="type-scale-row">
+          <div class="type-scale-label">Heading</div>
+          <div class="type-scale-size">18px</div>
+          <div style="font-family: 'Work Sans', sans-serif; font-weight: 500; font-size: 18px; color: var(--dark);">Must-Win Battles</div>
+        </div>
+        <div class="type-scale-row">
+          <div class="type-scale-label">Body</div>
+          <div class="type-scale-size">15px</div>
+          <div style="font-family: 'Work Sans', sans-serif; font-size: 15px; color: var(--dark);">We have conducted a baseline strategy documentation review.</div>
+        </div>
+        <div class="type-scale-row">
+          <div class="type-scale-label">Body SM</div>
+          <div class="type-scale-size">13px</div>
+          <div style="font-family: 'Work Sans', sans-serif; font-size: 13px; color: var(--n-500);">Source: Strategy& Closing the Strategy-Execution Gap, 2015</div>
+        </div>
+        <div class="type-scale-row">
+          <div class="type-scale-label">Overline</div>
+          <div class="type-scale-size">11px</div>
+          <div style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--n-400);">EXECUTIVE SUMMARY</div>
+        </div>
+        <div class="type-scale-row">
+          <div class="type-scale-label">Micro</div>
+          <div class="type-scale-size">10px</div>
+          <div style="font-family: 'Space Mono', monospace; font-size: 10px; color: var(--n-400);">CONFIDENTIAL — STRATEGIC POPOLTASTIC &copy; 2026</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brand-divider"></div>
+
+  <!-- ======================== SLIDE MOCKUPS ======================== -->
+  <div class="section">
+    <div class="section-label">Preview</div>
+    <h2>Slide Mockup — Section Divider</h2>
+    <p class="desc">How the brand system looks applied to a consulting slide.</p>
+
+    <div style="background: var(--dark); border-radius: 12px; overflow: hidden; aspect-ratio: 16/9; padding: 48px 56px; display: flex; flex-direction: column; justify-content: space-between; position: relative; max-width: 900px;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+        <div>
+          <div style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 3px; color: var(--accent); text-transform: uppercase; margin-bottom: 4px;">Part 1</div>
+          <div style="width: 60px; height: 1.5px; background: var(--accent);"></div>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'Syne', sans-serif; font-weight: 700; font-size: 42px; color: white; line-height: 1.15; margin-bottom: 12px;">
+          Executive Summary
+        </div>
+        <div style="font-family: 'Work Sans', sans-serif; font-style: italic; font-size: 16px; color: var(--blue-300);">
+          Assessing strategic documentation to strengthen clarity and execution
+        </div>
+      </div>
+      <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+        <div style="font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 2px; color: var(--n-500); text-transform: uppercase;">
+          Strategic Popoltastic
+        </div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 9px; color: var(--n-500);">
+          3
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 24px;"></div>
+
+  <div class="section">
+    <div class="section-label">Preview</div>
+    <h2>Slide Mockup — Content</h2>
+
+    <div style="background: var(--n-white); border: 1px solid var(--n-100); border-radius: 12px; overflow: hidden; aspect-ratio: 16/9; padding: 32px 48px; display: flex; flex-direction: column; justify-content: space-between; position: relative; max-width: 900px;">
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+          <div style="font-family: 'Space Mono', monospace; font-size: 8px; letter-spacing: 2px; color: var(--n-400); text-transform: uppercase;">Strategic Popoltastic</div>
+          <div style="font-family: 'Space Mono', monospace; font-size: 8px; color: var(--n-400);">Strategy Audit</div>
+        </div>
+        <div style="display: flex; gap: 4px; margin-bottom: 24px;">
+          <div style="padding: 4px 12px; background: var(--dark); color: white; font-family: 'Work Sans', sans-serif; font-size: 8px; letter-spacing: 1px; text-transform: uppercase;">Executive Summary</div>
+          <div style="padding: 4px 12px; border: 1px solid var(--n-200); color: var(--n-500); font-family: 'Work Sans', sans-serif; font-size: 8px; letter-spacing: 1px; text-transform: uppercase;">Introduction</div>
+          <div style="padding: 4px 12px; border: 1px solid var(--n-200); color: var(--n-500); font-family: 'Work Sans', sans-serif; font-size: 8px; letter-spacing: 1px; text-transform: uppercase;">Score</div>
+          <div style="padding: 4px 12px; border: 1px solid var(--n-200); color: var(--n-500); font-family: 'Work Sans', sans-serif; font-size: 8px; letter-spacing: 1px; text-transform: uppercase;">Strengths</div>
+          <div style="padding: 4px 12px; border: 1px solid var(--n-200); color: var(--n-500); font-family: 'Work Sans', sans-serif; font-size: 8px; letter-spacing: 1px; text-transform: uppercase;">Opportunities</div>
+        </div>
+        <div style="font-family: 'Syne', sans-serif; font-weight: 700; font-size: 28px; color: var(--dark); margin-bottom: 4px;">Current State of Strategy Documentation</div>
+        <div style="font-family: 'Work Sans', sans-serif; font-style: italic; font-size: 13px; color: var(--blue-400); margin-bottom: 20px;">Solid foundation with key strengths in culture and strategic initiatives</div>
+      </div>
+      <div style="flex: 1; display: flex; gap: 16px;">
+        <div style="flex: 1;">
+          <div style="font-family: 'Work Sans', sans-serif; font-weight: 500; font-size: 11px; color: var(--dark); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Strengths</div>
+          <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <div style="width: 70px; height: 70px; border-radius: 50%; background: var(--brand); color: white; display: flex; align-items: center; justify-content: center; text-align: center; font-family: 'Work Sans', sans-serif; font-size: 7px; padding: 8px; line-height: 1.3;">Level of internal analysis</div>
+            <div style="width: 70px; height: 70px; border-radius: 50%; background: var(--blue-400); color: white; display: flex; align-items: center; justify-content: center; text-align: center; font-family: 'Work Sans', sans-serif; font-size: 7px; padding: 8px; line-height: 1.3;">Strategic initiatives</div>
+            <div style="width: 70px; height: 70px; border-radius: 50%; background: var(--blue-300); color: white; display: flex; align-items: center; justify-content: center; text-align: center; font-family: 'Work Sans', sans-serif; font-size: 7px; padding: 8px; line-height: 1.3;">Cultural foundation</div>
+          </div>
+        </div>
+        <div style="flex: 1;">
+          <div style="font-family: 'Work Sans', sans-serif; font-weight: 500; font-size: 11px; color: var(--dark); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Opportunities</div>
+          <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <div style="width: 70px; height: 70px; border-radius: 50%; background: var(--accent); color: var(--dark); display: flex; align-items: center; justify-content: center; text-align: center; font-family: 'Work Sans', sans-serif; font-size: 7px; padding: 8px; line-height: 1.3;">Create main strategy doc</div>
+            <div style="width: 70px; height: 70px; border-radius: 50%; background: var(--yellow-200); color: var(--dark); display: flex; align-items: center; justify-content: center; text-align: center; font-family: 'Work Sans', sans-serif; font-size: 7px; padding: 8px; line-height: 1.3;">Define strategic structure</div>
+            <div style="width: 70px; height: 70px; border-radius: 50%; background: var(--yellow-100); color: var(--dark); display: flex; align-items: center; justify-content: center; text-align: center; font-family: 'Work Sans', sans-serif; font-size: 7px; padding: 8px; line-height: 1.3;">Standardize frameworks</div>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; justify-content: flex-end; align-items: center; gap: 8px;">
+        <div style="font-family: 'Space Mono', monospace; font-size: 8px; color: var(--n-400);">5</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align: center; padding: 60px 0 40px; color: var(--n-400); font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px;">
+    STRATEGIC POPOLTASTIC — PHASE 2: VISUAL IDENTITY — 2026
+  </div>
+
+</div>
+</body>
+</html>

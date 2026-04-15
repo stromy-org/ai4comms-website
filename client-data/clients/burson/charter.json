@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "tier": "output",
+    "displayName": "Burson",
+    "industry": "Communications / PR"
+  },
+  "colors": {
+    "primary": "#0a0400",
+    "secondary": "#4a4a4a",
+    "accent": "#feff00",
+    "background": "#fffff1",
+    "backgroundAlt": "#f5f5e8",
+    "text": "#0a0400",
+    "textLight": "#4a4a4a",
+    "success": "#10b981",
+    "warning": "#FFC107",
+    "error": "#ef4444"
+  },
+  "fonts": {
+    "heading": { "family": "system-ui", "fallback": "-apple-system, BlinkMacSystemFont, Segoe UI, Inter, sans-serif", "weight": "bold" },
+    "body": { "family": "system-ui", "fallback": "-apple-system, BlinkMacSystemFont, Segoe UI, Inter, sans-serif", "weight": "normal" },
+    "mono": { "family": "Courier New", "fallback": "monospace", "weight": "normal" }
+  },
+  "logo": { "primary": "", "white": "", "maxWidth": "120pt", "maxHeight": "50pt", "sizing": "contain" },
+  "document": {
+    "margins": { "top": "1in", "bottom": "1in", "left": "1in", "right": "1in" },
+    "header": { "content": "", "logo": false },
+    "footer": { "content": "Confidential", "pageNumbers": true },
+    "headingColor": "primary",
+    "tableHeaderColor": "primary"
+  },
+  "formatting": {
+    "headingThreshold": 24,
+    "accentCycleColors": ["accent", "secondary", "primary"],
+    "autoContrastText": true
+  },
+  "plotly": {
+    "categoricalPalette": ["#0a0400", "#feff00", "#181008", "#4a4a4a", "#fff566"],
+    "defaultHeight": 560,
+    "titleFontSize": 20,
+    "axisFontSize": 12,
+    "legendFontSize": 12,
+    "margins": { "top": 90, "bottom": 80, "left": 70, "right": 60 },
+    "secondaryTextColor": "#4a4a4a",
+    "gridColor": "#e5e5e5",
+    "line": { "width": 3, "markerSize": 8 },
+    "scatter": { "markerSize": 9 },
+    "pie": { "textfontSize": 13 }
+  }
+}

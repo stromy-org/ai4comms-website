@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "tier": "producer",
+    "displayName": "AI4comms",
+    "tagline": "Signal through the noise.",
+    "industry": "Communications / AI Intelligence",
+    "direction": "Signal Authority",
+    "archetype": {
+      "primary": "Magician",
+      "secondary": "Ruler"
+    }
+  },
+  "colors": {
+    "primary": "#15311A",
+    "secondary": "#1F4A2A",
+    "accent": "#44E88A",
+    "background": "#0C1410",
+    "backgroundAlt": "#F4F6F1",
+    "text": "#F4F6F1",
+    "textLight": "#929C8E",
+    "success": "#3B7A4E",
+    "warning": "#C89B3E",
+    "error": "#B85648"
+  },
+  "fonts": {
+    "heading": {
+      "family": "Syne",
+      "fallback": "\"Space Grotesk\", \"Avenir Next\", \"Segoe UI\", sans-serif",
+      "weight": "700"
+    },
+    "body": {
+      "family": "Inter",
+      "fallback": "\"Avenir Next\", \"Segoe UI\", system-ui, sans-serif",
+      "weight": "400"
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "fallback": "\"SFMono-Regular\", Consolas, monospace",
+      "weight": "500"
+    }
+  },
+  "logo": {
+    "primary": "logos/ai4comms-logo-primary.svg",
+    "white": "logos/ai4comms-logo-white.svg",
+    "icon": "logos/ai4comms-logo-square.svg",
+    "mark": "logos/ai4comms-logo-mark.svg",
+    "maxWidth": "140pt",
+    "maxHeight": "52pt",
+    "sizing": "contain"
+  },
+  "images": {
+    "catalog": [
+      {
+        "file": "images/comms-env-08-bGo01h57aCE--16x9-textsafe.jpg",
+        "description": "Dark architectural communications environment with strong lines and controlled contrast",
+        "roles": ["cover", "divider"]
+      },
+      {
+        "file": "images/data-tex-05-ETiSF2VSRTQ--16x9-textsafe.jpg",
+        "description": "Abstract data texture with a restrained technical feel for section transitions",
+        "roles": ["divider"]
+      },
+      {
+        "file": "images/signal-03-nwNjeZ0WA6w--16x9-textsafe.jpg",
+        "description": "Signal-oriented visual used for closing moments and strategic emphasis",
+        "roles": ["closing"]
+      }
+    ],
+    "overlay": {
+      "color": "background",
+      "opacity": 0.55
+    },
+    "logoVariantOnImage": "white"
+  },
+  "document": {
+    "margins": {
+      "top": "1in",
+      "bottom": "1in",
+      "left": "1in",
+      "right": "1in"
+    },
+    "header": {
+      "content": "{{company.name}}",
+      "logo": true
+    },
+    "footer": {
+      "content": "Confidential",
+      "pageNumbers": true
+    },
+    "headingColor": "primary",
+    "tableHeaderColor": "background"
+  },
+  "presentation": {
+    "slideMargin": "40pt",
+    "titleMargin": "30pt",
+    "contentMargin": "20pt",
+    "aspectRatio": "16:9",
+    "defaultTheme": "dark"
+  },
+  "video": {
+    "resolution": "1920x1080",
+    "fps": 30
+  },
+  "website": {
+    "archetype": "magician",
+    "aesthetic": "dark-mode-native",
+    "layout": {
+      "density": "balanced",
+      "symmetry": "asymmetric",
+      "flowDirection": "linear",
+      "heroStyle": "typographic",
+      "gridSystem": "12col-centered",
+      "maxWidth": "1320px",
+      "sectionSpacing": "generous",
+      "sectionDividers": "thin-line",
+      "footerStyle": "split",
+      "whitespaceStrategy": "breathing"
+    },
+    "texture": {
+      "backgroundTreatment": "geometric-pattern",
+      "surfaceFinish": "matte",
+      "borderStyle": "thin-line",
+      "shadowDepth": "subtle",
+      "cornerRadius": "slight",
+      "overlayStyle": "gradient",
+      "patternDensity": "sparse"
+    },
+    "typography": {
+      "headingStyle": "tight-sans",
+      "headingScale": 1.1,
+      "bodyLineHeight": 1.7,
+      "letterSpacing": "tight",
+      "textTransform": "uppercase-labels",
+      "pullQuoteStyle": "bordered-left",
+      "listStyle": "numbered-accent"
+    },
+    "motion": {
+      "intensity": "subtle",
+      "revealStyle": "fade",
+      "scrollBehavior": "smooth",
+      "hoverBehavior": "glow",
+      "transitionSpeed": "relaxed",
+      "loadingAnimation": "stagger-fade",
+      "cursorStyle": "default",
+      "interactionMode": "mixed",
+      "ambientScope": "accent-surfaces",
+      "reducedMotionPolicy": "auto-disable-decorative"
+    },
+    "components": {
+      "navigation": "transparent-hero",
+      "cards": "outlined",
+      "buttons": "ghost",
+      "forms": "minimal-underline",
+      "imagePresentation": "masked",
+      "testimonials": "simple-quote",
+      "ctaStyle": "minimal",
+      "socialProof": "none",
+      "codeBlocks": "terminal-style"
+    },
+    "colorApplication": {
+      "darkSections": true,
+      "darkSectionFrequency": 2,
+      "accentUsage": "sparring",
+      "gradientDirection": "none",
+      "colorBlockSections": false,
+      "imageOverlayBehavior": "gradient-fade"
+    },
+    "pages": {
+      "home": {
+        "enabled": true,
+        "sections": [
+          { "type": "hero", "variant": "typographic" },
+          { "type": "value-proposition", "variant": "numbered-list" },
+          { "type": "services", "variant": "alternating-rows" },
+          { "type": "case-study", "variant": "featured-plus-grid" },
+          { "type": "cta", "variant": "minimal" }
+        ]
+      },
+      "services": { "enabled": true },
+      "case-studies": { "enabled": true, "layout": "featured-plus-grid" },
+      "about": { "enabled": true },
+      "contact": { "enabled": true, "layout": "mailto-brief" }
+    },
+    "deployment": {
+      "platform": "github-pages",
+      "analytics": "none",
+      "contactForm": "mailto"
+    }
+  },
+  "formatting": {
+    "headingThreshold": 24,
+    "accentCycleColors": ["accent", "secondary", "primary"],
+    "autoContrastText": true
+  },
+  "plotly": {
+    "categoricalPalette": ["#44E88A", "#B8D88A", "#3B7A4E", "#15311A", "#5A7F9A"],
+    "defaultHeight": 500,
+    "titleFontSize": 18,
+    "axisFontSize": 12,
+    "legendFontSize": 11,
+    "margins": {
+      "top": 80,
+      "bottom": 70,
+      "left": 60,
+      "right": 50
+    },
+    "gridColor": "#E9ECE4",
+    "secondaryTextColor": "#929C8E"
+  },
+  "templates": {
+    "docx": {
+      "default": "templates/docx/default.docx",
+      "letterhead": "templates/docx/letterhead.docx"
+    },
+    "html": {
+      "business-cards": "templates/html/business-cards.html",
+      "email-signature": "templates/html/email-signature.html"
+    }
+  }
+}

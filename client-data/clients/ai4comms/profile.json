@@ -1,0 +1,84 @@
+{
+  "company": {
+    "name": "AI4comms",
+    "tagline": "Lead AI with clarity.",
+    "description": "AI4comms helps communications leaders turn AI from abstract hype into practical advantage through strategy, training, governance, and hands-on implementation support.",
+    "founded": null,
+    "headquarters": {
+      "city": null,
+      "country": "Netherlands"
+    },
+    "website": null,
+    "email": null,
+    "phone": null
+  },
+  "services": [
+    {
+      "id": "svc-001",
+      "name": "AI Strategy for Communications Teams",
+      "description": "Strategic advisory for communication leaders who need to define where AI creates real value across corporate communications, public affairs, media relations, and content operations.",
+      "industries": ["Corporate Communications", "Public Affairs", "Professional Services", "In-house Communications"],
+      "deliverables": ["AI Opportunity Assessment", "Communications AI Roadmap", "Leadership Briefing", "Use-Case Prioritization"],
+      "typicalDuration": "2-6 weeks",
+      "pricingModel": "price-001"
+    },
+    {
+      "id": "svc-002",
+      "name": "AI Training and Team Enablement",
+      "description": "Practical training programs that help communications teams adopt AI tools responsibly, improve workflows, and build confidence without drowning in jargon.",
+      "industries": ["Corporate Communications", "Agencies", "Public Affairs", "Associations"],
+      "deliverables": ["Workshop Design", "Prompt Playbooks", "Team Training Sessions", "Adoption Guidelines"],
+      "typicalDuration": "1 day to 4 weeks",
+      "pricingModel": "price-002"
+    },
+    {
+      "id": "svc-003",
+      "name": "Governance and Responsible AI for Comms",
+      "description": "Policy, governance, and operating-model support for organizations that need to use AI in communications without creating reputational, legal, or workflow risk.",
+      "industries": ["Corporate Communications", "Regulated Industries", "Public Sector", "Professional Services"],
+      "deliverables": ["AI Governance Framework", "Risk Register", "Approval Workflow", "Usage Policy"],
+      "typicalDuration": "3-8 weeks",
+      "pricingModel": "price-001"
+    },
+    {
+      "id": "svc-004",
+      "name": "Executive AI Advisory",
+      "description": "Senior advisory support for leaders who need a clear view on how AI is reshaping communications functions, stakeholder expectations, and team structures.",
+      "industries": ["Executive Leadership", "Communications Leadership", "Boards", "Founder-led Firms"],
+      "deliverables": ["Executive Briefing", "Decision Memo", "Scenario Analysis", "Facilitated Leadership Session"],
+      "typicalDuration": "Retainer or targeted advisory sprints",
+      "pricingModel": "price-001"
+    }
+  ],
+  "pricing": {
+    "models": [
+      {
+        "id": "price-001",
+        "name": "Advisory Retainer or Project Fee",
+        "description": "Used for strategic advisory, governance work, and executive support. Pricing depends on scope, access, and pace."
+      },
+      {
+        "id": "price-002",
+        "name": "Workshop and Enablement Fee",
+        "description": "Used for training sessions, team enablement, and playbook development. Pricing depends on team size and preparation required."
+      }
+    ],
+    "paymentTerms": null,
+    "discounts": []
+  },
+  "credentials": {
+    "certifications": [],
+    "awards": [],
+    "memberships": []
+  },
+  "legal": {
+    "standardTerms": {
+      "ip": null,
+      "confidentiality": null,
+      "liability": null,
+      "termination": null
+    },
+    "insurances": []
+  },
+  "_note": "Draft profile synthesized from the baseline brand guidelines on 2026-03-25. Replace contact details, founding data, pricing, credentials, and legal terms with confirmed company information."
+}

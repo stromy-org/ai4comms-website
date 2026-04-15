@@ -1,0 +1,78 @@
+{
+  "assumptions": [
+    {
+      "id": "assume-001",
+      "category": "General",
+      "text": "Client will provide timely access to relevant documentation, data, and key stakeholders for interviews and workshops."
+    },
+    {
+      "id": "assume-002",
+      "category": "General",
+      "text": "Engagement scope is based on the information provided during initial discussions. Material changes to scope may require a separate change order."
+    },
+    {
+      "id": "assume-003",
+      "category": "Collaboration",
+      "text": "Engagement follows a co-creative model with regular check-ins. Client designates a single point of contact for coordination and decision escalation."
+    },
+    {
+      "id": "assume-004",
+      "category": "Delivery",
+      "text": "Collaboration is primarily remote/online with optional on-site sessions as agreed. Deliverables are provided in digital format (PDF, PPTX) unless otherwise specified."
+    },
+    {
+      "id": "assume-005",
+      "category": "Delivery",
+      "text": "All deliverables remain draft until client sign-off at each phase gate. Final versions incorporate one round of client feedback per deliverable."
+    }
+  ],
+  "disclaimers": [
+    {
+      "id": "disc-001",
+      "category": "General",
+      "text": "All recommendations and analyses are based on information provided by the client and publicly available data. Strategic Popoltastic does not guarantee specific business outcomes."
+    },
+    {
+      "id": "disc-002",
+      "category": "Confidentiality",
+      "text": "All engagement materials, findings, and deliverables are treated as strictly confidential. Strategic Popoltastic will not disclose client information to third parties without written consent."
+    }
+  ],
+  "standardSections": {
+    "collaborationPrinciples": {
+      "title": "Uitgangspunten voor een succesvolle samenwerking",
+      "principles": [
+        {
+          "name": "Co-creatie",
+          "description": "This is a co-creation process. We work together through regular check-ins to ensure alignment and ownership of the strategic direction."
+        },
+        {
+          "name": "Kwaliteit",
+          "description": "We hold ourselves to top-tier strategy advisory quality standards — the same rigor you would expect from Bain, BCG, or McKinsey, delivered with the agility of a focused boutique."
+        },
+        {
+          "name": "Prestatie-Indicator",
+          "description": "We believe in earned trust. Payment can be linked to client satisfaction: if dissatisfied, 85% is paid for work completed, with 15% retained as a performance-linked discount."
+        },
+        {
+          "name": "Flexibel & Iteratief",
+          "description": "Our approach is structured but flexible. Primarily online collaboration with optional on-site sessions. We adapt to your pace and priorities."
+        }
+      ]
+    },
+    "whyStrategyAudit": {
+      "title": "Waarom helpt deze Strategy Audit?",
+      "statistics": {
+        "growth": "Coherent companies are 3x more likely to report above-average growth (47% vs 15%)",
+        "profit": "Coherent companies are 2x more likely to report above-average profit (48% vs 22%)",
+        "source": "Strategy& / 'Deals That Win' by J. Neely, John Juliens, and Joerg Krings (strategy + business, July 2015)"
+      },
+      "benefits": [
+        "Clarifies the real market you operate in",
+        "Reveals market structure and dynamics",
+        "Clarifies current strategic position",
+        "Identifies most promising strategic position"
+      ]
+    }
+  }
+}

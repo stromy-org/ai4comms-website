@@ -1,0 +1,74 @@
+[
+  {
+    "id": "proof-001",
+    "type": "research",
+    "claim": "Coherent companies are 3x more likely to report above-average growth (47% vs 15%) and 2x more likely to report above-average profit (48% vs 22%)",
+    "source": "Strategy& / 'Deals That Win' by J. Neely, John Juliens, and Joerg Krings (strategy + business, July 2015)",
+    "pillars": ["pillar-002", "pillar-003"],
+    "audiences": ["aud-001", "aud-002"]
+  },
+  {
+    "id": "proof-002",
+    "type": "methodology",
+    "claim": "35-question assessment framework across 9 categories provides structured, benchmarked evaluation of strategy documentation quality",
+    "source": "Strategic Popoltastic proprietary methodology",
+    "pillars": ["pillar-002"],
+    "audiences": ["aud-001", "aud-002"]
+  },
+  {
+    "id": "proof-003",
+    "type": "framework",
+    "claim": "Rule of Three framework identifies 5 distinct player types (3 generalists, 2 specialists) with mapped strategic elements, key tactics, and critical insights for each",
+    "source": "Global Rule of Three theory, applied via proprietary checklist",
+    "pillars": ["pillar-001"],
+    "audiences": ["aud-001", "aud-003"]
+  },
+  {
+    "id": "proof-004",
+    "type": "customer",
+    "claim": "Visscher-Caravelle baseline assessment: analyzed 51 sources, scored 9 categories, identified 6 key strengths and 6 prioritized recommendations that led to unified strategic direction",
+    "source": "Visscher-Caravelle engagement (2025)",
+    "pillars": ["pillar-002", "pillar-003"],
+    "audiences": ["aud-001", "aud-002"]
+  },
+  {
+    "id": "proof-005",
+    "type": "customer",
+    "claim": "W2Support strategy audit: recalibrated strategy of 3 operating companies using Rule of Three, delivered strategic baseline and positioning framework in 6 weeks",
+    "source": "W2Support engagement (2026)",
+    "pillars": ["pillar-001", "pillar-004"],
+    "audiences": ["aud-001", "aud-004"]
+  },
+  {
+    "id": "proof-006",
+    "type": "customer",
+    "claim": "VC Automotive Group: delivered 54-page strategy guide with reusable framework, strategy house template, and resource library of 13 best-practice frameworks adopted across business units",
+    "source": "VC Automotive Group engagement (2025)",
+    "pillars": ["pillar-002", "pillar-003"],
+    "audiences": ["aud-002", "aud-003"]
+  },
+  {
+    "id": "proof-007",
+    "type": "commitment",
+    "claim": "Performance-linked pricing: 85% paid if dissatisfied, 15% retained as discount — putting fees on the line for every engagement",
+    "source": "Strategic Popoltastic standard engagement terms",
+    "pillars": ["pillar-003"],
+    "audiences": ["aud-001", "aud-004"]
+  },
+  {
+    "id": "proof-008",
+    "type": "expertise",
+    "claim": "Founder has lived in 7 countries, speaks 3 languages fluently, with academic background spanning Amsterdam, Leuven, and Oxford — bringing cross-cultural strategic perspective",
+    "source": "Paul-Mattias Reitsma background",
+    "pillars": ["pillar-004"],
+    "audiences": ["aud-001", "aud-004"]
+  },
+  {
+    "id": "proof-009",
+    "type": "framework",
+    "claim": "Market development lifecycle model (Start Up → Growth → Mature) identifies phase-specific strategic focus, challenges, and growth drivers — preventing misaligned strategy for market maturity level",
+    "source": "Rule of Three market development theory",
+    "pillars": ["pillar-001"],
+    "audiences": ["aud-001", "aud-003"]
+  }
+]

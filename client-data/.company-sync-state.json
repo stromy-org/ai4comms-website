@@ -1,0 +1,42 @@
+{
+  "sync_date": "2026-04-01T21:55:33Z",
+  "clients": {
+    "ai4comms": {
+      "profile.json": "5d1a1779b412f5496892c7816af32c24f469be63c5d42473946d51556b8128f1"
+    },
+    "dukestrategies": {
+      "profile.json": "6f181be6cbf32c58efcad47ba8297f7989f0533839f0c0d2a33ad58df29f10f7",
+      "people.json": "16550e78cb47f47c691646124675cf63e8eaf27ab2a77950f6781677f31e0217",
+      "proposals/methodologies.json": "d4f690ff28b45a7f9061636359c06b1465520fef6a3cfa1520afa4f7dc9dd924",
+      "proposals/team-bios.json": "5429936e349b40bf1d89f2156b59c81ab2bc2a82ce7b41a24008bc006d5b74a4",
+      "proposals/partnerships.json": "f2ae2c37851c76d801c303b5185abff39e8799601c8fa08592e73372a1bae145",
+      "proposals/case-studies.json": "d4421036e0c5c96e560e0d142b5c8ce1ae8b12740b2f3ce5c6828b500e08f26a",
+      "proposals/testimonials.json": "8767b45aa9f7f05bcb157c0b6edad0a3703ec7d4f8fe71b94c1a9bf82d882caa",
+      "proposals/boilerplate.json": "25582b542d1b71c5aef57e9519657f977a24ba1fab1ef041be5b091b1b4a5cef",
+      "proposals/differentiators.json": "c7c55a075f775230fca7cc75e673009318de0645ed369b3a9445fc82785d479b",
+      "messaging/narratives.json": "eeacc7dd962407169d403c252e5a8c97c35845c37015ca6fe8b4b1e6630762dc",
+      "messaging/audiences.json": "50fa901a3dbdfa263a80054a66c80189c256106adadd0bb86c18f0f532a4f801",
+      "messaging/pillars.json": "8e1481ac1f61d5275dedc37646d2a7c7607f24419ea2df747e4d1ef7c6c82add",
+      "messaging/proof-points.json": "d60914fe6b94236ae4ade0cefe214cb67c835509d78c95522543843a9edc63bf",
+      "press-releases/approval-matrix.json": "1e9ee4cff3755eaedf148fc95f86cf87f6396e4a0c56c98b76670c6e7d1f202b",
+      "press-releases/spokespersons.json": "482ddd1009f0e7026e429465086f3856c5dde30db4f41caae2aaa83d05358d2e",
+      "press-releases/distribution-lists.json": "220ca97c15987aa44ad39c8f03dd379257e19df8fece51e2933590ce100770a4",
+      "press-releases/boilerplate.json": "8c9af94349ff217f05e48f0c43c5e6b6ba08e0eb9a7bfa941b5508fb0bd0cb5b"
+    },
+    "strategicpopoltastic": {
+      "profile.json": "a5bfde31238d50c57e491949f8b72ddaa87f8602c4367ae7bc85dab27682b0ab",
+      "people.json": "2452a56de3d9cad8217306b72f740da02e6d80f9d34c75a5fa515084fbfc666f",
+      "proposals/methodologies.json": "4423c61e6a2a7e79311836f49e07bc6d31a72b024837e39c8667f9ed87e00936",
+      "proposals/team-bios.json": "3907e0db18519c62afbbf66468414becaabc4eeea24061ff952e5620811fc3a8",
+      "proposals/partnerships.json": "2dcb0e1c85015693e6f4626b617dc1702e895251edea012b9b8bac13680cde19",
+      "proposals/case-studies.json": "e1b75ada736b9246b09fe7f1b0b6be1d038b07f8194053032fdf22558694efa5",
+      "proposals/testimonials.json": "9709059864f139bf56885c6ee5e747f11332d9a48fd57cf53b344fd308c72107",
+      "proposals/boilerplate.json": "fb9fbadc1b9ddbd7f3e6b54a80a5d64103c759b2105d552954e74e7364ca2b81",
+      "proposals/differentiators.json": "c1e63c36392af26a274bb8ab3fc03b20b8a8f000a41b89f3c1649fac276d9fcb",
+      "messaging/narratives.json": "7860ebeb03711400c91f6e14de8d4efb811573c7cf31df76785d082b3fbbcc68",
+      "messaging/audiences.json": "03f462d1ddde5de3fc6723b69386ac74e620305625bd0165101920f9d95d3519",
+      "messaging/pillars.json": "ddec372a0609b06f5b72d2212a8626fbaab8e88b73f3d8392a8ed3b10e37c203",
+      "messaging/proof-points.json": "fa8a5116aa89f294092b787c3bff5d54a53b8f8e3239aaf8d84354b40c41aad1"
+    }
+  }
+}

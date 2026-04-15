@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">AI4comms square logo</title>
+  <desc id="desc">Square avatar variant with a forest green background and highlighted 4.</desc>
+  <rect width="160" height="160" rx="28" fill="#0C1410"/>
+  <text x="28" y="76" font-family="'Space Grotesk', 'Avenir Next', 'Segoe UI', Arial, sans-serif" font-size="44" font-weight="700" letter-spacing="-2" fill="#FFFFFF">AI<tspan fill="#B8D88A">4</tspan></text>
+  <text x="30" y="116" font-family="'Source Sans 3', 'Avenir Next', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" fill="#FFFFFF">comms</text>
+</svg>

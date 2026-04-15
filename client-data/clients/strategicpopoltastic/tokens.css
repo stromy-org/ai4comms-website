@@ -1,0 +1,514 @@
+/* ============================================================
+   Strategic Popoltastic — Design Tokens
+   Read the market. Find your edge.
+
+   Usage: Import this file at the root of any project.
+   Google Fonts import required (see --font-* declarations).
+   ============================================================ */
+
+:root {
+  /* -- Primary Palette ---------------------------------------- */
+  --brand-dark:          #0A1628;        /* Deep navy — never use pure #000 */
+  --brand-primary:       #1B3A5C;        /* Core brand blue */
+  --brand-accent:        #7FB3D3;        /* Ice blue — use sparingly */
+
+  /* -- Brand Blue Scale --------------------------------------- */
+  --brand-50:            #E8EEF5;
+  --brand-100:           #C5D4E6;
+  --brand-200:           #9BB5D1;
+  --brand-300:           #6B90B8;
+  --brand-400:           #4A72A0;
+  --brand-500:           #1B3A5C;        /* = --brand-primary */
+  --brand-600:           #163252;
+  --brand-700:           #112845;
+  --brand-800:           #0D1F37;
+  --brand-900:           #0A1628;        /* = --brand-dark */
+
+  /* -- Accent Ice Blue Scale ---------------------------------- */
+  --accent-50:           #EFF6FA;
+  --accent-100:          #D4E8F2;
+  --accent-200:          #B0D5E6;
+  --accent-300:          #7FB3D3;        /* = --brand-accent */
+  --accent-400:          #5A9AB5;
+  --accent-500:          #3D7F99;
+  --accent-600:          #2E6880;
+  --accent-700:          #245267;
+  --accent-800:          #1A3D4E;
+  --accent-900:          #112935;
+
+  /* -- Neutral Scale (cool) ----------------------------------- */
+  --neutral-950:         #0D1117;
+  --neutral-900:         #161B22;
+  --neutral-800:         #21262D;
+  --neutral-700:         #30363D;
+  --neutral-600:         #484F58;
+  --neutral-500:         #6E7681;
+  --neutral-400:         #8B949E;
+  --neutral-300:         #B1BAC4;
+  --neutral-200:         #C9D1D9;
+  --neutral-100:         #E6EDF3;
+  --neutral-50:          #F0F3F6;
+  --neutral-white:       #F8F9FA;
+
+  /* -- Semantic Colors ---------------------------------------- */
+  --success:             #4A8F7A;
+  --success-light:       #E2F0EB;
+  --warning:             #B8935A;
+  --warning-light:       #F5EFE0;
+  --error:               #A65454;
+  --error-light:         #F5E5E5;
+  --info:                #4A72A0;
+  --info-light:          #E8EEF5;
+
+  /* -- Typography --------------------------------------------- */
+  --font-display:        'Syne', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body:           'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono:           'Space Mono', 'SF Mono', 'Fira Code', 'Consolas', monospace;
+
+  /* Google Fonts import:
+     https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=Work+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap
+  */
+
+  /* -- Type Scale --------------------------------------------- */
+  --text-display-xl:     3rem;           /* 48px — hero, cover pages */
+  --text-display-lg:     2.25rem;        /* 36px — report titles */
+  --text-display-md:     1.5rem;         /* 24px — section titles */
+  --text-display-sm:     1.25rem;        /* 20px — card titles */
+  --text-heading:        1.125rem;       /* 18px — content headings */
+  --text-body:           0.9375rem;      /* 15px — paragraphs */
+  --text-body-sm:        0.8125rem;      /* 13px — captions, secondary */
+  --text-caption:        0.75rem;        /* 12px — small metadata */
+  --text-overline:       0.6875rem;      /* 11px — section labels */
+  --text-micro:          0.625rem;       /* 10px — legal, page numbers */
+
+  /* -- Line Heights ------------------------------------------- */
+  --leading-tight:       1.15;           /* Display text */
+  --leading-snug:        1.3;            /* Headings */
+  --leading-normal:      1.5;            /* Subheadings */
+  --leading-relaxed:     1.65;           /* Body text */
+  --leading-loose:       1.8;            /* Long-form reading */
+
+  /* -- Letter Spacing ----------------------------------------- */
+  --tracking-tight:      -0.02em;        /* Large display text */
+  --tracking-snug:       -0.01em;        /* Display MD */
+  --tracking-normal:     0;              /* Body text */
+  --tracking-wide:       0.03em;         /* UI labels */
+  --tracking-wider:      0.06em;         /* Small caps, nav */
+  --tracking-widest:     0.1em;          /* Overlines */
+
+  /* -- Font Weights ------------------------------------------- */
+  --weight-regular:      400;
+  --weight-medium:       500;
+  --weight-bold:         700;
+
+  /* -- Spacing Scale (4px base) ------------------------------- */
+  --space-1:   0.25rem;      /* 4px */
+  --space-2:   0.5rem;       /* 8px */
+  --space-3:   0.75rem;      /* 12px */
+  --space-4:   1rem;         /* 16px */
+  --space-5:   1.25rem;      /* 20px */
+  --space-6:   1.5rem;       /* 24px */
+  --space-8:   2rem;         /* 32px */
+  --space-10:  2.5rem;       /* 40px */
+  --space-12:  3rem;         /* 48px */
+  --space-16:  4rem;         /* 64px */
+  --space-20:  5rem;         /* 80px */
+  --space-24:  6rem;         /* 96px */
+  --space-32:  8rem;         /* 128px */
+
+  /* -- Border Radius ------------------------------------------ */
+  --radius-sm:   4px;
+  --radius-md:   6px;
+  --radius-lg:   8px;
+  --radius-xl:   12px;
+  --radius-2xl:  16px;
+  --radius-full: 9999px;
+
+  /* -- Shadows ------------------------------------------------ */
+  --shadow-sm:   0 1px 2px rgba(10, 22, 40, 0.04);
+  --shadow-md:   0 2px 8px rgba(10, 22, 40, 0.06);
+  --shadow-lg:   0 4px 16px rgba(10, 22, 40, 0.08);
+  --shadow-xl:   0 8px 32px rgba(10, 22, 40, 0.10);
+
+  /* -- Transitions -------------------------------------------- */
+  --ease-out:        cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:     cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast:   120ms;
+  --duration-normal: 200ms;
+  --duration-slow:   400ms;
+
+  /* -- Brand Motif: The Edge (diagonal slash) ----------------- */
+  --motif-color:         var(--brand-accent);
+  --motif-color-dark:    var(--accent-500);
+  --motif-color-light:   var(--accent-200);
+  --motif-weight:        2.5px;
+  --motif-angle:         -8deg;          /* Slight backward lean */
+
+  /* -- Layout ------------------------------------------------- */
+  --content-width:    720px;
+  --content-wide:     960px;
+  --content-max:      1200px;
+}
+
+/* -- Semantic Surface Variables ------------------------------- */
+:root {
+  --surface:         var(--neutral-white);
+  --surface-raised:  var(--neutral-50);
+  --surface-sunken:  var(--brand-50);
+  --text-primary:    var(--brand-dark);
+  --text-secondary:  var(--neutral-600);
+  --text-tertiary:   var(--neutral-500);
+  --border:          var(--neutral-200);
+  --border-subtle:   var(--neutral-100);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface:         var(--neutral-950);
+    --surface-raised:  var(--neutral-900);
+    --surface-sunken:  var(--neutral-800);
+    --text-primary:    var(--neutral-50);
+    --text-secondary:  var(--neutral-500);
+    --text-tertiary:   var(--neutral-600);
+    --border:          var(--neutral-800);
+    --border-subtle:   var(--neutral-900);
+  }
+}
+
+/* ============================================================
+   UTILITY CLASSES
+   ============================================================ */
+
+/* -- Typography ----------------------------------------------- */
+.brand-display-xl {
+  font-family: var(--font-display);
+  font-size: var(--text-display-xl);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  font-weight: var(--weight-bold);
+}
+.brand-display-lg {
+  font-family: var(--font-display);
+  font-size: var(--text-display-lg);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-snug);
+  font-weight: var(--weight-bold);
+}
+.brand-display-md {
+  font-family: var(--font-display);
+  font-size: var(--text-display-md);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-snug);
+  font-weight: var(--weight-bold);
+}
+.brand-display-sm {
+  font-family: var(--font-body);
+  font-size: var(--text-display-sm);
+  line-height: var(--leading-snug);
+  font-weight: var(--weight-medium);
+}
+.brand-heading {
+  font-family: var(--font-body);
+  font-size: var(--text-heading);
+  line-height: var(--leading-snug);
+  font-weight: var(--weight-medium);
+}
+.brand-body {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--leading-relaxed);
+  font-weight: var(--weight-regular);
+}
+.brand-body-sm {
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-relaxed);
+  font-weight: var(--weight-regular);
+}
+.brand-overline {
+  font-family: var(--font-mono);
+  font-size: var(--text-overline);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  font-weight: var(--weight-regular);
+}
+.brand-mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-normal);
+  font-weight: var(--weight-regular);
+}
+.brand-micro {
+  font-family: var(--font-mono);
+  font-size: var(--text-micro);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+}
+
+/* -- Brand Motif: The Edge ------------------------------------ */
+/* Diagonal slash accent — the brand's repeatable visual element */
+
+.edge-line {
+  position: relative;
+  display: inline-block;
+}
+.edge-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -16px;
+  width: var(--motif-weight);
+  background: var(--motif-color);
+  transform: rotate(var(--motif-angle));
+}
+
+/* Full-width divider variant */
+.edge-divider {
+  position: relative;
+  height: 1px;
+  background: var(--border-subtle);
+  margin: var(--space-8) 0;
+}
+.edge-divider::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -12px;
+  width: var(--motif-weight);
+  height: 24px;
+  background: var(--motif-color);
+  transform: rotate(var(--motif-angle));
+}
+
+/* Short accent variant */
+.edge-accent {
+  display: inline-block;
+  width: var(--motif-weight);
+  height: 24px;
+  background: var(--motif-color);
+  transform: rotate(var(--motif-angle));
+}
+.edge-accent--short {
+  height: 16px;
+}
+.edge-accent--tall {
+  height: 40px;
+}
+
+/* Light variant for dark backgrounds */
+.edge-accent--light {
+  background: var(--motif-color-light);
+}
+
+/* Double edge — two parallel slashes */
+.edge-double {
+  position: relative;
+  display: inline-block;
+}
+.edge-double::before,
+.edge-double::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: var(--motif-weight);
+  background: var(--motif-color);
+  transform: rotate(var(--motif-angle));
+}
+.edge-double::before { left: -16px; }
+.edge-double::after { left: -10px; opacity: 0.4; }
+
+/* Fade edge — slash that fades out */
+.edge-fade {
+  display: inline-block;
+  width: var(--motif-weight);
+  height: 40px;
+  background: linear-gradient(to bottom, var(--motif-color), transparent);
+  transform: rotate(var(--motif-angle));
+}
+
+/* Corner edge — L-shaped slash at corner */
+.edge-corner {
+  position: relative;
+}
+.edge-corner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: var(--motif-weight);
+  background: var(--motif-color);
+}
+.edge-corner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--motif-weight);
+  height: 24px;
+  background: var(--motif-color);
+  transform: rotate(var(--motif-angle));
+}
+
+/* -- Secondary Motif: The Chevron -------------------------- */
+.chevron {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--motif-color);
+  border-bottom: 2px solid var(--motif-color);
+  transform: rotate(-45deg);
+}
+.chevron--sm {
+  width: 6px;
+  height: 6px;
+  border-width: 1.5px;
+}
+.chevron--lg {
+  width: 12px;
+  height: 12px;
+  border-width: 2.5px;
+}
+.chevron--right {
+  transform: rotate(-45deg);
+}
+.chevron--down {
+  transform: rotate(45deg);
+}
+.chevron--brand {
+  border-color: var(--brand-primary);
+}
+
+/* -- Buttons -------------------------------------------------- */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-3) var(--space-6);
+  background: var(--brand-primary);
+  color: white;
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-medium);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background var(--duration-normal) var(--ease-in-out);
+}
+.btn-primary:hover {
+  background: var(--brand-700);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-3) var(--space-6);
+  background: transparent;
+  color: var(--brand-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-medium);
+  border: 1px solid var(--brand-primary);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-in-out);
+}
+.btn-secondary:hover {
+  background: var(--brand-50);
+}
+
+.btn-accent {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-3) var(--space-6);
+  background: var(--brand-accent);
+  color: var(--brand-dark);  /* Ice blue has sufficient contrast with dark */
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-medium);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background var(--duration-normal) var(--ease-in-out);
+}
+.btn-accent:hover {
+  background: var(--accent-400);
+}
+
+/* -- Cards ---------------------------------------------------- */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  transition: box-shadow var(--duration-normal) var(--ease-in-out);
+}
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+.card--dark {
+  background: var(--brand-dark);
+  border-color: var(--brand-800);
+  color: white;
+}
+.card--brand {
+  background: var(--brand-primary);
+  border-color: var(--brand-600);
+  color: white;
+}
+
+/* -- Badges --------------------------------------------------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-micro);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+}
+.badge--brand {
+  background: var(--brand-50);
+  color: var(--brand-primary);
+}
+.badge--accent {
+  background: var(--accent-100);
+  color: var(--accent-700);
+}
+.badge--neutral {
+  background: var(--neutral-100);
+  color: var(--neutral-600);
+}
+
+/* -- Data Table ----------------------------------------------- */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+}
+.data-table thead th {
+  background: var(--brand-dark);
+  color: white;
+  font-weight: var(--weight-medium);
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  font-size: var(--text-overline);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+.data-table tbody td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.data-table tbody tr:nth-child(even) {
+  background: var(--neutral-50);
+}
+.data-table tbody td[data-type="number"] {
+  font-family: var(--font-mono);
+  text-align: right;
+}

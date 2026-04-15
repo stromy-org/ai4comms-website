@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 24" fill="none">
+  <!-- Short divider: compact Edge motif for section headers -->
+  <line x1="0" y1="12" x2="48" y2="12" stroke="#C9D1D9" stroke-width="1"/>
+  <line x1="54" y1="2" x2="62" y2="22" stroke="#7FB3D3" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="68" y1="12" x2="120" y2="12" stroke="#C9D1D9" stroke-width="1"/>
+</svg>

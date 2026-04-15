@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" fill="none">
+  <!-- Repeating pattern tile: subtle diagonal grid on dark navy -->
+  <rect width="60" height="60" fill="#0A1628"/>
+  <!-- Diagonal slash echoes — very low opacity -->
+  <line x1="10" y1="0" x2="18" y2="60" stroke="#1B3A5C" stroke-width="0.5" opacity="0.35"/>
+  <line x1="40" y1="0" x2="48" y2="60" stroke="#1B3A5C" stroke-width="0.5" opacity="0.35"/>
+  <!-- Horizontal subtle lines -->
+  <line x1="0" y1="20" x2="60" y2="20" stroke="#1B3A5C" stroke-width="0.3" opacity="0.2"/>
+  <line x1="0" y1="40" x2="60" y2="40" stroke="#1B3A5C" stroke-width="0.3" opacity="0.2"/>
+  <!-- Gold accent dot at intersection -->
+  <circle cx="14" cy="20" r="1" fill="#7FB3D3" opacity="0.15"/>
+  <circle cx="44" cy="40" r="1" fill="#7FB3D3" opacity="0.15"/>
+</svg>

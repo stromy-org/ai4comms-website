@@ -1,0 +1,85 @@
+{
+  "company": {
+    "name": "Strategic Popoltastic",
+    "tagline": "Read the market. Find your edge.",
+    "description": "Strategic Popoltastic delivers Bain/BCG-grade strategy audits, market positioning, and strategic roadmaps for Dutch mid-market and growth companies. We combine rigorous analytical frameworks with a direct, co-creative working style that cuts through corporate fog.",
+    "founded": 2025,
+    "headquarters": {
+      "city": "Amsterdam",
+      "country": "Netherlands"
+    },
+    "website": "https://strategicpopoltastic.nl",
+    "email": "info@strategicpopoltastic.nl",
+    "phone": "+31 20 555 0100"
+  },
+  "services": [
+    {
+      "id": "svc-001",
+      "name": "Strategy Audit",
+      "description": "Comprehensive assessment of current strategic position — market dynamics, competitive landscape, internal capabilities, and growth vectors. Delivered as a board-ready report with clear recommendations.",
+      "industries": ["Technology", "Professional Services", "Manufacturing", "Retail", "Financial Services"],
+      "deliverables": ["Strategic Assessment Report", "Competitive Landscape Analysis", "Growth Vector Map", "Board Presentation"],
+      "typicalDuration": "4-8 weeks",
+      "pricingModel": "price-001"
+    },
+    {
+      "id": "svc-002",
+      "name": "Market Positioning",
+      "description": "Define and validate market position — target segments, value proposition, competitive differentiation, and go-to-market strategy for Dutch mid-market companies.",
+      "industries": ["Technology", "Professional Services", "Consumer Goods", "B2B Services"],
+      "deliverables": ["Positioning Strategy", "Value Proposition Framework", "Competitive Differentiation Map", "Go-to-Market Playbook"],
+      "typicalDuration": "3-6 weeks",
+      "pricingModel": "price-001"
+    },
+    {
+      "id": "svc-003",
+      "name": "Strategic Roadmap",
+      "description": "Translate strategy into execution — phased roadmaps with milestones, resource requirements, risk mitigation, and governance frameworks.",
+      "industries": ["Technology", "Professional Services", "Manufacturing", "Financial Services"],
+      "deliverables": ["Strategic Roadmap", "Implementation Plan", "Risk Assessment", "KPI Framework", "Quarterly Review Cadence"],
+      "typicalDuration": "2-4 weeks",
+      "pricingModel": "price-002"
+    }
+  ],
+  "pricing": {
+    "models": [
+      {
+        "id": "price-001",
+        "name": "Project-based",
+        "description": "Fixed-fee engagement based on defined scope and deliverables.",
+        "rates": [
+          { "role": "Partner", "amount": 2500, "currency": "EUR", "per": "day" },
+          { "role": "Senior Consultant", "amount": 1800, "currency": "EUR", "per": "day" },
+          { "role": "Analyst", "amount": 1000, "currency": "EUR", "per": "day" }
+        ]
+      },
+      {
+        "id": "price-002",
+        "name": "Retainer",
+        "description": "Monthly retainer for ongoing strategic counsel and quarterly roadmap reviews."
+      }
+    ],
+    "paymentTerms": "Net 14 days from invoice date",
+    "discounts": [
+      { "type": "Multi-phase", "description": "5% discount for engagements spanning 2+ phases" },
+      { "type": "Retainer", "description": "10% discount on annual retainer agreements" }
+    ]
+  },
+  "credentials": {
+    "certifications": [],
+    "awards": [],
+    "memberships": []
+  },
+  "legal": {
+    "standardTerms": {
+      "ip": "All deliverables become client property upon final payment. Pre-existing methodologies and frameworks remain with Strategic Popoltastic under perpetual license to client.",
+      "confidentiality": "Both parties agree to maintain strict confidentiality of all proprietary information for 3 years following engagement completion.",
+      "liability": "Total liability capped at 2x the engagement fee. Excludes consequential, indirect, or punitive damages.",
+      "termination": "Either party may terminate with 14 days written notice. Client pays for work completed to date."
+    },
+    "insurances": [
+      { "type": "Professional Liability", "coverage": 2500000, "currency": "EUR" },
+      { "type": "General Liability", "coverage": 1000000, "currency": "EUR" }
+    ]
+  }
+}

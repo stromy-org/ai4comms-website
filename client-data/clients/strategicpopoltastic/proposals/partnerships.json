@@ -1,0 +1,16 @@
+[
+  {
+    "id": "part-001",
+    "partner": "Strategy& / PwC",
+    "level": "Methodology Reference",
+    "description": "Strategic Popoltastic's coherence-based strategy assessment draws on Strategy&'s research on the strategy-execution gap, particularly the 'Deals That Win' study demonstrating that coherent companies are 3x more likely to report above-average growth.",
+    "relevantServices": ["Strategy Audit", "Strategic Roadmap"]
+  },
+  {
+    "id": "part-002",
+    "partner": "Rule of Three Institute",
+    "level": "Framework Practitioner",
+    "description": "Certified practitioners of the Global Rule of Three framework for market structure analysis and competitive positioning. Applied across multiple industries to determine optimal strategic positioning for mid-market companies.",
+    "relevantServices": ["Market Positioning", "Strategy Audit"]
+  }
+]

@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strategic Popoltastic — Imagery Direction Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dark: #0A1628;
+    --brand: #1B3A5C;
+    --accent: #7FB3D3;
+    --accent-dark: #5A9AB5;
+    --brand-light: #6B90B8;
+    --n800: #0D1F37;
+    --n600: #484F58;
+    --n500: #6E7681;
+    --n400: #8B949E;
+    --n300: #B1BAC4;
+    --n200: #C9D1D9;
+    --n100: #E6EDF3;
+    --n50: #F0F3F6;
+    --white: #F8F9FA;
+    --success: #4A8F7A;
+    --error: #A65454;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Work Sans', sans-serif;
+    background: var(--white);
+    color: var(--dark);
+    line-height: 1.6;
+  }
+
+  /* ---- HERO ---- */
+  .hero {
+    background: var(--dark);
+    padding: 80px 60px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      repeating-linear-gradient(
+        110deg,
+        transparent,
+        transparent 58px,
+        rgba(27,58,92,0.12) 58px,
+        rgba(27,58,92,0.12) 59px
+      );
+    pointer-events: none;
+  }
+  .hero-overline {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    color: #fff;
+    max-width: 700px;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .hero p {
+    font-size: 18px;
+    color: var(--n400);
+    max-width: 600px;
+    font-style: italic;
+  }
+
+  /* ---- SECTIONS ---- */
+  section {
+    padding: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  section + section { padding-top: 0; }
+  .section-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+    margin-bottom: 8px;
+  }
+  h2 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--dark);
+    margin-bottom: 24px;
+  }
+  h3 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--dark);
+    margin-bottom: 8px;
+  }
+  p.body {
+    font-size: 15px;
+    color: var(--n600);
+    line-height: 1.7;
+    margin-bottom: 16px;
+    max-width: 700px;
+  }
+
+  /* ---- PHILOSOPHY ---- */
+  .philosophy-statement {
+    background: var(--n50);
+    border-left: 3px solid var(--accent);
+    padding: 24px 32px;
+    margin: 32px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .philosophy-statement p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 17px;
+    font-style: italic;
+    color: var(--brand);
+    line-height: 1.7;
+  }
+
+  /* ---- PRINCIPLES GRID ---- */
+  .principles-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 32px 0;
+  }
+  .principle-card {
+    border: 1px solid var(--n200);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .principle-card .card-header {
+    padding: 16px 20px;
+    background: var(--dark);
+  }
+  .principle-card .card-header h3 {
+    color: #fff;
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  .principle-card .card-body {
+    padding: 16px 20px;
+  }
+  .principle-card .card-body p {
+    font-size: 13px;
+    color: var(--n600);
+    line-height: 1.6;
+  }
+
+  /* ---- IMAGE CATEGORIES ---- */
+  .category-section {
+    margin: 48px 0;
+  }
+  .category-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+  .category-header::before {
+    content: '';
+    width: 3px;
+    height: 22px;
+    display: inline-block;
+  }
+  .cat-nav .category-header::before { background: var(--accent); }
+  .cat-chess .category-header::before { background: #8B7355; }
+  .cat-tex .category-header::before { background: var(--n500); }
+  .cat-arch .category-header::before { background: var(--brand); }
+
+  .category-header h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  .category-meta {
+    font-size: 13px;
+    color: var(--n500);
+    margin-bottom: 16px;
+    padding-left: 15px;
+  }
+  .category-meta strong { color: var(--brand); }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .image-card {
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--n200);
+    position: relative;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+  .image-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .image-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+  .image-card .img-meta {
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--dark);
+  }
+  .image-card .img-name {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--n300);
+  }
+  .image-card .img-treatment {
+    font-size: 9px;
+    color: var(--n500);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* ---- ORIGINAL/PROCESSED TOGGLE ---- */
+  .image-card.show-original img.processed { display: none; }
+  .image-card:not(.show-original) img.original { display: none; }
+  .image-card .compare {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(10, 22, 40, 0.8);
+    color: var(--accent);
+    border: 1px solid rgba(127, 179, 211, 0.3);
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    padding: 4px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 1;
+  }
+  .image-card:hover .compare { opacity: 1; }
+
+  /* ---- HERO IMAGE SHOWCASE ---- */
+  .hero-showcase {
+    margin: 40px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    height: 360px;
+  }
+  .hero-showcase img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hero-showcase .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(10,22,40,0.7) 0%, rgba(27,58,92,0.3) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+  }
+  .hero-showcase .overlay .overline {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .hero-showcase .overlay h2 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+  .hero-showcase .overlay p {
+    font-size: 16px;
+    color: var(--n200);
+    max-width: 500px;
+  }
+
+  /* ---- BEFORE/AFTER ---- */
+  .before-after {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 32px 0;
+  }
+  .before-after .side {
+    position: relative;
+  }
+  .before-after img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+  }
+  .before-after .label {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #fff;
+    background: rgba(10,22,40,0.7);
+    padding: 4px 10px;
+    border-radius: 3px;
+  }
+
+  /* ---- RECIPE ---- */
+  .recipe-block {
+    background: var(--dark);
+    border-radius: 8px;
+    padding: 28px 32px;
+    margin: 32px 0;
+  }
+  .recipe-block h3 {
+    color: var(--accent);
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .recipe-block pre {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    color: var(--n300);
+    line-height: 2;
+  }
+  .recipe-block .step-num { color: var(--accent); font-weight: 700; }
+  .recipe-block .step-value { color: #fff; }
+
+  .treatment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 13px;
+  }
+  .treatment-table th {
+    background: var(--dark);
+    color: var(--accent);
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    text-align: left;
+  }
+  .treatment-table td {
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--n100);
+    color: var(--n600);
+  }
+  .treatment-table tr:nth-child(even) td {
+    background: var(--n50);
+  }
+  .treatment-table .profile-name {
+    font-weight: 600;
+    color: var(--dark);
+  }
+
+  /* ---- KEYWORDS ---- */
+  .keyword-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin: 32px 0;
+  }
+  .tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid;
+  }
+  .tag.yes {
+    background: rgba(46, 160, 67, 0.08);
+    border-color: var(--success);
+    color: var(--success);
+  }
+  .tag.no {
+    background: rgba(207, 34, 46, 0.06);
+    border-color: var(--error);
+    color: var(--error);
+    text-decoration: line-through;
+  }
+
+  /* ---- SVG ASSETS ---- */
+  .divider-showcase {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin: 32px 0;
+  }
+  .divider-demo { text-align: center; }
+  .divider-demo .demo-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--n400);
+    margin-bottom: 12px;
+  }
+  .divider-demo img { max-width: 100%; }
+  .divider-demo.on-dark {
+    background: var(--dark);
+    padding: 32px;
+    border-radius: 8px;
+  }
+
+  .pattern-demo {
+    height: 200px;
+    border-radius: 8px;
+    background-image: url('assets/pattern-tile.svg');
+    background-repeat: repeat;
+    background-size: 60px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 24px 0;
+    position: relative;
+  }
+  .pattern-demo .overlay-text {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+    text-shadow: 0 2px 20px rgba(10,22,40,0.8);
+  }
+
+  /* ---- SOURCING ---- */
+  .sourcing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 32px 0;
+  }
+  .platform-card {
+    border: 1px solid var(--n200);
+    border-radius: 8px;
+    padding: 20px;
+  }
+  .platform-card h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 4px;
+  }
+  .platform-card .type {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--brand-light);
+    margin-bottom: 8px;
+  }
+  .platform-card p {
+    font-size: 13px;
+    color: var(--n500);
+    line-height: 1.5;
+  }
+  .search-terms {
+    background: var(--n50);
+    border-radius: 8px;
+    padding: 24px 28px;
+    margin: 24px 0;
+  }
+  .search-terms h3 {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--brand);
+    margin-bottom: 12px;
+  }
+  .search-terms ul {
+    list-style: none;
+    columns: 2;
+    gap: 24px;
+  }
+  .search-terms li {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    color: var(--n600);
+    padding: 4px 0;
+    border-bottom: 1px solid var(--n100);
+  }
+  .search-terms li::before {
+    content: '>';
+    color: var(--accent);
+    margin-right: 8px;
+    font-weight: 700;
+  }
+
+  /* ---- FOOTER ---- */
+  .guide-footer {
+    background: var(--dark);
+    padding: 40px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+  }
+  .guide-footer .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .guide-footer .brand .strategic {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 10px;
+    color: var(--n500);
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+  }
+  .guide-footer .brand .slash {
+    width: 2px;
+    height: 20px;
+    background: var(--accent);
+    transform: rotate(-8deg);
+  }
+  .guide-footer .brand .name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+  }
+  .guide-footer .meta {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--n500);
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== HERO ========== -->
+<div class="hero">
+  <p class="hero-overline">Phase 4 / Imagery Direction</p>
+  <h1>Visual Language &amp; Imagery Guide</h1>
+  <p>Guidance for sourcing, processing, and applying photography and visual assets that reinforce the Strategic Popoltastic brand.</p>
+</div>
+
+<!-- ========== PHILOSOPHY ========== -->
+<section>
+  <p class="section-label">01 / Philosophy</p>
+  <h2>Imagery Philosophy</h2>
+  <p class="body">Strategic Popoltastic's imagery communicates authority, analytical precision, and the clarity of strategic insight. Every visual asset belongs in a boardroom-quality document — sophisticated, purposeful, and never decorative for its own sake.</p>
+
+  <div class="philosophy-statement">
+    <p>Our imagery is the visual equivalent of sharp strategic thinking: precise compositions, controlled palettes, and subjects that suggest navigation, game theory, and market intelligence. Every image earns its place — no filler.</p>
+  </div>
+
+  <p class="body">Two core metaphors anchor the visual language: <strong>Strategic Navigation</strong> (compasses, charts, cartography — "Read the market. Find your edge.") and <strong>Chess / Game Theory</strong> (boards, isolated pieces, game-in-progress — Popol's consulting world). Supporting themes of dark textures and geometric architecture complete the library.</p>
+</section>
+
+<!-- ========== VISUAL PRINCIPLES ========== -->
+<section>
+  <p class="section-label">02 / Visual Principles</p>
+  <h2>Four Pillars of Visual Language</h2>
+
+  <div class="principles-grid">
+    <div class="principle-card">
+      <div class="card-header"><h3>Subjects</h3></div>
+      <div class="card-body">
+        <p>Compasses, nautical charts, vintage cartography, chess pieces and boards, architectural geometry, dark stone and metal textures, horizon lines.</p>
+      </div>
+    </div>
+    <div class="principle-card">
+      <div class="card-header"><h3>Avoid</h3></div>
+      <div class="card-body">
+        <p>Stock handshakes, people smiling at laptops, generic office interiors, abstract colored gradients, cliche light bulbs, puzzle pieces, low-res imagery.</p>
+      </div>
+    </div>
+    <div class="principle-card">
+      <div class="card-header"><h3>Composition</h3></div>
+      <div class="card-body">
+        <p>Tight geometric crops. Strong leading lines. Rule of thirds or centered symmetry. Prefer 16:9 or 2:1 ratios. Negative space is a feature.</p>
+      </div>
+    </div>
+    <div class="principle-card">
+      <div class="card-header"><h3>Treatment</h3></div>
+      <div class="card-body">
+        <p>Desaturated with brand overlay. High contrast, deep shadows. Cool undertone trending toward navy. Vignette for hero images. Always processed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HERO IMAGE DEMO ========== -->
+<section>
+  <p class="section-label">03 / Hero Usage</p>
+  <h2>Images in Context</h2>
+  <p class="body">Brand-treated images work as full-bleed backgrounds with text overlay. The dark processing and brand overlay ensure sufficient contrast for white text.</p>
+
+  <div class="hero-showcase">
+    <img src="assets/images/compass-map-01.jpg" alt="Compass on vintage map">
+    <div class="overlay">
+      <span class="overline">Strategic Advisory</span>
+      <h2>Read the market.<br>Find your edge.</h2>
+      <p>Management consulting for organizations navigating complex competitive landscapes.</p>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px;">
+    <div class="hero-showcase" style="height: 240px;">
+      <img src="assets/images/chess-lineup-01.jpg" alt="Chess pieces">
+      <div class="overlay" style="padding: 40px;">
+        <span class="overline">Game Theory</span>
+        <h2 style="font-size: 28px;">Strategic Positioning</h2>
+      </div>
+    </div>
+    <div class="hero-showcase" style="height: 240px;">
+      <img src="assets/images/arch-geometric-01.jpg" alt="Architecture">
+      <div class="overlay" style="padding: 40px;">
+        <span class="overline">Structure</span>
+        <h2 style="font-size: 28px;">Built to Perform</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BEFORE / AFTER ========== -->
+<section>
+  <p class="section-label">04 / Processing</p>
+  <h2>Brand Treatment: Before &amp; After</h2>
+  <p class="body">Every sourced image passes through our sharp processing pipeline — desaturation, contrast boost, brand color overlay, and optional vignette. The result is a cohesive visual language regardless of source.</p>
+
+  <div class="before-after">
+    <div class="side">
+      <img src="assets/images/originals/compass-map-02.jpg" alt="Original">
+      <span class="label">Original</span>
+    </div>
+    <div class="side">
+      <img src="assets/images/compass-map-02.jpg" alt="Processed">
+      <span class="label">Brand Treatment</span>
+    </div>
+  </div>
+
+  <div class="before-after">
+    <div class="side">
+      <img src="assets/images/originals/chess-table-05.jpg" alt="Original">
+      <span class="label">Original</span>
+    </div>
+    <div class="side">
+      <img src="assets/images/chess-table-05.jpg" alt="Processed">
+      <span class="label">Brand Treatment</span>
+    </div>
+  </div>
+
+  <h3 style="margin-top: 32px;">Treatment Profiles</h3>
+  <table class="treatment-table">
+    <thead>
+      <tr>
+        <th>Profile</th>
+        <th>Saturation</th>
+        <th>Contrast</th>
+        <th>Overlay</th>
+        <th>Vignette</th>
+        <th>Use</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="profile-name">Navigation (warm)</td>
+        <td>-35%</td>
+        <td>1.12x</td>
+        <td>Dark navy 12%</td>
+        <td>Yes</td>
+        <td>Hero images, section openers</td>
+      </tr>
+      <tr>
+        <td class="profile-name">Chess (dramatic)</td>
+        <td>-50%</td>
+        <td>1.20x</td>
+        <td>Dark navy 18%</td>
+        <td>Yes</td>
+        <td>Statement slides, covers</td>
+      </tr>
+      <tr>
+        <td class="profile-name">Textures (background)</td>
+        <td>-45%</td>
+        <td>1.15x</td>
+        <td>Dark navy 20%</td>
+        <td>No</td>
+        <td>Slide backgrounds, cards</td>
+      </tr>
+      <tr>
+        <td class="profile-name">Architecture (blue)</td>
+        <td>-40%</td>
+        <td>1.18x</td>
+        <td>Brand blue 15%</td>
+        <td>Yes</td>
+        <td>Professional contexts, headers</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="recipe-block">
+    <h3>Sharp Processing Pipeline</h3>
+    <pre><span class="step-num">1.</span> Resize           <span class="step-value">1920px max width</span>           maintain aspect ratio
+<span class="step-num">2.</span> Desaturate       <span class="step-value">-35% to -50%</span>               pull color back, let structure dominate
+<span class="step-num">3.</span> Contrast          <span class="step-value">1.12x to 1.20x linear</span>     sharpen tonal separation
+<span class="step-num">4.</span> Color overlay     <span class="step-value">#0A1628 or #1B3A5C</span>        SVG multiply blend at 12-20% opacity
+<span class="step-num">5.</span> Vignette          <span class="step-value">radial gradient</span>            optional — edges to dark at 40% opacity
+<span class="step-num">6.</span> Export            <span class="step-value">JPEG quality 85</span>            optimized file size</pre>
+  </div>
+</section>
+
+<!-- ========== IMAGE LIBRARY ========== -->
+<section>
+  <p class="section-label">05 / Image Library</p>
+  <h2>Curated Image Library — 21 Images</h2>
+  <p class="body">All images sourced from Unsplash, processed with brand treatment, and organized by theme. Click any image to toggle original/processed.</p>
+
+  <!-- Navigation -->
+  <div class="category-section cat-nav">
+    <div class="category-header"><h3>Strategic Navigation</h3></div>
+    <p class="category-meta">5 images · <strong>Warm vintage treatment</strong> · Compasses, charts, cartography · Ties to "Read the market. Find your edge."</p>
+    <div class="image-grid">
+      <div class="image-card" onclick="this.classList.toggle('show-original')">
+        <img class="processed" src="assets/images/compass-map-01.jpg" alt="Compass on vintage map">
+        <img class="original" src="assets/images/originals/compass-map-01.jpg" alt="Original">
+        <span class="compare">ORIGINAL</span>
+        <div class="img-meta">
+          <span class="img-name">compass-map-01.jpg</span>
+          <span class="img-treatment">sat -35% · vignette</span>
+        </div>
+      </div>
+      <div class="image-card" onclick="this.classList.toggle('show-original')">
+        <img class="processed" src="assets/images/compass-map-02.jpg" alt="Compass with ruler on map">
+        <img class="original" src="assets/images/originals/compass-map-02.jpg" alt="Original">
+        <span class="compare">ORIGINAL</span>
+        <div class="img-meta">
+          <span class="img-name">compass-map-02.jpg</span>
+          <span class="img-treatment">sat -35% · vignette</span>
+        </div>
+      </div>
+      <div class="image-card" onclick="this.classList.toggle('show-original')">
+        <img class="processed" src="assets/images/compass-rose-03.jpg" alt="Wind direction compass rose">
+        <img class="original" src="assets/images/originals/compass-rose-03.jpg" alt="Original">
+        <span class="compare">ORIGINAL</span>
+        <div class="img-meta">
+          <span class="img-name">compass-rose-03.jpg</span>
+          <span class="img-treatment">sat -35% · vignette</span>
+        </div>
+      </div>
+      <div class="image-card" onclick="this.classList.toggle('show-original')">
+        <img class="processed" src="assets/images/globe-04.jpg" alt="Antique globe">
+        <img class="original" src="assets/images/originals/globe-04.jpg" alt="Original">
+        <span class="compare">ORIGINAL</span>
+        <div class="img-meta">
+          <span class="img-name">globe-04.jpg</span>
+          <span class="img-treatment">sat -35% · vignette</span>
+        </div>
+      </div>
+      <div class="image-card" onclick="this.classList.toggle('show-original')">
+        <img class="processed" src="assets/images/vintage-map-05.jpg" alt="Vintage arctic map">
+        <img class="original" src="assets/images/originals/vintage-map-05.jpg" alt="Original">
+        <span class="compare">ORIGINAL</span>
+        <div class="img-meta">
+          <span class="img-name">vintage-map-05.jpg</span>
+          <span class="img-treatment">sat -35% · vignette</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chess -->
+  <div class="category-section cat-chess">
+    <div class="category-header"><h3>Chess / Game Theory</h3></div>
+    <p class="category-meta">5 images · <strong>Dramatic treatment</strong> · Heavy desaturation, strong contrast · Classic strategy metaphor</p>
+    <div class="image-grid">
+      <div class="image-card" onclick="this.classList.toggle('show-original')">
+        <img class="processed" src="assets/images/chess-lineup-01.jpg" alt="Chess pieces in dramatic light">
+        <img class="original" src="assets/images/originals/chess-lineup-01.jpg" alt="Original">
+        <span class="compare">ORIGINAL</span>
+        <div class="img-meta">
+          <span class="img-name">chess-lineup-01.jpg</span>
+          <span class="img-treatment">sat -50% · contrast 1.2 · vignette</span>
+        </div>
+      </div>
+      <div class="image-card" onclick="this.classList.toggle('show-original')">
+        <img class="processed" src="assets/images/chess-board-02.jpg" alt="Chess pieces on board">
+        <img class="original" src="assets/images/originals/chess-board-02.jpg" alt="Original">
+        <span class="compare">ORIGINAL</span>
+        <div class="img-meta">
+          <span class="img-name">chess-board-02.jpg</span>
+          <span class="img-treatment">sat -50% · contrast 1.2 · vignette</span>
+        </div>
+      </div>
+      <div class="image-card" onclick="this.classList.toggle('show-original')">
+        <img class="processed" src="assets/images/chess-checkmate-03.jpg" alt="Checkmate position">
+        <img class="original" src="assets/images/originals/chess-checkmate-03.jpg" alt="Original">
+        <span class="compare">ORIGINAL</span>
+        <div class="img-meta">
+          <span class="img-name">chess-checkmate-03.jpg</span>
+          <span class="img-treatment">sat -50% · contrast 1.2 · vignette</span>
+        </div>
+      </div>
+      <div class="image-card" onclick="this.classList.toggle('show-original')">
+        <img class="processed" src="assets/images/chess-corner-04.jpg" alt="Chess corner perspective">
+        <img class="original" src="assets/images/originals/chess-corner-04.jpg" alt="Original">
+        <span class="compare">ORIGINAL</span>
+        <div class="img-meta">
+          <span class="img-name">chess-corner-04.jpg</span>
+          <span class="img-treatment">sat -50% · contrast 1.2 · vignette</span>
+        </div>
+      </div>
+      <div class="image-card" onclick="this.classList.toggle('show-original')">
+        <img class="processed" src="assets/images/chess-table-05.jpg" alt="Chess on wooden table">
+        <img class="original" src="assets/images/originals/chess-table-05.jpg" alt="Original">
+        <span class="compare">ORIGINAL</span>
+        <div class="img-meta">
+          <span class="img-name">chess-table-05.jpg</span>
+          <span class="img-treatment">sat -50% · contrast 1.2 · vignette</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Textures -->
+  <div class="category-section cat-tex">
+    <div class="category-header"><h3>Dark Textures</h3></div>
+    <p class="category-meta">6 images · <strong>Background-ready treatment</strong> · Heavy overlay, no vignette · Slide and section backgrounds</p>
+    <div class="image-grid">
+      <div class="image-card" onclick="this.classList.toggle('show-original')">
+        <img class="processed" src="assets/images/dark-marble-01.jpg" alt="Black marble">
+        <img class="original" src="assets/images/originals/dark-marble-01.jpg" alt="Original">
+        <span class="compare">ORIGINAL</span>
+        <div class="img-meta">
+          <span class="img-name">dark-marble-01.jpg</span>
+          <span class="img-treatment">sat -45% · overlay 20%</span>
+        </div>
+      </div>
+      <div class="image-card" onclick="this.classList.toggle('show-original')">
+        <img class="processed" src="assets/images/dark-abstract-02.jpg" alt="Abstract dark gradient">
+        <img class="original" src="assets/images/originals/dark-abstract-02.jpg" alt="Original">
+        <span class="compare">ORIGINAL</span>
+        <div class="img-meta">
+          <span class="img-name">dark-abstract-02.jpg</span>
+          <span class="img-treatment">sat -45% · overlay 20%</span>
+        </div>
+      </div>
+      <div class="image-card" onclick="this.classList.toggle('show-original')">
+        <img class="processed" src="assets/images/dark-stone-03.jpg" alt="Dark stone surface">
+        <img class="original" src="assets/images/originals/dark-stone-03.jpg" alt="Original">
+        <span class="compare">ORIGINAL</span>
+        <div class="img-meta">
+          <span class="img-name">dark-stone-03.jpg</span>
+          <span class="img-treatment">sat -45% · overlay 20%</span>
+        </div>
+      </div>
+      <div class="image-card" onclick="this.classList.toggle('show-original')">
+        <img class="processed" src="assets/images/brushed-metal-04.jpg" alt="Brushed metal">
+        <img class="original" src="assets/images/originals/brushed-metal-04.jpg" alt="Original">
+        <span class="compare">ORIGINAL</span>
+        <div class="img-meta">
+          <span class="img-name">brushed-metal-04.jpg</span>
+          <span class="img-treatment">sat -45% · overlay 20%</span>
+        </div>
+      </div>
+      <div class="image-card" onclick="this.classList.toggle('show-original')">
+        <img class="processed" src="assets/images/concrete-05.jpg" alt="Concrete wall">
+        <img class="original" src="assets/images/originals/concrete-05.jpg" alt="Original">
+        <span class="compare">ORIGINAL</span>
+        <div class="img-meta">
+          <span class="img-name">concrete-05.jpg</span>
+          <span class="img-treatment">sat -45% · overlay 20%</span>
+        </div>
+      </div>
+      <div class="image-card" onclick="this.classList.toggle('show-original')">
+        <img class="processed" src="assets/images/dark-brick-06.jpg" alt="Dark brick with skylight">
+        <img class="original" src="assets/images/originals/dark-brick-06.jpg" alt="Original">
+        <span class="compare">ORIGINAL</span>
+        <div class="img-meta">
+          <span class="img-name">dark-brick-06.jpg</span>
+          <span class="img-treatment">sat -45% · overlay 20%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Architecture -->
+  <div class="category-section cat-arch">
+    <div class="category-header"><h3>Architecture</h3></div>
+    <p class="category-meta">5 images · <strong>Brand blue overlay</strong> · Cool corporate tone, strong contrast · Geometric precision</p>
+    <div class="image-grid">
+      <div class="image-card" onclick="this.classList.toggle('show-original')">
+        <img class="processed" src="assets/images/arch-geometric-01.jpg" alt="Geometric window patterns">
+        <img class="original" src="assets/images/originals/arch-geometric-01.jpg" alt="Original">
+        <span class="compare">ORIGINAL</span>
+        <div class="img-meta">
+          <span class="img-name">arch-geometric-01.jpg</span>
+          <span class="img-treatment">sat -40% · blue overlay · vignette</span>
+        </div>
+      </div>
+      <div class="image-card" onclick="this.classList.toggle('show-original')">
+        <img class="processed" src="assets/images/arch-corner-02.jpg" alt="Modern building corner">
+        <img class="original" src="assets/images/originals/arch-corner-02.jpg" alt="Original">
+        <span class="compare">ORIGINAL</span>
+        <div class="img-meta">
+          <span class="img-name">arch-corner-02.jpg</span>
+          <span class="img-treatment">sat -40% · blue overlay · vignette</span>
+        </div>
+      </div>
+      <div class="image-card" onclick="this.classList.toggle('show-original')">
+        <img class="processed" src="assets/images/arch-curved-03.jpg" alt="Curved metallic roof">
+        <img class="original" src="assets/images/originals/arch-curved-03.jpg" alt="Original">
+        <span class="compare">ORIGINAL</span>
+        <div class="img-meta">
+          <span class="img-name">arch-curved-03.jpg</span>
+          <span class="img-treatment">sat -40% · blue overlay · vignette</span>
+        </div>
+      </div>
+      <div class="image-card" onclick="this.classList.toggle('show-original')">
+        <img class="processed" src="assets/images/arch-triangular-04.jpg" alt="Triangular windows">
+        <img class="original" src="assets/images/originals/arch-triangular-04.jpg" alt="Original">
+        <span class="compare">ORIGINAL</span>
+        <div class="img-meta">
+          <span class="img-name">arch-triangular-04.jpg</span>
+          <span class="img-treatment">sat -40% · blue overlay · vignette</span>
+        </div>
+      </div>
+      <div class="image-card" onclick="this.classList.toggle('show-original')">
+        <img class="processed" src="assets/images/arch-futuristic-05.jpg" alt="Futuristic architecture">
+        <img class="original" src="assets/images/originals/arch-futuristic-05.jpg" alt="Original">
+        <span class="compare">ORIGINAL</span>
+        <div class="img-meta">
+          <span class="img-name">arch-futuristic-05.jpg</span>
+          <span class="img-treatment">sat -40% · blue overlay · vignette</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== KEYWORDS ========== -->
+<section>
+  <p class="section-label">06 / Keywords</p>
+  <h2>Visual Vocabulary</h2>
+  <p class="body">Use these keywords when briefing photographers, searching stock libraries, or evaluating imagery for brand fit.</p>
+
+  <div class="keyword-section">
+    <div class="keyword-group">
+      <h3 style="color: var(--success);">Use These</h3>
+      <div class="tag-cloud">
+        <span class="tag yes">compass</span>
+        <span class="tag yes">nautical chart</span>
+        <span class="tag yes">cartography</span>
+        <span class="tag yes">chess</span>
+        <span class="tag yes">game theory</span>
+        <span class="tag yes">architectural</span>
+        <span class="tag yes">geometric</span>
+        <span class="tag yes">dark minimal</span>
+        <span class="tag yes">high contrast</span>
+        <span class="tag yes">navigational</span>
+        <span class="tag yes">vintage map</span>
+        <span class="tag yes">strategic</span>
+        <span class="tag yes">editorial</span>
+        <span class="tag yes">boardroom</span>
+        <span class="tag yes">dark texture</span>
+        <span class="tag yes">marble stone</span>
+      </div>
+    </div>
+    <div class="keyword-group">
+      <h3 style="color: var(--error);">Never Use</h3>
+      <div class="tag-cloud">
+        <span class="tag no">handshake</span>
+        <span class="tag no">smiling at laptop</span>
+        <span class="tag no">generic office</span>
+        <span class="tag no">abstract gradient</span>
+        <span class="tag no">light bulb</span>
+        <span class="tag no">puzzle pieces</span>
+        <span class="tag no">thumbs up</span>
+        <span class="tag no">target dartboard</span>
+        <span class="tag no">gears cogs</span>
+        <span class="tag no">neon colors</span>
+        <span class="tag no">clip art</span>
+        <span class="tag no">globe earth</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SVG ASSETS ========== -->
+<section>
+  <p class="section-label">07 / Brand Assets</p>
+  <h2>SVG Divider &amp; Pattern Assets</h2>
+  <p class="body">Reusable SVG elements extending the Edge motif across documents, slides, and web properties.</p>
+
+  <div class="divider-showcase">
+    <div class="divider-demo">
+      <p class="demo-label">Full-Width Divider</p>
+      <img src="assets/divider-full.svg" alt="Full-width divider">
+      <p style="font-size: 12px; color: var(--n400); margin-top: 8px; font-family: 'Space Mono', monospace;">assets/divider-full.svg — Section separators, report breaks</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+      <div class="divider-demo">
+        <p class="demo-label">Short Divider</p>
+        <div style="padding: 20px 0; display: flex; justify-content: center;">
+          <img src="assets/divider-short.svg" alt="Short divider" style="width: 120px;">
+        </div>
+        <p style="font-size: 12px; color: var(--n400); font-family: 'Space Mono', monospace;">assets/divider-short.svg — Headers, sub-sections</p>
+      </div>
+      <div class="divider-demo">
+        <p class="demo-label">Minimal Divider</p>
+        <div style="padding: 20px 0; display: flex; justify-content: center;">
+          <img src="assets/divider-minimal.svg" alt="Minimal divider" style="width: 20px; height: 24px;">
+        </div>
+        <p style="font-size: 12px; color: var(--n400); font-family: 'Space Mono', monospace;">assets/divider-minimal.svg — Email sigs, tight spaces</p>
+      </div>
+    </div>
+
+    <div class="divider-demo on-dark">
+      <p class="demo-label" style="color: var(--n400);">Full-Width Divider — On Dark</p>
+      <img src="assets/divider-full.svg" alt="Divider on dark" style="filter: brightness(1.3);">
+    </div>
+  </div>
+
+  <h3 style="margin-top: 32px;">Pattern Tile</h3>
+  <p class="body">A repeating 60x60 SVG tile for dark backgrounds. Subtle diagonal lines echoing the Edge slash motif with low-opacity ice blue accent dots.</p>
+
+  <div class="pattern-demo">
+    <span class="overlay-text">Background Pattern<br><span style="font-size: 14px; font-weight: 400; color: var(--n300);">assets/pattern-tile.svg at 60x60 repeat</span></span>
+  </div>
+
+  <div style="background: var(--n50); border-radius: 8px; padding: 20px 24px; margin-top: 16px;">
+    <h3 style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--brand); margin-bottom: 8px;">CSS Usage</h3>
+    <pre style="font-family: 'Space Mono', monospace; font-size: 13px; color: var(--n600); line-height: 1.8;">background-image: url('assets/pattern-tile.svg');
+background-repeat: repeat;
+background-size: 60px 60px;</pre>
+  </div>
+</section>
+
+<!-- ========== SOURCING ========== -->
+<section>
+  <p class="section-label">08 / Sourcing</p>
+  <h2>Image Sourcing Platforms</h2>
+
+  <div class="sourcing-grid">
+    <div class="platform-card">
+      <h4>Unsplash</h4>
+      <p class="type">Free / High Quality</p>
+      <p>Primary source for this brand. Excellent compasses, chess, architecture, and texture photography. Strong geometric/minimal collections.</p>
+    </div>
+    <div class="platform-card">
+      <h4>Pexels</h4>
+      <p class="type">Free / Wide Variety</p>
+      <p>Good supplemental source for textures, chess closeups, and abstract dark backgrounds.</p>
+    </div>
+    <div class="platform-card">
+      <h4>Stocksy</h4>
+      <p class="type">Paid / Editorial</p>
+      <p>Curated editorial quality. Premium option for client-facing hero images where imagery quality is paramount.</p>
+    </div>
+  </div>
+
+  <div class="search-terms">
+    <h3>Recommended Search Terms</h3>
+    <ul>
+      <li>compass vintage map cartography</li>
+      <li>nautical chart navigation instruments</li>
+      <li>chess pieces dramatic lighting</li>
+      <li>chess board overhead strategy</li>
+      <li>dark marble texture luxury</li>
+      <li>architectural facade geometric</li>
+      <li>brushed metal dark texture</li>
+      <li>concrete minimal dark surface</li>
+      <li>modern architecture abstract</li>
+      <li>vintage globe antique</li>
+      <li>dark stone surface texture</li>
+      <li>building geometric pattern facade</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<div class="guide-footer">
+  <div class="brand">
+    <span class="strategic">STRATEGIC</span>
+    <div class="slash"></div>
+    <span class="name">Popoltastic</span>
+  </div>
+  <span class="meta">Imagery Direction Guide v2.0 — March 2026 — 21 images, 4 themes</span>
+</div>
+
+</body>
+</html>

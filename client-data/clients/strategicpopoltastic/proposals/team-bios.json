@@ -1,0 +1,21 @@
+[
+  {
+    "id": "person-001",
+    "name": "Paul-Mattias Reitsma",
+    "title": "Founder & Managing Partner",
+    "bio": "Paul-Mattias brings a distinctive combination of academic depth and consulting pragmatism to every engagement. With a background in Theology, Hermeneutics and Leadership from the Universities of Amsterdam, Leuven and Oxford, he approaches strategy through a uniquely human lens — understanding that organizations are shaped by the stories they tell themselves as much as by their market position.\n\nHaving lived in 7 countries and fluent in Dutch, English and Spanish, Paul-Mattias works across cultural contexts with ease. His consulting career spans strategy reassessments for manufacturing companies, social impact strategy for international banks, cultural transformation programs, and executive advisory roles in automotive and financial services.\n\nHe is a certified DISC trainer and Perform Plus coach, and a recognized expert in the Rule of Three strategic framework — applying rigorous market structure analysis to help mid-market companies identify whether they should compete as generalists or specialists, and how to position accordingly.",
+    "expertise": ["Strategy audits & reassessments", "Rule of Three market positioning", "Change management & cultural transformation", "Leadership coaching & organizational development", "Stakeholder interviews & group dynamics"],
+    "certifications": ["Certified DISC Trainer", "Certified Perform Plus Coach"],
+    "education": ["University of Amsterdam", "KU Leuven", "University of Oxford"],
+    "languages": ["Dutch", "English", "Spanish"]
+  },
+  {
+    "id": "person-002",
+    "name": "William Masquelier",
+    "title": "Data Analyst & Research Associate",
+    "bio": "William specializes in translating complex datasets into actionable strategic insights. With a foundation from Erasmus University Rotterdam, he develops analytical frameworks that combine traditional statistical methods with AI-driven models to support evidence-based strategy decisions.\n\nHis role at Strategic Popoltastic centers on the quantitative backbone of strategy engagements — market analysis, competitive benchmarking, documentation assessment scoring, and data-driven recommendation frameworks. William ensures that every strategic recommendation is grounded in data, not just intuition.",
+    "expertise": ["Data analysis & statistical methods", "AI-driven analytical models", "Market research & competitive benchmarking", "Strategic insight distillation", "Documentation assessment frameworks"],
+    "certifications": ["Oracle SCM Transportation & Global Trade Management Cloud 2022 Implementer", "Scrum Master Certified (SMC)", "Oracle Inventory Cloud 2022 Certified Implementation Specialist"],
+    "education": ["Erasmus University Rotterdam"]
+  }
+]
