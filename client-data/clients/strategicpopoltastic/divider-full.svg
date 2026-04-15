@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 24" fill="none">
-  <!-- Full-width divider: The Edge motif — diagonal gold slash with extending lines -->
-  <line x1="0" y1="12" x2="440" y2="12" stroke="#C9D1D9" stroke-width="1"/>
-  <line x1="448" y1="2" x2="456" y2="22" stroke="#7FB3D3" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="464" y1="12" x2="960" y2="12" stroke="#C9D1D9" stroke-width="1"/>
-</svg>
