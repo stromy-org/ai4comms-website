@@ -41,9 +41,13 @@
   },
   "logo": {
     "primary": "logos/ai4comms-logo-primary.svg",
+    "png": "logos/ai4comms-logo-primary.png",
     "white": "logos/ai4comms-logo-white.svg",
+    "whitePng": "logos/ai4comms-logo-white.png",
     "icon": "logos/ai4comms-logo-square.svg",
+    "iconPng": "logos/ai4comms-logo-square.png",
     "mark": "logos/ai4comms-logo-mark.svg",
+    "markPng": "logos/ai4comms-logo-mark.png",
     "maxWidth": "140pt",
     "maxHeight": "52pt",
     "sizing": "contain"
