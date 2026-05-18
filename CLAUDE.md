@@ -1,16 +1,12 @@
-# CLAUDE.md
+<!--
+  GENERATED FILE — DO NOT EDIT.
+  Source of truth: AGENTS.md (cross-vendor standard).
+  Override file:   .agent-overrides/claude.md (optional, appended below)
+  Regenerate with: scripts/render-agent-md.py
+-->
 
-<!-- Placeholder — the website-builder skill will generate comprehensive instructions -->
+# AGENTS.md
 
-## Project Overview
+<!-- Placeholder — the website-builder skill will generate self-contained instructions -->
 
-AI4comms corporate website — Astro 6, MDX, Tailwind CSS 4.
-
-## Commands
-
-```bash
-npm run dev     # Dev server (localhost:4321)
-npm run build   # Token generation + production build
-npm run tokens  # Regenerate brand tokens from client-data charter.json
-npm run check   # Astro TypeScript check
-```
+AI4comms corporate website.
