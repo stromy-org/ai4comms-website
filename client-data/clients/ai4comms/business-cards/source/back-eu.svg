@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="91mm" height="61mm" viewBox="0 0 91 61">
+  <!-- AI4comms — business card BACK (deep green). EU bleed box 91x61mm; trim 85x55 inset 3mm. -->
+  <rect width="91" height="61" fill="#15311A"/>
+  <!-- Sage keyline accent, top-right -->
+  <rect x="74" y="13" width="10" height="6.5" rx="1.4" fill="none" stroke="#9EC187" stroke-width="0.7"/>
+  <!-- Wordmark: white "AI", sage "4", white "comms" -->
+  <text x="11" y="27" font-family="Montserrat, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="7"><tspan fill="#FFFFFF">AI</tspan><tspan fill="#9EC187">4</tspan><tspan fill="#FFFFFF">comms</tspan></text>
+  <text x="11" y="32.5" fill="#9EC187" font-family="Montserrat, 'Helvetica Neue', Arial, sans-serif" font-size="2.2" letter-spacing="0.4">AI ENABLEMENT FOR COMMUNICATIONS</text>
+  <!-- Tagline (NL), sage emphasis -->
+  <text x="11" y="46" fill="#FFFFFF" font-family="Montserrat, 'Helvetica Neue', Arial, sans-serif" font-weight="500" font-size="3.4">Kies voor AI als <tspan fill="#9EC187">partner</tspan>,</text>
+  <text x="11" y="50.6" fill="#FFFFFF" font-family="Montserrat, 'Helvetica Neue', Arial, sans-serif" font-weight="500" font-size="3.4">niet als vervanger.</text>
+  <text x="11" y="55.8" fill="#9EC187" font-family="Montserrat, 'Helvetica Neue', Arial, sans-serif" font-size="2.3">ai4-comms.com</text>
+</svg>
