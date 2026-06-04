@@ -39,7 +39,9 @@ into `<stromy-org>/.claude/skills/brand-builder/assets/icc/` and re-run with
 `--icc-target eu`. Always confirm the standard/profile the chosen print house
 prefers.
 
-Emails follow the verified `firstname.lastname@ai4-comms.com` pattern; phone
-numbers are placeholders (`+31 (0) — — —`) — fill in before printing.
+Emails follow the `firstname.lastname@ai4-comms.com` pattern, except William,
+who uses his Stromy address (`william.masquelier@stromy.com.au`) by request.
+Direct lines: William +32 479 83 72 97, Emma +31 6 22 00 94 23,
+Ingo +31 6 55 86 79 04, Arien +31 6 21 53 12 33.
 
 Requires `brew install librsvg ghostscript` (native tools, operator-local).

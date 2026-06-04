@@ -273,7 +273,7 @@
       "letterhead": "templates/docx/letterhead.docx"
     },
     "html": {
-      "business-cards": "templates/html/business-cards.html",
+      "business-cards": "business-cards/review/business-cards.html",
       "email-signature": "templates/html/email-signature.html"
     }
   },
