@@ -1,186 +1,176 @@
 # AI4comms Brand Guidelines
 
-**Direction:** Signal Authority · **Archetype:** Magician (primary) + Ruler (secondary)
-**Refreshed:** 2026-04-05
+**Direction:** Practical AI enablement partner · **Archetype:** Sage (primary) + Caregiver (secondary)
+**Locale:** Dutch (NL-NL) primary, English secondary
+**Refreshed:** 2026-05-18 — realigned to deployed identity at ai4-comms.com
 
-AI4comms is the advisory and enablement partner that turns AI from abstract hype into usable operating practice for communications leaders. The refreshed identity expresses that mission through a dark-first, tech-forward system built around a single metaphor: **signal through the noise**.
+AI4comms helps communications professionals make AI usable in daily practice. The identity is grounded, accessible, and serviceable — closer to a trusted colleague than a premium consultancy. This refresh replaces the earlier aspirational "Signal Authority" system (archived at `.build-history/aspirational-2026-04-05/`) with a brand that matches what is actually deployed at ai4-comms.com.
 
 ---
 
 ## 1. Brand Foundation
 
 ### Essence
-AI4comms helps communications leaders make AI practical — turning noise into signal so teams can work with more clarity, speed, and judgment.
+AI4comms turns AI from abstract hype into usable operating practice for communications teams — in Dutch, on the ground, one routekaart at a time.
 
 ### Positioning
-For communications leaders under pressure to adopt AI responsibly, AI4comms is the advisory and enablement partner that turns AI hype into usable operating practice — delivering strategic clarity, team confidence, and credible implementation.
+For Dutch-speaking communications professionals under pressure to adopt AI responsibly, AI4comms is the enablement partner that translates AI tooling into practical routines — so teams gain impact without losing their craft or their judgment.
 
 ### Tagline
-**Signal through the noise.**
+- **Primary (NL):** Kies voor AI als partner, niet als vervanger
+- **English equivalent:** Choose AI as a partner, not a replacement
 
 ### Personality
-- **Precise** — every word earns its place
-- **Grounded** — senior, calm, never hyped
-- **Challenging** — pushes leaders to act
-- **Practical** — outcomes over theory
-- **Assured** — authority without arrogance
+- **Practical** — outcomes over theory, every concept has a hands-on next step
+- **Approachable** — explains rather than impresses
+- **Grounded** — senior judgment, no hype, no jargon for jargon's sake
+- **Patient** — meets teams where they are; trusts the routekaart
+- **Trustworthy** — calm, clear, accountable
 
 ### Archetype
-- **Primary — Magician:** we transform chaos into clarity; we make the invisible visible
-- **Secondary — Ruler:** we bring structure, standards, and accountability to AI adoption
+- **Primary — Sage:** we understand AI and translate it honestly; mastery in service of understanding
+- **Secondary — Caregiver:** we make adoption feel safe and supported; we protect the team's craft and time
 
 ---
 
 ## 2. Voice & Tone
 
-Write like a senior communications adviser who understands how messy real adoption is.
+Write like a senior adviser who is a peer, not a guru. In Dutch, default to professional but not stiff (`u`/`je` follows the client's own usage — the live site uses `je`/`jullie`).
 
 **Core rules:**
-- Lead with the point, not the setup
+- Lead with the point, then explain
 - Short, scannable sentences
-- Concrete nouns; verbs that do work
-- Name trade-offs, don't sell certainty
-- Never "revolutionary", "game-changing", "unlock", "empower"
+- Use the team's language ("communicatieprofessionals", "communicatieteam", "routekaart")
+- Concrete examples beat abstractions
+- Ask honest rhetorical questions; answer them plainly
+- Never oversell AI; never undersell the team's existing craft
 
-**Voice test — same message, our voice vs. not:**
+**Do:**
+- "AI-oplossingen op maat voor communicatieprofessionals"
+- "Onze werkwijze: de AI-routekaart"
+- "Resultaat: een communicatieteam met meer impact"
 
-| ✓ Signal Authority | ✗ Generic AI hype |
-|---|---|
-| "Here's what to do on Monday." | "Unlock the power of AI-driven transformation." |
-| "Three teams tried this. Two worked. Here's why." | "Leverage cutting-edge insights to revolutionize your comms." |
+**Don't:**
+- "Signal through the noise" — too abstract for the deployed audience
+- "Transform your communications" — empty buzz
+- "Disrupt", "revolutionize", "leverage" — wrong register
 
 ---
 
 ## 3. Logo
 
-The AI4comms wordmark is unchanged structurally; only the highlight color has evolved.
+The deployed brand has **one logo variant**: a green wordmark on light backgrounds.
 
-### Variants
-| Variant | File | Use |
-|---|---|---|
-| Primary (dark on light) | `logos/ai4comms-logo-primary.svg` | Light backgrounds |
-| White (light on dark) | `logos/ai4comms-logo-white.svg` | Dark backgrounds — **default** |
-| Mark (AI4) | `logos/ai4comms-logo-mark.svg` | Compact applications, favicons |
-| Square / icon | `logos/ai4comms-logo-square.svg` | App icons, social avatars |
+| File | Use |
+|---|---|
+| `logos/ai4comms-logo-primary.svg` | Primary lockup, all light-background uses (web, docs, decks, signature) |
+| `logos/ai4comms-logo-primary.png` | Raster fallback (1500×966 source) |
+| `logos/ai4comms-favicon-192.png` | Favicon / app tile (192px) |
+| `logos/ai4comms-favicon-180.png` | apple-touch-icon (180px) |
 
-### Rules
-- The **"4"** is always `#B8D88A` (Sage+). Never recolor it.
-- The wordmark sits in Space Grotesk — do not re-typeset in another font.
-- Minimum clear space: the height of the "4" on every side.
-- Minimum width: 96px digital, 24mm print.
-- On imagery: always use the white variant with a ≥55% Midnight overlay.
-- **Don't:** stretch, outline, add drop shadows, rotate, or place on a busy background without overlay.
+**Clear space:** maintain at least the height of the "A" in "AI4comms" on all sides.
+**Minimum size:** 96px wide on screen, 24mm wide in print.
+
+**Not yet deployed (do not invent):**
+- White-on-dark variant — the live site never places the logo on dark surfaces. If a dark surface is unavoidable, use the brand-canopy `#15311A` as the surface (matches the wordmark color), or commission a proper white variant before shipping.
+- Icon-only mark / square mark — not deployed. Use the favicon PNGs for sub-32px contexts.
 
 ---
 
-## 4. Color System
+## 4. Color Palette
 
-AI4comms is **dark-first**. Midnight is the default background. ~30-40% of surfaces are deliberately light for contrast and rhythm.
-
-### Primary palette
-
-| Name | Hex | Role |
+| Token | Hex | Role |
 |---|---|---|
-| Midnight | `#0C1410` | Primary dark surface |
-| Canopy | `#15311A` | Deep brand green |
-| Pine | `#1F4A2A` | Mid brand green |
-| Fern | `#3B7A4E` | Active / hover |
-| Sage+ | `#B8D88A` | Accent highlight (logo "4") |
-| Phosphor | `#44E88A` | Signal / live accent |
-| Paper | `#F4F6F1` | Warm off-white |
-| White | `#FFFFFF` | Pure white |
+| Canopy | `#15311A` | Primary — logo, headings on light, primary CTA |
+| Pine | `#214C28` | Secondary — gradient depth, hover states, secondary CTA |
+| Sage | `#9EC187` | Accent — highlights, rules, active indicators, sparing use |
+| White | `#FFFFFF` | Primary surface |
+| Paper | `#F8FAFC` | Secondary surface (section bands, cards) |
+| Mist | `#ECECEC` | Tertiary surface (gradient end, table headers) |
+| Ink | `#1F1F1F` | Body text |
+| Ink-light | `#4E4E4E` | Muted text, captions |
 
-### Extended scales
-- **Pine scale:** 50–900, for brand greens in layouts and UI states
-- **Phosphor scale:** 50–900, for the signal accent and data highlights
-- **Neutral scale:** 0–950, green-tinted warm grays, 12 stops
+**Header gradient** (matches deployed): `linear-gradient(135deg, #F8FAFC 0%, #ECECEC 100%)`.
 
-### Semantic colors (palette-aligned, muted)
-| Token | Hex | Light variant |
-|---|---|---|
-| Success | `#3B7A4E` | `#E2F0E6` |
-| Warning | `#C89B3E` | `#F6ECD4` |
-| Error | `#B85648` | `#F3DCD7` |
-| Info | `#5A7F9A` | `#E1E9F0` |
+**Mode:** light-first. Dark sections are allowed but should be the exception, not the rule — and they MUST use `#15311A` (canopy) as the background, never near-black.
 
-### Color rules
-- **Do** default to Midnight backgrounds. Use Paper sparingly as a contrasting surface.
-- **Do** reserve Phosphor for signal moments: live data, CTAs, active cursors, highlights.
-- **Don't** use Phosphor as a background fill — it's a pointer, not a wall.
-- **Don't** mix Sage+ and Phosphor as adjacent fills; they live on different layers (wordmark vs. UI signal).
+**Semantic colors:** `success #3B7A4E`, `warning #C89B3E`, `error #B85648`, `info #4F6F3D`.
 
 ---
 
 ## 5. Typography
 
-| Role | Font | Weights | Use |
-|---|---|---|---|
-| Display | **Syne** | 500–800 | Headlines, slide titles, big numbers |
-| Body | **Inter** | 400–700 | Paragraphs, UI, captions |
-| Data/Meta | **JetBrains Mono** | 400–600 | Overlines, tags, metrics, code, labels |
-| Logo | Space Grotesk | 700 | Logo only — never for copy |
+**Typeface:** Montserrat for everything (heading + body), matching the deployed Divi global font settings. JetBrains Mono is retained for code blocks (not used on the deployed site, but reserved for technical deliverables).
 
-### Type scale
-| Token | Size | Typical use |
-|---|---|---|
-| display-xl | 72px | Hero, cover |
-| display-lg | 52px | Section titles |
-| display-md | 36px | Slide titles |
-| display-sm | 26px | Sub-titles |
-| heading | 20px | Card headings |
-| body-lg | 17px | Lead paragraphs |
-| body | 15px | Default body |
-| body-sm | 13px | Captions |
-| overline | 11px | Kicker labels (mono, uppercase, tracking 0.18em) |
+| Use | Family | Weight | Size | Line-height |
+|---|---|---|---|---|
+| Display | Montserrat | 700 | 56–72px | 1.2 |
+| H1 | Montserrat | 700 | 44px | 1.2 |
+| H2 | Montserrat | 700 | 34px | 1.25 |
+| H3 | Montserrat | 600 | 22px | 1.3 |
+| Body | Montserrat | 400 | 14px | 1.7 |
+| Caption | Montserrat | 400 | 12–13px | 1.5 |
+| Overline | Montserrat | 600 | 12px | 1.3, tracked 0.12em uppercase |
 
-### Rules
-- Pair **Syne Bold** (display) + **Inter Regular** (body). Never use Syne for long-form copy.
-- Overlines are always JetBrains Mono, uppercase, `letter-spacing: 0.18em`, in Phosphor on dark or Pine on light.
-- Line length: max ~72ch for body copy.
-- Dark-mode body text is Paper (`#F4F6F1`), not pure white.
+Body size 14px and line-height 1.7 are the deployed Divi defaults — preserve them in web/document templates so on-screen output matches the live site.
 
 ---
 
 ## 6. Motif System
 
-Two motifs work together.
+The deployed site has **no decorative motif system** — it relies on whitespace, a header gradient, and the sage accent rule for visual rhythm. Phase 3 motif SVGs from the previous aspirational brand (dark dividers, hatched pattern tile) have been archived; they encode a darker, more authoritative system than what is deployed.
 
-### Primary — The Cursor
-A blinking terminal cursor `|` (or chevron `›`) is the signature mark. It expresses authority, precision, and live intelligence.
+**Acceptable design-system motifs for this refresh** (to be regenerated in a follow-up Phase 3 step):
+- **Sage hairline rule** — 1px sage line, 64px wide, paired under section overlines
+- **Header gradient** — `linear-gradient(135deg, #F8FAFC → #ECECEC)`, reserved for page/section headers
+- **Pine wedge** — a single 8px-tall canopy band used as a section opener at the top of dark callout boxes
 
-- Use after titles, next to CTAs, beside data points
-- Color: Phosphor (`#44E88A`)
-- Weight: 3px
-- Animation: blink (1.1s, steps(2)) — static in print
-- Don't put a cursor on every heading; reserve it for moments of emphasis
-
-### Ambient — The Grid
-A 30px radial-dot grid at 2.5% opacity sits behind dark surfaces as texture.
-
-```css
-background-image: radial-gradient(circle, rgba(68,232,138,0.025) 1px, transparent 1px);
-background-size: 30px 30px;
-```
-
-- Always subtle — you should sense it, not see it
-- Only on Midnight or near-Midnight surfaces
-- Never overlap with dense content; fade or crop behind image blocks
-
-### The Split — layout device
-A signature side-by-side layout: 60% Midnight (title, tagline) + 40% Paper (supporting content). Used on title slides, hero sections, and section dividers.
+That is the full motif vocabulary until a richer system is commissioned. Do not invent decorative shapes that aren't deployed.
 
 ---
 
-## 7. Imagery Direction
+## 7. Imagery
 
-*(Detailed direction delivered in Phase 4 — `_build/AI4comms-Imagery-Guide.html`.)*
+The deployed site uses **minimal photography**. The previous brand's 140-image library (architectural / signal / data-texture themes) is archived but no longer canonical — it was built for the dark-mode aspirational identity and does not match the deployed light, typographic feel.
 
-Headline posture: dark, architectural, high-signal. Treated with desaturation + subtle Pine/Phosphor cast and a Midnight overlay for text legibility. Themes span signal visualisation, AI infrastructure, communications environments, and abstract data texture.
+**Imagery posture for this refresh:**
+- Default to **no hero photography**. Type and whitespace carry the page.
+- When photography is required (case studies, team page), use **bright, natural, human-scale** images (workplaces, conversations, screens being used by real hands).
+- Avoid: dark architectural shots, abstract data textures, neon-lit interiors, monochrome industrial scenes.
+- Treatment: keep originals largely untouched. Overlay only with `--overlay-canopy-55` if text needs to sit on the image.
+
+A new image library will be sourced in a follow-up Phase 4 pass.
 
 ---
 
-## 8. Design Tokens
+## 8. Templates
 
-See `tokens.css` for the complete CSS custom property set covering palette, scales, semantic colors, typography, spacing, radius, shadows, transitions, motif variables, layout, and utility classes.
+The existing `templates/` directory contains dark-mode artifacts that no longer match the brand:
 
-**Charter aliases** (`--color-primary`, `--font-heading`, etc.) map the brand palette to the org-wide report-renderer convention so every consumer renders consistently.
+| Template | Status | Action |
+|---|---|---|
+| `templates/docx/default.docx` | dark-mode | Regenerate in light mode |
+| `templates/docx/letterhead.docx` | dark-mode | Regenerate in light mode |
+| `templates/html/business-cards.html` | dark-mode | Regenerate in light mode |
+| `templates/html/email-signature.html` | dark-mode | Regenerate in light mode |
+
+This refresh updates the **charter, tokens, guidelines, and logos only**. Template regeneration is a separate Phase 5 pass (flagged in BUILD_LOG.md as the next-action item).
+
+---
+
+## 9. What changed in this refresh
+
+| Dimension | Before (aspirational) | After (deployed) |
+|---|---|---|
+| Mode | dark-mode-native | light-mode-first |
+| Tagline | "Signal through the noise." (EN) | "Kies voor AI als partner, niet als vervanger" (NL) |
+| Archetype | Magician + Ruler | Sage + Caregiver |
+| Accent | `#44E88A` neon phosphor | `#9EC187` sage |
+| Heading font | Syne | Montserrat |
+| Body font | Inter | Montserrat |
+| Logo | 489-byte stand-in wordmark | 8.4 KB designed Affinity artwork (live) |
+| Logo variants | 8 (primary/white/icon/mark × svg/png) | 4 (primary svg/png + 2 favicons) |
+| Imagery | 140-image dark library | Minimal — text-first |
+| Primary green | `#15311A` ✓ | `#15311A` ✓ (unchanged) |
+
+The primary brand green is the one thing that survived the refresh. Everything else was realigned to what the client actually ships.
