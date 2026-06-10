@@ -83,10 +83,11 @@
       }
     ],
     "overlay": {
-      "color": "background",
+      "color": "primary",
       "opacity": 0.55
     },
-    "logoVariantOnImage": "white"
+    "logoVariantOnImage": "primary",
+    "_note": "Overlay is canopy green at 55% (guidelines: --overlay-canopy-55), applied only when text must sit on the image. Only one logo variant exists (green wordmark, see logo._note) — do NOT place the logo on overlaid/dark imagery; if a page pairs logo and image, put the logo on an unoverlaid light region."
   },
   "document": {
     "margins": {
@@ -104,7 +105,7 @@
       "pageNumbers": true
     },
     "headingColor": "primary",
-    "tableHeaderColor": "background"
+    "tableHeaderColor": "primary"
   },
   "presentation": {
     "slideMargin": "40pt",
@@ -248,11 +249,12 @@
   },
   "plotly": {
     "categoricalPalette": [
+      "#15311A",
       "#9EC187",
       "#3B7A4E",
-      "#214C28",
-      "#15311A",
-      "#82AE68"
+      "#C89B3E",
+      "#82AE68",
+      "#4E4E4E"
     ],
     "defaultHeight": 500,
     "titleFontSize": 18,
