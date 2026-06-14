@@ -279,6 +279,116 @@
       "email-signature": "templates/html/email-signature.html"
     }
   },
+  "identity": {
+    "archetype": {
+      "primary": "sage",
+      "secondary": "caregiver",
+      "status": "approved",
+      "rationale": "Driven by observed voice and posture on the deployed ai4-comms.com site: FAQ-led navigation, peer-register copy (je/jullie), practical how-to framing, and a brand refresh decision to abandon the earlier Magician+Ruler aspirational system in favour of what the client actually ships. Sage expresses as knowledgeable colleague — mastery made legible, never guru-elevated. Caregiver expresses as craft-protection and safe-adoption assurance — the routekaart as a patient guide, not emotional warmth."
+    },
+    "essence": "AI4comms turns AI from abstract hype into usable operating practice for communications teams — in Dutch, on the ground, one routekaart at a time.",
+    "positioning": "For Dutch-speaking communications professionals under pressure to adopt AI responsibly, AI4comms is the enablement partner that translates AI tooling into practical routines — so teams gain impact without losing their craft or their judgment.",
+    "personalityTraits": [
+      "Practical — outcomes over theory; every concept has a hands-on next step",
+      "Approachable — explains rather than impresses; peer register, not guru register",
+      "Grounded — senior judgment, no hype, no jargon for jargon's sake",
+      "Patient — meets teams where they are; trusts the routekaart as the vehicle",
+      "Trustworthy — calm, clear, accountable; never oversells AI or undersells the team's craft"
+    ],
+    "personalityAxes": {
+      "authorityVsPeer": 0.2,
+      "abstractVsConcrete": 0.1,
+      "warmthVsProfessional": 0.35,
+      "cautionVsBoldness": 0.3,
+      "minimalistVsExpressive": 0.2
+    }
+  },
+  "expression": {
+    "source": "co_created",
+    "confidence": "approved",
+    "status": "approved",
+    "principles": [
+      "Typographic-led: whitespace and heading hierarchy carry the page — imagery is supplementary, not structural",
+      "Light-mode-first: the brand lives on white and paper surfaces; dark sections (#15311A canopy) are deliberate exceptions, not the default",
+      "Monotypeface discipline: Montserrat handles every typographic role (display through caption); the single-typeface constraint signals systematic clarity, not impoverishment",
+      "Accent as signal, not decoration: sage green (#9EC187) appears at active indicators, hairline rules, and section overlines — never as fill or background wash",
+      "Constrained motif vocabulary: the deployed site has no decorative motif system; rhythm comes from whitespace, the F8FAFC→ECECEC header gradient, and 64px sage hairline rules paired under overlines",
+      "No hero photography by default: type and whitespace carry the page; photography (when used) is bright, human-scale, and largely untouched",
+      "Peer register in copy: leads with the point, then explains; uses the team's own language (routekaart, communicatieprofessionals); asks honest rhetorical questions and answers them plainly"
+    ],
+    "visualAxes": {
+      "density": "spacious",
+      "contrast": "medium",
+      "symmetry": "symmetric",
+      "geometry": "rectilinear",
+      "typeExpression": "systematic",
+      "imageTreatment": "documentary-muted",
+      "motifProminence": "accent",
+      "colorRhythm": "light-dominant",
+      "ornament": "restrained"
+    },
+    "signatureElements": [
+      "Montserrat 700 headings in canopy (#15311A) on white or paper surfaces",
+      "F8FAFC→ECECEC diagonal header gradient (135deg) as page/section opener",
+      "64px wide sage (#9EC187) hairline rule (1px) paired under overlines",
+      "Overlines: Montserrat 600, 12px, uppercase, letter-spacing 0.12em, in pine (#214C28)",
+      "CTA buttons: canopy fill with wide-tracked uppercase Montserrat 600 label; ghost variant with canopy border",
+      "Outlined cards with 1px #ECECEC border and 12px radius on white surface",
+      "Body text 14px / line-height 1.7 (matches deployed Divi global presets)",
+      "Section spacing 96px (--section-gap); content max-width 1320px"
+    ],
+    "antiPatterns": [
+      "Dark-mode-native layouts — the brand is light-first; the aspirational Signal Authority dark system is archived",
+      "Neon or high-chroma greens — the accent is muted sage (#9EC187), not the former phosphor #44E88A",
+      "Syne or Inter typefaces — replaced by Montserrat across all roles",
+      "Abstract data-texture or architectural photography — does not match the deployed light typographic identity",
+      "Decorative motif shapes (dark dividers, hatched tiles from Phase 3 aspirational) — archived, not canonical",
+      "White-on-dark logo placement — no white logo variant exists; avoid placing the green wordmark on dark surfaces",
+      "Guru or authority register in copy — 'Signal through the noise', 'Transform your communications', 'Disrupt' are explicitly prohibited",
+      "Accent sage used as fill color or background wash — accent is a hairline/indicator signal only",
+      "Multiple typeface families — single-typeface constraint is a deliberate discipline, not a gap"
+    ],
+    "requiredMotifs": [
+      "Sage hairline rule (1px, 64px wide, #9EC187) under section overlines",
+      "Header gradient (linear-gradient(135deg, #F8FAFC 0%, #ECECEC 100%)) on page/section openers",
+      "Canopy (#15311A) as the mandatory dark-section background when dark contrast is required"
+    ],
+    "evidence": [
+      {
+        "path": "clients/ai4comms/guidelines.md",
+        "kind": "brand_guidelines",
+        "sourceAuthority": "co_created",
+        "confidence": "approved",
+        "surface": "all",
+        "freshness": "current"
+      },
+      {
+        "path": "clients/ai4comms/charter.json#website",
+        "kind": "schema_block",
+        "sourceAuthority": "co_created",
+        "confidence": "approved",
+        "surface": "all",
+        "freshness": "current"
+      },
+      {
+        "path": "clients/ai4comms/tokens.css",
+        "kind": "design_tokens",
+        "sourceAuthority": "co_created",
+        "confidence": "approved",
+        "surface": "all",
+        "freshness": "current"
+      },
+      {
+        "path": "clients/ai4comms/.build-history/BUILD_LOG.md",
+        "kind": "build_log",
+        "sourceAuthority": "co_created",
+        "confidence": "approved",
+        "surface": "all",
+        "freshness": "current"
+      }
+    ],
+    "_migration_note": "The deployed ai4-comms.com site runs on WordPress with the Divi builder (theme: bureau-peppr-child). Divi global font presets (body 14px / lh 1.7) and inline CSS custom properties (--gcid-jd3gym30fa, --gcid-v6w1ho8m1g) were the source of truth for tokens.css. This is a platform-specific deployment detail — it does NOT become a hard expression axis and is not an Astro schema requirement. The charter.json website block describes the schema-valid Astro target the org's website-builder would produce."
+  },
   "_audit": {
     "source": "_build/brand-intelligence/ai4comms/audit.md",
     "date": "2026-05-18",
