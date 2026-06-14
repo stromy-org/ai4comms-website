@@ -3,12 +3,16 @@ _commit: 1709439
 _src_path: gh:stromy-org/astro-website-template
 author_email: william.masquelier@stromy.com.au
 author_name: William Masquelier
+azure_region: westeurope
+azure_resource_group: rg-ai4comms-website
 client_slug: ai4comms
 default_locale: en
-deploy_target: github-pages
+deploy_target: azure-swa
 description: AI4Comms corporate website
+github_owner: stromy-org
+github_repo: ai4comms-website
 package_slug: ai4comms-website
 site_name: AI4Comms
-site_url: https://stromy.be
+site_url: https://green-forest-0f795c303.7.azurestaticapps.net
 token_prefix: brand
 tsx_runner: tsx

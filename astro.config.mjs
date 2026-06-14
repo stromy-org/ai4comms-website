@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://stromy.be',
+  site: 'https://green-forest-0f795c303.7.azurestaticapps.net',
   integrations: [mdx(), sitemap()],
   vite: {
     plugins: [tailwindcss()],
