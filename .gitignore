@@ -3,3 +3,6 @@ dist/
 .astro/
 .env
 *.local
+
+# Office temp/lock files
+~$*
