@@ -1,0 +1,339 @@
+{
+  "schemaVersion": 1,
+  "version": "1.0",
+  "generatedFrom": {
+    "charterSha": "57ba67b1e3aecef2e7a7779853585f6335d279c8e78315e6880fc24489fee97e",
+    "compiler": "1.0"
+  },
+  "tier": "producer",
+  "colors": {
+    "primary": "#15311A",
+    "secondary": "#214C28",
+    "accent": "#9EC187",
+    "background": "#FFFFFF",
+    "backgroundAlt": "#F8FAFC",
+    "text": "#1F1F1F",
+    "textLight": "#4E4E4E",
+    "success": "#3B7A4E",
+    "warning": "#C89B3E",
+    "error": "#B85648"
+  },
+  "typography": {
+    "heading": {
+      "family": "Montserrat",
+      "weight": "700",
+      "fallback": "\"Helvetica Neue\", Arial, sans-serif"
+    },
+    "body": {
+      "family": "Montserrat",
+      "weight": "400",
+      "fallback": "\"Helvetica Neue\", Arial, sans-serif"
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "weight": "500",
+      "fallback": "\"SFMono-Regular\", Consolas, monospace"
+    }
+  },
+  "tokens_css": "/* ============================================================================\n * AI4comms — Design Tokens\n * Direction: Practical AI enablement partner (Sage + Caregiver)\n * Light-first, accessible, deployed-identity-aligned.\n *\n * Source of truth: ai4-comms.com live site (Divi global presets + verified\n * inline styles, captured 2026-05-18).\n *\n * Aspirational dark-mode \"Signal Authority\" tokens archived at\n * .build-history/aspirational-2026-04-05/tokens.css.\n * ============================================================================ */\n\n:root {\n  /* ---------- Primary palette ---------- */\n  --brand-canopy: #15311A;        /* primary deep brand green (logo wordmark) */\n  --brand-pine:   #214C28;        /* secondary mid brand green */\n  --brand-sage:   #9EC187;        /* accent — light sage green (active/highlight) */\n  --brand-paper:  #F8FAFC;        /* warm near-white surface */\n  --brand-mist:   #ECECEC;        /* secondary surface band */\n  --brand-white:  #FFFFFF;        /* primary surface */\n  --brand-ink:    #1F1F1F;        /* primary body text */\n\n  /* ---------- Pine scale (brand greens, light-mode oriented) ---------- */\n  --pine-50:  #EEF5EF;\n  --pine-100: #D5E7D8;\n  --pine-200: #A9CFB0;\n  --pine-300: #7AB488;\n  --pine-400: #509964;\n  --pine-500: #3B7A4E;\n  --pine-600: #2D5E3C;\n  --pine-700: #214C28;   /* secondary */\n  --pine-800: #15311A;   /* primary */\n  --pine-900: #0C1410;\n\n  /* ---------- Sage scale (accent) ---------- */\n  --sage-50:  #F1F6EC;\n  --sage-100: #E1EDD7;\n  --sage-200: #C9DEB5;\n  --sage-300: #B0CE93;\n  --sage-400: #9EC187;   /* accent */\n  --sage-500: #82AE68;\n  --sage-600: #678F4F;\n  --sage-700: #4F6F3D;\n  --sage-800: #3A522D;\n  --sage-900: #243620;\n\n  /* ---------- Neutral scale (cool grays, matches deployed site) ---------- */\n  --n-0:   #FFFFFF;\n  --n-50:  #F8FAFC;   /* deployed --gcid-jd3gym30fa */\n  --n-100: #ECECEC;   /* deployed --gcid-v6w1ho8m1g */\n  --n-200: #DDDDDD;\n  --n-300: #C4C4C4;\n  --n-400: #A1A1A1;\n  --n-500: #7A7A7A;\n  --n-600: #4E4E4E;   /* textLight */\n  --n-700: #3A3A3A;\n  --n-800: #2A2A2A;\n  --n-900: #1F1F1F;   /* text */\n\n  /* ---------- Semantic colors (palette-aligned, muted) ---------- */\n  --success:       #3B7A4E;\n  --success-light: #E2F0E6;\n  --warning:       #C89B3E;\n  --warning-light: #F6ECD4;\n  --error:         #B85648;\n  --error-light:   #F6DCD6;\n  --info:          #4F6F3D;\n  --info-light:    #E1EDD7;\n\n  /* ---------- Charter semantic mappings ---------- */\n  --color-primary:        var(--brand-canopy);\n  --color-secondary:      var(--brand-pine);\n  --color-accent:         var(--brand-sage);\n  --color-background:     var(--brand-white);\n  --color-background-alt: var(--brand-paper);\n  --color-text:           var(--n-900);\n  --color-text-light:     var(--n-600);\n  --color-text-on-dark:   var(--brand-white);\n  --color-text-on-accent: var(--brand-canopy);\n  --color-rule:           var(--n-100);\n  --color-rule-strong:    var(--n-200);\n\n  /* ---------- Typography ---------- */\n  --font-heading: \"Montserrat\", \"Helvetica Neue\", Arial, sans-serif;\n  --font-body:    \"Montserrat\", \"Helvetica Neue\", Arial, sans-serif;\n  --font-mono:    \"JetBrains Mono\", \"SFMono-Regular\", Consolas, monospace;\n\n  --weight-regular:  400;\n  --weight-medium:   500;\n  --weight-semibold: 600;\n  --weight-bold:     700;\n\n  --line-height-tight: 1.2;\n  --line-height-snug:  1.4;\n  --line-height-base:  1.7;     /* matches deployed --et_global_body_font_height */\n  --line-height-loose: 1.9;\n\n  --letter-spacing-tight:  -0.01em;\n  --letter-spacing-normal: 0;\n  --letter-spacing-wide:   0.04em;\n  --letter-spacing-label:  0.12em;\n\n  /* ---------- Type scale ---------- */\n  --fs-xs:   12px;\n  --fs-sm:   13px;\n  --fs-base: 14px;    /* matches deployed --et_global_body_font_size */\n  --fs-md:   16px;\n  --fs-lg:   18px;\n  --fs-xl:   22px;\n  --fs-2xl:  28px;\n  --fs-3xl:  34px;\n  --fs-4xl:  44px;\n  --fs-5xl:  56px;\n  --fs-display: 72px;\n\n  /* ---------- Spacing scale ---------- */\n  --space-1:  4px;\n  --space-2:  8px;\n  --space-3:  12px;\n  --space-4:  16px;\n  --space-5:  24px;\n  --space-6:  32px;\n  --space-7:  48px;\n  --space-8:  64px;\n  --space-9:  96px;\n  --space-10: 128px;\n\n  /* ---------- Radii ---------- */\n  --radius-sm: 4px;\n  --radius-md: 6px;\n  --radius-lg: 12px;\n  --radius-pill: 999px;\n\n  /* ---------- Elevation ---------- */\n  --shadow-sm: 0 1px 2px rgba(15, 30, 18, 0.06);\n  --shadow-md: 0 4px 12px rgba(15, 30, 18, 0.08);\n  --shadow-lg: 0 12px 32px rgba(15, 30, 18, 0.12);\n\n  /* ---------- Motif tokens (light-mode hairline rules) ---------- */\n  --motif-line-weight: 1px;\n  --motif-line-color:  var(--brand-canopy);\n  --motif-rule-color:  var(--n-200);\n  --motif-pattern-opacity: 0.05;\n\n  /* ---------- Overlay tokens (for hero photography, if reintroduced) ---------- */\n  --overlay-canopy-80: rgba(21, 49, 26, 0.8);\n  --overlay-canopy-70: rgba(21, 49, 26, 0.7);\n  --overlay-canopy-55: rgba(21, 49, 26, 0.55);\n\n  /* ---------- Layout ---------- */\n  --content-max:  1320px;\n  --content-narrow: 760px;\n  --gutter:       24px;\n  --section-gap:  96px;\n}\n\n/* ============================================================================\n * Utility classes — light-mode base\n * ============================================================================ */\n\n.brand-button-primary {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  padding: 12px 24px;\n  background: var(--brand-canopy);\n  color: var(--brand-white);\n  font-family: var(--font-body);\n  font-weight: var(--weight-semibold);\n  font-size: var(--fs-base);\n  letter-spacing: var(--letter-spacing-wide);\n  text-transform: uppercase;\n  border: none;\n  border-radius: var(--radius-md);\n  text-decoration: none;\n  transition: background 160ms ease;\n}\n.brand-button-primary:hover { background: var(--brand-pine); }\n\n.brand-button-ghost {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  padding: 12px 24px;\n  background: transparent;\n  color: var(--brand-canopy);\n  font-family: var(--font-body);\n  font-weight: var(--weight-semibold);\n  font-size: var(--fs-base);\n  letter-spacing: var(--letter-spacing-wide);\n  text-transform: uppercase;\n  border: 1px solid var(--brand-canopy);\n  border-radius: var(--radius-md);\n  text-decoration: none;\n  transition: background 160ms ease, color 160ms ease;\n}\n.brand-button-ghost:hover { background: var(--brand-canopy); color: var(--brand-white); }\n\n.brand-overline {\n  font-family: var(--font-body);\n  font-size: var(--fs-xs);\n  font-weight: var(--weight-semibold);\n  text-transform: uppercase;\n  letter-spacing: var(--letter-spacing-label);\n  color: var(--brand-pine);\n}\n\n.brand-heading {\n  font-family: var(--font-heading);\n  font-weight: var(--weight-bold);\n  line-height: var(--line-height-tight);\n  letter-spacing: var(--letter-spacing-tight);\n  color: var(--brand-canopy);\n}\n\n.brand-body {\n  font-family: var(--font-body);\n  font-weight: var(--weight-regular);\n  font-size: var(--fs-base);\n  line-height: var(--line-height-base);\n  color: var(--n-900);\n}\n\n.brand-rule {\n  border: none;\n  border-top: var(--motif-line-weight) solid var(--motif-rule-color);\n  margin: var(--space-6) 0;\n}\n\n.brand-rule-accent {\n  border: none;\n  border-top: 2px solid var(--brand-canopy);\n  width: 64px;\n  margin: var(--space-5) 0;\n}\n\n.brand-card {\n  background: var(--brand-white);\n  border: 1px solid var(--n-100);\n  border-radius: var(--radius-lg);\n  padding: var(--space-6);\n}\n\n.brand-card-tinted {\n  background: var(--brand-paper);\n  border-radius: var(--radius-lg);\n  padding: var(--space-6);\n}\n\n.brand-section-light    { background: var(--brand-white);  color: var(--n-900); }\n.brand-section-mist     { background: var(--brand-paper);  color: var(--n-900); }\n.brand-section-canopy   { background: var(--brand-canopy); color: var(--brand-white); }\n.brand-section-canopy .brand-heading { color: var(--brand-white); }\n.brand-section-canopy .brand-overline { color: var(--brand-sage); }\n",
+  "identity": {
+    "essence": "AI4comms turns AI from abstract hype into usable operating practice for communications teams — in Dutch, on the ground, one routekaart at a time.",
+    "positioning": "For Dutch-speaking communications professionals under pressure to adopt AI responsibly, AI4comms is the enablement partner that translates AI tooling into practical routines — so teams gain impact without losing their craft or their judgment.",
+    "personalityTraits": [
+      "Practical — outcomes over theory; every concept has a hands-on next step",
+      "Approachable — explains rather than impresses; peer register, not guru register",
+      "Grounded — senior judgment, no hype, no jargon for jargon's sake",
+      "Patient — meets teams where they are; trusts the routekaart as the vehicle",
+      "Trustworthy — calm, clear, accountable; never oversells AI or undersells the team's craft"
+    ],
+    "personalityAxes": {
+      "authorityVsPeer": 0.2,
+      "abstractVsConcrete": 0.1,
+      "warmthVsProfessional": 0.35,
+      "cautionVsBoldness": 0.3,
+      "minimalistVsExpressive": 0.2
+    },
+    "company": {
+      "name": "AI4comms",
+      "description": "AI4comms helps communications leaders turn AI from abstract hype into practical advantage through strategy, training, governance, and hands-on implementation support.",
+      "services": [
+        {
+          "id": "svc-001",
+          "name": "AI Strategy for Communications Teams",
+          "description": "Strategic advisory for communication leaders who need to define where AI creates real value across corporate communications, public affairs, media relations, and content operations.",
+          "industries": [
+            "Corporate Communications",
+            "Public Affairs",
+            "Professional Services",
+            "In-house Communications"
+          ],
+          "deliverables": [
+            "AI Opportunity Assessment",
+            "Communications AI Roadmap",
+            "Leadership Briefing",
+            "Use-Case Prioritization"
+          ],
+          "typicalDuration": "2-6 weeks",
+          "pricingModel": "price-001"
+        },
+        {
+          "id": "svc-002",
+          "name": "AI Training and Team Enablement",
+          "description": "Practical training programs that help communications teams adopt AI tools responsibly, improve workflows, and build confidence without drowning in jargon.",
+          "industries": [
+            "Corporate Communications",
+            "Agencies",
+            "Public Affairs",
+            "Associations"
+          ],
+          "deliverables": [
+            "Workshop Design",
+            "Prompt Playbooks",
+            "Team Training Sessions",
+            "Adoption Guidelines"
+          ],
+          "typicalDuration": "1 day to 4 weeks",
+          "pricingModel": "price-002"
+        },
+        {
+          "id": "svc-003",
+          "name": "Governance and Responsible AI for Comms",
+          "description": "Policy, governance, and operating-model support for organizations that need to use AI in communications without creating reputational, legal, or workflow risk.",
+          "industries": [
+            "Corporate Communications",
+            "Regulated Industries",
+            "Public Sector",
+            "Professional Services"
+          ],
+          "deliverables": [
+            "AI Governance Framework",
+            "Risk Register",
+            "Approval Workflow",
+            "Usage Policy"
+          ],
+          "typicalDuration": "3-8 weeks",
+          "pricingModel": "price-001"
+        },
+        {
+          "id": "svc-004",
+          "name": "Executive AI Advisory",
+          "description": "Senior advisory support for leaders who need a clear view on how AI is reshaping communications functions, stakeholder expectations, and team structures.",
+          "industries": [
+            "Executive Leadership",
+            "Communications Leadership",
+            "Boards",
+            "Founder-led Firms"
+          ],
+          "deliverables": [
+            "Executive Briefing",
+            "Decision Memo",
+            "Scenario Analysis",
+            "Facilitated Leadership Session"
+          ],
+          "typicalDuration": "Retainer or targeted advisory sprints",
+          "pricingModel": "price-001"
+        }
+      ]
+    }
+  },
+  "expression": {
+    "sourceLevel": "expression",
+    "principles": [
+      "Typographic-led: whitespace and heading hierarchy carry the page — imagery is supplementary, not structural",
+      "Light-mode-first: the brand lives on white and paper surfaces; dark sections (#15311A canopy) are deliberate exceptions, not the default",
+      "Monotypeface discipline: Montserrat handles every typographic role (display through caption); the single-typeface constraint signals systematic clarity, not impoverishment",
+      "Accent as signal, not decoration: sage green (#9EC187) appears at active indicators, hairline rules, and section overlines — never as fill or background wash",
+      "Constrained motif vocabulary: the deployed site has no decorative motif system; rhythm comes from whitespace, the F8FAFC→ECECEC header gradient, and 64px sage hairline rules paired under overlines",
+      "No hero photography by default: type and whitespace carry the page; photography (when used) is bright, human-scale, and largely untouched",
+      "Peer register in copy: leads with the point, then explains; uses the team's own language (routekaart, communicatieprofessionals); asks honest rhetorical questions and answers them plainly"
+    ],
+    "visualAxes": {
+      "density": "spacious",
+      "contrast": "medium",
+      "symmetry": "symmetric",
+      "geometry": "rectilinear",
+      "typeExpression": "systematic",
+      "imageTreatment": "documentary-muted",
+      "motifProminence": "accent",
+      "colorRhythm": "light-dominant",
+      "ornament": "restrained"
+    },
+    "signatureElements": [
+      "Montserrat 700 headings in canopy (#15311A) on white or paper surfaces",
+      "F8FAFC→ECECEC diagonal header gradient (135deg) as page/section opener",
+      "64px wide sage (#9EC187) hairline rule (1px) paired under overlines",
+      "Overlines: Montserrat 600, 12px, uppercase, letter-spacing 0.12em, in pine (#214C28)",
+      "CTA buttons: canopy fill with wide-tracked uppercase Montserrat 600 label; ghost variant with canopy border",
+      "Outlined cards with 1px #ECECEC border and 12px radius on white surface",
+      "Body text 14px / line-height 1.7 (matches deployed Divi global presets)",
+      "Section spacing 96px (--section-gap); content max-width 1320px"
+    ],
+    "antiPatterns": [
+      "Dark-mode-native layouts — the brand is light-first; the aspirational Signal Authority dark system is archived",
+      "Neon or high-chroma greens — the accent is muted sage (#9EC187), not the former phosphor #44E88A",
+      "Syne or Inter typefaces — replaced by Montserrat across all roles",
+      "Abstract data-texture or architectural photography — does not match the deployed light typographic identity",
+      "Decorative motif shapes (dark dividers, hatched tiles from Phase 3 aspirational) — archived, not canonical",
+      "White-on-dark logo placement — no white logo variant exists; avoid placing the green wordmark on dark surfaces",
+      "Guru or authority register in copy — 'Signal through the noise', 'Transform your communications', 'Disrupt' are explicitly prohibited",
+      "Accent sage used as fill color or background wash — accent is a hairline/indicator signal only",
+      "Multiple typeface families — single-typeface constraint is a deliberate discipline, not a gap"
+    ],
+    "requiredMotifs": [
+      "Sage hairline rule (1px, 64px wide, #9EC187) under section overlines",
+      "Header gradient (linear-gradient(135deg, #F8FAFC 0%, #ECECEC 100%)) on page/section openers",
+      "Canopy (#15311A) as the mandatory dark-section background when dark contrast is required"
+    ]
+  },
+  "surfaceExpression": {
+    "presentation": {
+      "visualAxes": {
+        "density": "spacious",
+        "contrast": "medium",
+        "symmetry": "symmetric",
+        "geometry": "rectilinear",
+        "typeExpression": "systematic",
+        "imageTreatment": "documentary-muted",
+        "motifProminence": "accent",
+        "colorRhythm": "light-dominant",
+        "ornament": "restrained"
+      },
+      "principles": [
+        "Typographic-led: whitespace and heading hierarchy carry the page — imagery is supplementary, not structural",
+        "Light-mode-first: the brand lives on white and paper surfaces; dark sections (#15311A canopy) are deliberate exceptions, not the default",
+        "Monotypeface discipline: Montserrat handles every typographic role (display through caption); the single-typeface constraint signals systematic clarity, not impoverishment",
+        "Accent as signal, not decoration: sage green (#9EC187) appears at active indicators, hairline rules, and section overlines — never as fill or background wash",
+        "Constrained motif vocabulary: the deployed site has no decorative motif system; rhythm comes from whitespace, the F8FAFC→ECECEC header gradient, and 64px sage hairline rules paired under overlines",
+        "No hero photography by default: type and whitespace carry the page; photography (when used) is bright, human-scale, and largely untouched",
+        "Peer register in copy: leads with the point, then explains; uses the team's own language (routekaart, communicatieprofessionals); asks honest rhetorical questions and answers them plainly"
+      ]
+    },
+    "document": {
+      "visualAxes": {
+        "density": "spacious",
+        "contrast": "medium",
+        "symmetry": "symmetric",
+        "geometry": "rectilinear",
+        "typeExpression": "systematic",
+        "imageTreatment": "documentary-muted",
+        "motifProminence": "accent",
+        "colorRhythm": "light-dominant",
+        "ornament": "restrained"
+      },
+      "principles": [
+        "Typographic-led: whitespace and heading hierarchy carry the page — imagery is supplementary, not structural",
+        "Light-mode-first: the brand lives on white and paper surfaces; dark sections (#15311A canopy) are deliberate exceptions, not the default",
+        "Monotypeface discipline: Montserrat handles every typographic role (display through caption); the single-typeface constraint signals systematic clarity, not impoverishment",
+        "Accent as signal, not decoration: sage green (#9EC187) appears at active indicators, hairline rules, and section overlines — never as fill or background wash",
+        "Constrained motif vocabulary: the deployed site has no decorative motif system; rhythm comes from whitespace, the F8FAFC→ECECEC header gradient, and 64px sage hairline rules paired under overlines",
+        "No hero photography by default: type and whitespace carry the page; photography (when used) is bright, human-scale, and largely untouched",
+        "Peer register in copy: leads with the point, then explains; uses the team's own language (routekaart, communicatieprofessionals); asks honest rhetorical questions and answers them plainly"
+      ]
+    }
+  },
+  "plotly_theme": {
+    "colorway": [
+      "#15311A",
+      "#9EC187",
+      "#214C28",
+      "#3B7A4E",
+      "#C89B3E",
+      "#B85648"
+    ],
+    "baseTemplate": "plotly_white",
+    "font": {
+      "family": "Montserrat",
+      "color": "#1F1F1F"
+    },
+    "titleFontSize": 18,
+    "gridColor": "#ECECEC",
+    "sentiment": {
+      "positive": "#3B7A4E",
+      "negative": "#B85648",
+      "neutral": "#4E4E4E"
+    },
+    "categoricalPalette": [
+      "#15311A",
+      "#9EC187",
+      "#3B7A4E",
+      "#C89B3E",
+      "#82AE68",
+      "#4E4E4E"
+    ],
+    "defaultHeight": 500,
+    "axisFontSize": 12,
+    "legendFontSize": 11,
+    "margins": {
+      "top": 80,
+      "bottom": 70,
+      "left": 60,
+      "right": 50
+    },
+    "secondaryTextColor": "#4E4E4E"
+  },
+  "excalidraw_theme": {
+    "strokeColor": "#1F1F1F",
+    "fillColors": [
+      "#15311A",
+      "#9EC187",
+      "#214C28"
+    ],
+    "textColor": "#1F1F1F",
+    "arrowColor": "#15311A",
+    "backgroundColor": "#FFFFFF",
+    "roughness": 0,
+    "headingFont": "Montserrat",
+    "bodyFont": "Montserrat"
+  },
+  "formatting": {
+    "slideMargin": "40pt",
+    "titleMargin": "30pt",
+    "contentMargin": "20pt",
+    "aspectRatio": "16:9",
+    "defaultTheme": "light",
+    "headingThreshold": 24,
+    "accentCycleColors": [
+      "accent",
+      "secondary",
+      "primary"
+    ],
+    "autoContrastText": true
+  },
+  "document": {
+    "margins": {
+      "top": "1in",
+      "bottom": "1in",
+      "left": "1in",
+      "right": "1in"
+    },
+    "header": {
+      "content": "{{company.name}}",
+      "logo": true
+    },
+    "footer": {
+      "content": "Confidential",
+      "pageNumbers": true
+    },
+    "headingColor": "primary",
+    "tableHeaderColor": "primary"
+  },
+  "images": {
+    "overlay": {
+      "color": "primary",
+      "opacity": 0.55
+    },
+    "logoVariantOnImage": "primary"
+  },
+  "logo": {
+    "primary": "logos/ai4comms-logo-primary.svg",
+    "png": "logos/ai4comms-logo-primary.png",
+    "favicon_192": "logos/ai4comms-favicon-192.png",
+    "favicon_180": "logos/ai4comms-favicon-180.png",
+    "maxWidth": "180pt",
+    "maxHeight": "60pt",
+    "sizing": "contain",
+    "_note": "Live deployed brand has only one logo variant (green wordmark on light backgrounds). White-on-dark variant, icon-only mark, and square mark variants are NOT deployed and have been intentionally omitted. Reintroduce only when client commissions them."
+  },
+  "fallbacksUsed": [],
+  "warnings": []
+}
