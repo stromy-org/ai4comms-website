@@ -1,0 +1,33 @@
+{
+  "$schema": "../../schema/boilerplate.schema.json",
+  "$comment": "AI4Comms fixed cross-deliverable strings. AI4Comms is a brand of Duke Strategy & Corporate Affairs B.V.; company facts live in profile.json, not here.",
+  "version": "1.0",
+  "footer": {
+    "deck": "AI4Comms · {{confidentiality.deck}} · {{page}} / {{pages}}",
+    "doc": "AI4Comms · {{document.title}} · {{date}}",
+    "showLogo": true,
+    "logoVariant": "primary"
+  },
+  "confidentiality": {
+    "public": "",
+    "internal": "Intern — AI4Comms",
+    "confidential": "Strikt vertrouwelijk — niet verspreiden",
+    "draft": "CONCEPT — niet voor verspreiding",
+    "deck": "Vertrouwelijk",
+    "doc": "Vertrouwelijk"
+  },
+  "watermark": {
+    "draft": { "text": "CONCEPT", "opacity": 0.08, "rotation": -30, "color": "textLight" }
+  },
+  "legal": {
+    "copyright": "© {{year}} Duke Strategy & Corporate Affairs B.V. Alle rechten voorbehouden.",
+    "trademark": "AI4Comms is een merk van Duke Strategy & Corporate Affairs B.V."
+  },
+  "sign_off": {
+    "default_nl": "Met vriendelijke groet,",
+    "default_en": "Kind regards,"
+  },
+  "contact_block": {
+    "default_nl": "AI4Comms\nHambakenwetering 1, 5231 DD 's-Hertogenbosch\nInfo@ai4-comms.com · +31 85 212 94 14 · ai4-comms.com"
+  }
+}

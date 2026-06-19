@@ -1,14 +1,18 @@
 {
   "schemaVersion": 1,
   "generatedFrom": {
-    "profileSha": "5d1a1779b412f5496892c7816af32c24f469be63c5d42473946d51556b8128f1",
+    "profileSha": "ff03d2941c05c4c24aafcc7884196b9785097c5cb73b726170bcd1c3acfccff7",
+    "peopleSha": "9303ba83db3c90a6cb5f0143117d73957eb15b509625f800dec65a171634b3f5",
     "compiler": "1.0"
   },
   "company": {
-    "name": "AI4comms",
+    "name": "AI4Comms",
     "description": "AI4comms helps communications leaders turn AI from abstract hype into practical advantage through strategy, training, governance, and hands-on implementation support.",
     "tagline": "Lead AI with clarity.",
+    "website": "https://ai4-comms.com",
+    "founded": 2026,
     "headquarters": {
+      "city": "'s-Hertogenbosch",
       "country": "Netherlands"
     },
     "services": [
@@ -88,7 +92,14 @@
         "typicalDuration": "Retainer or targeted advisory sprints",
         "pricingModel": "price-001"
       }
-    ]
+    ],
+    "publicContact": {
+      "website": "https://ai4-comms.com",
+      "press": "Info@ai4-comms.com"
+    }
+  },
+  "credentials": {
+    "_note": "pendingTruth: AI4Comms shares the Duke B.V.; confirm whether it presents Duke's memberships (e.g. Logeion) as its own."
   },
   "pricing": {
     "publicModels": [
@@ -103,5 +114,37 @@
         "description": "Used for training sessions, team enablement, and playbook development. Pricing depends on team size and preparation required."
       }
     ]
-  }
+  },
+  "people": [
+    {
+      "id": "person-001",
+      "name": "Ingo Heijnen",
+      "title": "Co-founder",
+      "publicRole": "spokesperson",
+      "publicBio": "Ingo Heijnen is co-founder of AI4Comms. He spent more than 25 years in corporate communications and corporate affairs, most of it at Hill & Knowlton, advising executives and building senior communications teams. He now focuses on making AI practically useful for the communications function.",
+      "quoteStyle": "Measured and senior; speaks from decades of in-the-room experience and frames AI as a strategic accelerator, never as hype."
+    },
+    {
+      "id": "person-002",
+      "name": "Emma van Gelder",
+      "title": "Co-founder",
+      "publicRole": "spokesperson",
+      "publicBio": "Emma van Gelder is a co-founder of AI4Comms. She worked in corporate communications at Hill & Knowlton before co-founding AI4Comms, where she focuses on helping organisations treat AI adoption in communications as a leadership challenge rather than a tooling question.",
+      "quoteStyle": "Mission-driven and collaborative; frames AI adoption in communications as a leadership question, not a tooling one."
+    },
+    {
+      "id": "person-003",
+      "name": "Ariën Stuijt",
+      "title": "Advisor",
+      "publicRole": "spokesperson",
+      "publicBio": "Ariën Stuijt is a former journalist (Dow Jones Newswires, The Wall Street Journal) who spent 17 years in strategic consulting at Hill & Knowlton, specialising in transformative situations such as crises, shareholder activism, M&A, and stakeholder communication. He advises on keeping authority and authenticity in the age of generative AI.",
+      "quoteStyle": "Reflective and principled; moves between corporate-affairs analysis and public commentary on journalism and the rule of law; writes in Dutch and English."
+    }
+  ],
+  "redactions": [
+    "company direct email",
+    "company phone number",
+    "company registration numbers",
+    "personal contact (email / phone)"
+  ]
 }

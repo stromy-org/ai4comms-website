@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "additional_banned_phrases": [
+    "revolutionair",
+    "game-changing",
+    "game changer",
+    "disruptief",
+    "supercharge",
+    "unlock the power",
+    "vervang je team",
+    "AI doet het werk voor je"
+  ],
+  "additional_banned_substrings": [],
+  "notes": "AI4Comms L2: additive-only anti-hype bans on top of the L1 baseline. Reinforces 'AI als partner, niet als vervanger' — no replacement / automation-magic framing."
+}

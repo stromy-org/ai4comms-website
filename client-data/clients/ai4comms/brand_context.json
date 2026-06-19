@@ -60,8 +60,9 @@
       "minimalistVsExpressive": 0.2
     },
     "company": {
-      "name": "AI4comms",
+      "name": "AI4Comms",
       "description": "AI4comms helps communications leaders turn AI from abstract hype into practical advantage through strategy, training, governance, and hands-on implementation support.",
+      "website": "https://ai4-comms.com",
       "services": [
         {
           "id": "svc-001",
@@ -140,6 +141,18 @@
           "pricingModel": "price-001"
         }
       ]
+    }
+  },
+  "boilerplate": {
+    "footer": "AI4Comms · {{confidentiality.deck}} · {{page}} / {{pages}}",
+    "confidentiality": "Vertrouwelijk",
+    "copyright": "© {{year}} Duke Strategy & Corporate Affairs B.V. Alle rechten voorbehouden.",
+    "sign_off": {
+      "default_nl": "Met vriendelijke groet,",
+      "default_en": "Kind regards,"
+    },
+    "contact_block": {
+      "default_nl": "AI4Comms\nHambakenwetering 1, 5231 DD 's-Hertogenbosch\nInfo@ai4-comms.com · +31 85 212 94 14 · ai4-comms.com"
     }
   },
   "expression": {
