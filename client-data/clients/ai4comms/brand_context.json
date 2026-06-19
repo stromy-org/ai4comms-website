@@ -39,6 +39,12 @@
   "identity": {
     "essence": "AI4comms turns AI from abstract hype into usable operating practice for communications teams — in Dutch, on the ground, one routekaart at a time.",
     "positioning": "For Dutch-speaking communications professionals under pressure to adopt AI responsibly, AI4comms is the enablement partner that translates AI tooling into practical routines — so teams gain impact without losing their craft or their judgment.",
+    "archetype": {
+      "primary": "sage",
+      "secondary": "caregiver",
+      "status": "approved",
+      "rationale": "Driven by observed voice and posture on the deployed ai4-comms.com site: FAQ-led navigation, peer-register copy (je/jullie), practical how-to framing, and a brand refresh decision to abandon the earlier Magician+Ruler aspirational system in favour of what the client actually ships. Sage expresses as knowledgeable colleague — mastery made legible, never guru-elevated. Caregiver expresses as craft-protection and safe-adoption assurance — the routekaart as a patient guide, not emotional warmth."
+    },
     "personalityTraits": [
       "Practical — outcomes over theory; every concept has a hands-on next step",
       "Approachable — explains rather than impresses; peer register, not guru register",
@@ -138,6 +144,43 @@
   },
   "expression": {
     "sourceLevel": "expression",
+    "status": "approved",
+    "confidence": "approved",
+    "source": "co_created",
+    "evidence": [
+      {
+        "path": "clients/ai4comms/guidelines.md",
+        "kind": "brand_guidelines",
+        "sourceAuthority": "co_created",
+        "confidence": "approved",
+        "surface": "all",
+        "freshness": "current"
+      },
+      {
+        "path": "clients/ai4comms/charter.json#website",
+        "kind": "schema_block",
+        "sourceAuthority": "co_created",
+        "confidence": "approved",
+        "surface": "all",
+        "freshness": "current"
+      },
+      {
+        "path": "clients/ai4comms/tokens.css",
+        "kind": "design_tokens",
+        "sourceAuthority": "co_created",
+        "confidence": "approved",
+        "surface": "all",
+        "freshness": "current"
+      },
+      {
+        "path": "clients/ai4comms/.build-history/BUILD_LOG.md",
+        "kind": "build_log",
+        "sourceAuthority": "co_created",
+        "confidence": "approved",
+        "surface": "all",
+        "freshness": "current"
+      }
+    ],
     "principles": [
       "Typographic-led: whitespace and heading hierarchy carry the page — imagery is supplementary, not structural",
       "Light-mode-first: the brand lives on white and paper surfaces; dark sections (#15311A canopy) are deliberate exceptions, not the default",
@@ -333,6 +376,10 @@
     "maxHeight": "60pt",
     "sizing": "contain",
     "_note": "Live deployed brand has only one logo variant (green wordmark on light backgrounds). White-on-dark variant, icon-only mark, and square mark variants are NOT deployed and have been intentionally omitted. Reintroduce only when client commissions them."
+  },
+  "video": {
+    "resolution": "1920x1080",
+    "fps": 30
   },
   "fallbacksUsed": [],
   "warnings": []
