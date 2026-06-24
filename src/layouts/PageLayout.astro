@@ -8,12 +8,13 @@ interface Props {
   description: string;
   pathname: string;
   image?: string;
+  noindex?: boolean;
 }
 
-const { title, description, pathname, image } = Astro.props;
+const { title, description, pathname, image, noindex } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description} pathname={pathname} image={image}>
+<BaseLayout title={title} description={description} pathname={pathname} image={image} noindex={noindex}>
   <Header pathname={pathname} />
   <main>
     <slot />
