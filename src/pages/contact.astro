@@ -2,6 +2,7 @@
 import PageLayout from "../layouts/PageLayout.astro";
 import Button from "../components/ui/Button.astro";
 import { company, contactRoutes } from "../data/company";
+import { copy } from "../data/content/copy";
 
 const createMailto = (recipient: string, subject: string, body: string) =>
   `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -10,16 +11,16 @@ const email = company.contact.email;
 ---
 
 <PageLayout
-  title="Contact"
-  description="Contact AI4comms to discuss strategy, team enablement, or governance for AI in communications."
+  title={copy.contact.seoTitle}
+  description={copy.contact.seoDesc}
   pathname="/contact"
 >
   <section class="page-hero">
     <div class="shell page-hero__inner">
-      <div class="eyebrow">Contact</div>
-      <h1 class="page-title">Start with one clear conversation.</h1>
+      <div class="eyebrow">{copy.contact.eyebrow}</div>
+      <h1 class="page-title">{copy.contact.title}</h1>
       <p class="page-intro">
-        The site is set up for a simple mailto-style contact flow. Final email and phone details are still being confirmed, so the draft routes below are structurally ready even while the live contact fields remain provisional.
+        {copy.contact.intro}
       </p>
     </div>
   </section>
@@ -27,22 +28,22 @@ const email = company.contact.email;
   <section class="section">
     <div class="shell contact-grid">
       <article class="surface-card contact-card">
-        <div class="eyebrow">Primary route</div>
-        <h2>Direct and simple.</h2>
+        <div class="eyebrow">{copy.contact.primaryRouteEyebrow}</div>
+        <h2>{copy.contact.primaryRouteTitle}</h2>
         <p>
-          This page is intentionally light. For a GitHub Pages launch, the preferred pattern is an email-first route rather than a hosted form.
+          {copy.contact.primaryRouteBody}
         </p>
         <div class="contact-meta">
           <div>
-            <strong>Email</strong>
-            <span>{email ?? "Pending confirmation"}</span>
+            <strong>{copy.contact.labelEmail}</strong>
+            <span>{email ?? copy.contact.pending}</span>
           </div>
           <div>
-            <strong>Phone</strong>
-            <span>{company.contact.phone ?? "Pending confirmation"}</span>
+            <strong>{copy.contact.labelPhone}</strong>
+            <span>{company.contact.phone ?? copy.contact.pending}</span>
           </div>
           <div>
-            <strong>Base</strong>
+            <strong>{copy.contact.labelBase}</strong>
             <span>{company.office.label}</span>
           </div>
         </div>
@@ -58,7 +59,7 @@ const email = company.contact.email;
               variant="secondary"
               disabled={!email}
             >
-              {email ? "Open draft email" : "Email route pending"}
+              {email ? copy.contact.openDraft : copy.contact.routePending}
             </Button>
           </article>
         ))}

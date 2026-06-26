@@ -1,19 +1,20 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 import { services } from "../data/company";
+import { copy } from "../data/content/copy";
 ---
 
 <PageLayout
-  title="Services"
-  description="AI strategy, team enablement, governance, and executive advisory for communications teams."
+  title={copy.services.seoTitle}
+  description={copy.services.seoDesc}
   pathname="/services"
 >
   <section class="page-hero">
     <div class="shell page-hero__inner">
-      <div class="eyebrow">Services</div>
-      <h1 class="page-title">A consulting offer built for communications leaders, not AI tourism.</h1>
+      <div class="eyebrow">{copy.services.eyebrow}</div>
+      <h1 class="page-title">{copy.services.title}</h1>
       <p class="page-intro">
-        AI4comms works across strategy, enablement, governance, and senior advisory. Each engagement is designed to move a team from interest to disciplined use.
+        {copy.services.intro}
       </p>
     </div>
   </section>

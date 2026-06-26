@@ -1,4 +1,8 @@
+// Structural shim (review-gated): owns the route table (navigation hrefs) and composes
+// the client-owned SEO/footer VALUES from the content home `./content/site.ts` into the
+// exported `site` object. Consumers keep importing `{ site, navigation }` from "../data/site".
 import { company } from "./company";
+import { siteContent } from "./content/site";
 
 export const navigation = [
   { href: "/", label: "Home" },
@@ -10,11 +14,9 @@ export const navigation = [
 
 export const site = {
   name: company.name,
-  title: "AI4comms",
-  description:
-    "AI strategy, team enablement, and governance support for communications leaders who need practical AI operating clarity.",
+  title: siteContent.title,
+  description: siteContent.description,
   ogImage: "/og-fallback.png",
   navigation,
-  footerNote:
-    "Static GitHub Pages launch. Contact details remain intentionally provisional until the brand owner confirms final email, phone, and domain details.",
+  footerNote: siteContent.footerNote,
 };

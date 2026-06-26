@@ -1,20 +1,21 @@
 ---
 import { company } from "../../data/company";
 import { navigation, site } from "../../data/site";
+import { copy } from "../../data/content/copy";
 import logo from "../../brand/logos/ai4comms-logo-primary.svg";
 ---
 
 <footer class="site-footer">
   <div class="shell site-footer__grid">
     <div class="site-footer__brand">
-      <img src={logo.src} alt="AI4comms" />
+      <img src={logo.src} alt={copy.chrome.logoAlt} />
       <p>{company.description}</p>
       <p class="site-footer__note">{site.footerNote}</p>
     </div>
 
     <div class="site-footer__links">
       <div>
-        <h2>Navigation</h2>
+        <h2>{copy.chrome.footerNavHeading}</h2>
         <ul class="list-reset">
           {navigation.map((item) => (
             <li><a href={item.href}>{item.label}</a></li>
@@ -23,11 +24,11 @@ import logo from "../../brand/logos/ai4comms-logo-primary.svg";
       </div>
 
       <div>
-        <h2>Contact</h2>
+        <h2>{copy.chrome.footerContactHeading}</h2>
         <ul class="list-reset">
           <li>{company.office.label}</li>
-          <li>{company.contact.email ?? "Email address pending confirmation"}</li>
-          <li>{company.contact.phone ?? "Phone number pending confirmation"}</li>
+          <li>{company.contact.email ?? copy.chrome.footerEmailPending}</li>
+          <li>{company.contact.phone ?? copy.chrome.footerPhonePending}</li>
         </ul>
       </div>
     </div>

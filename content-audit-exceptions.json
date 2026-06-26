@@ -1,0 +1,9 @@
+{
+  "exceptions": [
+    {
+      "path": "src/components/layout/Header.astro",
+      "locator": "aria-label:Primary",
+      "reason": "Technical ARIA landmark label for the primary nav region — a screen-reader a11y mechanic, not client-editable copy; stays review-gated in the structural component."
+    }
+  ]
+}
