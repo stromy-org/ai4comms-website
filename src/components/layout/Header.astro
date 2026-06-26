@@ -1,5 +1,6 @@
 ---
 import { navigation } from "../../data/site";
+import { copy } from "../../data/content/copy";
 import logo from "../../brand/logos/ai4comms-logo-primary.svg";
 
 interface Props {
@@ -12,7 +13,7 @@ const { pathname } = Astro.props;
 <header class="site-header" data-site-header>
   <div class="shell site-header__inner">
     <a class="site-header__brand" href="/">
-      <img src={logo.src} alt="AI4comms" />
+      <img src={logo.src} alt={copy.chrome.logoAlt} />
     </a>
 
     <nav class="site-header__nav" aria-label="Primary">

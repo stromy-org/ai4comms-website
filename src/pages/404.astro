@@ -1,22 +1,23 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
+import { copy } from "../data/content/copy";
 ---
 
 <PageLayout
-  title="Page not found"
-  description="The page you were looking for does not exist."
+  title={copy.notFound.seoTitle}
+  description={copy.notFound.seoDesc}
   pathname="/404"
 >
   <section class="page-hero">
     <div class="shell page-hero__inner">
-      <div class="eyebrow">404</div>
-      <h1 class="page-title">Nothing useful lives at this route.</h1>
+      <div class="eyebrow">{copy.notFound.eyebrow}</div>
+      <h1 class="page-title">{copy.notFound.title}</h1>
       <p class="page-intro">
-        Return to the homepage or go directly to services, case studies, or contact.
+        {copy.notFound.intro}
       </p>
       <div class="button-row">
-        <a class="button button--primary" href="/">Back to home</a>
-        <a class="button button--secondary" href="/services">View services</a>
+        <a class="button button--primary" href="/">{copy.notFound.backHome}</a>
+        <a class="button button--secondary" href="/services">{copy.notFound.viewServices}</a>
       </div>
     </div>
   </section>

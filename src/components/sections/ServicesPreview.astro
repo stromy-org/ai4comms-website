@@ -1,13 +1,16 @@
 ---
 import { services } from "../../data/company";
+import { copy } from "../../data/content/copy";
+
+const preview = copy.home.servicesPreview;
 ---
 
 <section class="section reveal-on-scroll" data-reveal>
   <div class="shell">
-    <div class="eyebrow">Services</div>
-    <h2 class="section-title">Advisory, enablement, and governance built for communications teams.</h2>
+    <div class="eyebrow">{preview.eyebrow}</div>
+    <h2 class="section-title">{preview.title}</h2>
     <p class="section-copy">
-      AI4comms is structured as a consulting offer, not a toolbox pitch. Each service turns a fuzzy AI conversation into a clearer operating decision.
+      {preview.intro}
     </p>
 
     <div class="services-list">

@@ -1,17 +1,19 @@
 ---
 import { caseStudies } from "../../data/caseStudies";
+import { copy } from "../../data/content/copy";
 import caseImage from "../../brand/images/signal-03-nwNjeZ0WA6w--16x9-textsafe.jpg";
 
+const showcase = copy.home.caseShowcase;
 const entries = [...caseStudies].sort((a, b) => a.order - b.order);
 const [featured, ...rest] = entries;
 ---
 
 <section class="section section--paper reveal-on-scroll" data-reveal>
   <div class="shell">
-    <div class="eyebrow">Use cases</div>
-    <h2 class="section-title">Concrete applications for teams that need more than AI theatre.</h2>
+    <div class="eyebrow">{showcase.eyebrow}</div>
+    <h2 class="section-title">{showcase.title}</h2>
     <p class="page-intro">
-      The case-study area is designed as a use-case library. It can later hold named client work, but it already supports structured application patterns from day one.
+      {showcase.intro}
     </p>
 
     <div class="case-grid">
@@ -19,10 +21,10 @@ const [featured, ...rest] = entries;
         <article class="case-grid__featured surface-card">
           <img src={caseImage.src} alt="" aria-hidden="true" />
           <div class="case-grid__featured-copy">
-            <div class="eyebrow">Featured use case</div>
+            <div class="eyebrow">{showcase.featuredEyebrow}</div>
             <h3>{featured.title}</h3>
             <p>{featured.summary}</p>
-            <a href={`/case-studies/${featured.slug}`} class="button button--secondary">Read the use case</a>
+            <a href={`/case-studies/${featured.slug}`} class="button button--secondary">{showcase.readCta}</a>
           </div>
         </article>
       )}
@@ -33,7 +35,7 @@ const [featured, ...rest] = entries;
             <div class="eyebrow">{entry.sector}</div>
             <h3>{entry.title}</h3>
             <p>{entry.summary}</p>
-            <a href={`/case-studies/${entry.slug}`}>Open use case</a>
+            <a href={`/case-studies/${entry.slug}`}>{showcase.openCta}</a>
           </article>
         ))}
       </div>

@@ -5,11 +5,12 @@ import ValueProposition from "../components/sections/ValueProposition.astro";
 import ServicesPreview from "../components/sections/ServicesPreview.astro";
 import CaseStudyShowcase from "../components/sections/CaseStudyShowcase.astro";
 import MinimalCta from "../components/sections/MinimalCta.astro";
+import { copy } from "../data/content/copy";
 ---
 
 <PageLayout
-  title="AI4comms"
-  description="AI strategy, enablement, and governance support for communications leaders who need practical operating clarity."
+  title={copy.home.seoTitle}
+  description={copy.home.seoDesc}
   pathname="/"
 >
   <HomeHero />
