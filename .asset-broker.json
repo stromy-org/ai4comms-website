@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "owner_client_slug": "ai4comms",
+  "build": {
+    "install": "npm ci",
+    "command": "npm run build",
+    "output_dir": "dist",
+    "node_version": "22",
+    "serve": "static"
+  },
+  "lanes": {
+    "content": {
+      "editable_globs": [
+        "src/content/**",
+        "src/data/content/**",
+        "src/i18n/content/**",
+        "src/assets/content/**",
+        "public/content/**"
+      ],
+      "self_publish": true,
+      "required_check": "astro-check"
+    },
+    "structural": {
+      "editable_globs": [
+        "src/components/**",
+        "src/layouts/**",
+        "src/pages/**",
+        "src/styles/**",
+        "src/lib/**",
+        "src/data/**",
+        "src/assets/**",
+        "astro.config.mjs"
+      ],
+      "self_publish": false
+    }
+  },
+  "preview_route_map": {
+    "src/data/content/": ["/", "/services", "/case-studies", "/about", "/contact"]
+  }
+}

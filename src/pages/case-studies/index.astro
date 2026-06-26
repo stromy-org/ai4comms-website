@@ -1,21 +1,22 @@
 ---
 import PageLayout from "../../layouts/PageLayout.astro";
 import { caseStudies } from "../../data/caseStudies";
+import { copy } from "../../data/content/copy";
 
 const orderedCaseStudies = [...caseStudies].sort((a, b) => a.order - b.order);
 ---
 
 <PageLayout
-  title="Case Studies"
-  description="Concrete AI use cases and application patterns for communications teams."
+  title={copy.caseStudies.seoTitle}
+  description={copy.caseStudies.seoDesc}
   pathname="/case-studies"
 >
   <section class="page-hero">
     <div class="shell page-hero__inner">
-      <div class="eyebrow">Case studies</div>
-      <h1 class="page-title">A use-case library for serious communications work.</h1>
+      <div class="eyebrow">{copy.caseStudies.eyebrow}</div>
+      <h1 class="page-title">{copy.caseStudies.title}</h1>
       <p class="page-intro">
-        This section is built to describe real projects later. For launch, it already works as a concrete application library so the site can speak in examples instead of abstractions.
+        {copy.caseStudies.intro}
       </p>
     </div>
   </section>
@@ -32,7 +33,7 @@ const orderedCaseStudies = [...caseStudies].sort((a, b) => a.order - b.order);
               <strong>{entry.client}</strong>
               <span>{entry.outcome}</span>
             </div>
-            <a href={`/case-studies/${entry.slug}`}>Read use case</a>
+            <a href={`/case-studies/${entry.slug}`}>{copy.caseStudies.readCta}</a>
           </article>
         ))}
       </div>

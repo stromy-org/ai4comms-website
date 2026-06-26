@@ -1,41 +1,42 @@
 ---
 import Button from "../ui/Button.astro";
 import { company } from "../../data/company";
+import { copy } from "../../data/content/copy";
 import heroImage from "../../brand/images/comms-env-08-bGo01h57aCE--16x9-textsafe.jpg";
 import accentImage from "../../brand/images/data-tex-05-ETiSF2VSRTQ--16x9-textsafe.jpg";
+
+const hero = copy.home.hero;
 ---
 
 <section class="home-hero ambient-zone ambient-zone--deep" data-ambient-zone="hero">
   <div class="shell home-hero__grid">
     <div class="home-hero__copy">
-      <div class="eyebrow">Signal Authority</div>
+      <div class="eyebrow">{hero.eyebrow}</div>
       <h1 class="display-title home-hero__title">
-        Turn AI ambition into clear operating decisions for comms teams.
+        {hero.title}
       </h1>
       <p class="lede">
         {company.description}
       </p>
       <ul class="home-hero__signals list-reset">
-        <li>Strategy before tooling</li>
-        <li>Governance before scale</li>
-        <li>Enablement that teams actually use</li>
+        {hero.signals.map((signal) => <li>{signal}</li>)}
       </ul>
       <div class="button-row">
-        <Button href="/case-studies" variant="primary">See Use Cases</Button>
-        <Button href="/contact" variant="secondary">Contact AI4comms</Button>
+        <Button href="/case-studies" variant="primary">{hero.primaryCta}</Button>
+        <Button href="/contact" variant="secondary">{hero.secondaryCta}</Button>
       </div>
     </div>
 
     <div class="home-hero__visual">
       <article class="surface-card home-hero__image-card">
-        <img src={heroImage.src} alt="Dark communications environment with architectural structure" />
+        <img src={heroImage.src} alt={hero.imageAlt} />
       </article>
       <article class="surface-card home-hero__detail">
         <img src={accentImage.src} alt="" aria-hidden="true" />
         <div>
-          <div class="eyebrow">How the site should feel</div>
+          <div class="eyebrow">{hero.detailEyebrow}</div>
           <p>
-            Dark-first and decisive, but with enough paper-toned space to read as a high-end advisory firm rather than a startup landing page.
+            {hero.detailBody}
           </p>
         </div>
       </article>

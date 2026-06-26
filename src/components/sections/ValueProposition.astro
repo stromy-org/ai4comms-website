@@ -1,13 +1,16 @@
 ---
 import { company } from "../../data/company";
+import { copy } from "../../data/content/copy";
+
+const value = copy.home.value;
 ---
 
 <section class="section section--paper reveal-on-scroll" data-reveal>
   <div class="shell">
-    <div class="eyebrow">What AI4comms fixes</div>
-    <h2 class="section-title">From AI noise to operational signal.</h2>
+    <div class="eyebrow">{value.eyebrow}</div>
+    <h2 class="section-title">{value.title}</h2>
     <p class="page-intro">
-      The brief is not “do more AI.” It is to decide where AI belongs, how teams should use it, and which controls have to exist before adoption scales.
+      {value.intro}
     </p>
 
     <div class="value-list">

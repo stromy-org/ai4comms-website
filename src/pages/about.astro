@@ -1,20 +1,21 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 import { company } from "../data/company";
+import { copy } from "../data/content/copy";
 import aboutImage from "../brand/images/comms-env-06-GP7SH7RRkqo--16x9-textsafe.jpg";
 ---
 
 <PageLayout
-  title="About"
-  description="About AI4comms and its operating posture for strategy, enablement, and responsible AI adoption in communications."
+  title={copy.about.seoTitle}
+  description={copy.about.seoDesc}
   pathname="/about"
 >
   <section class="page-hero">
     <div class="shell page-hero__inner">
-      <div class="eyebrow">About</div>
-      <h1 class="page-title">A calmer, stricter way to lead AI in communications.</h1>
+      <div class="eyebrow">{copy.about.eyebrow}</div>
+      <h1 class="page-title">{copy.about.title}</h1>
       <p class="page-intro">
-        AI4comms is positioned as an advisory and enablement partner for leaders who need clarity, not performance. The proposition is strategic, practical, and governance-aware by design.
+        {copy.about.intro}
       </p>
     </div>
   </section>
@@ -22,7 +23,7 @@ import aboutImage from "../brand/images/comms-env-06-GP7SH7RRkqo--16x9-textsafe.
   <section class="section">
     <div class="shell about-grid">
       <article class="surface-card about-copy">
-        <div class="eyebrow">Operating posture</div>
+        <div class="eyebrow">{copy.about.postureEyebrow}</div>
         <h2>{company.heroTagline}</h2>
         <p>{company.description}</p>
         <ul class="about-points list-reset">
@@ -31,15 +32,15 @@ import aboutImage from "../brand/images/comms-env-06-GP7SH7RRkqo--16x9-textsafe.
       </article>
 
       <article class="surface-card about-image">
-        <img src={aboutImage.src} alt="Muted, high-contrast communications environment" />
+        <img src={aboutImage.src} alt={copy.about.imageAlt} />
       </article>
     </div>
   </section>
 
   <section class="section section--paper">
     <div class="shell">
-      <div class="eyebrow">Principles</div>
-      <h2 class="section-title">The work should read as senior advisory, not AI excitement.</h2>
+      <div class="eyebrow">{copy.about.principlesEyebrow}</div>
+      <h2 class="section-title">{copy.about.principlesTitle}</h2>
       <div class="grid-3 principles-grid">
         {company.principles.map((principle, index) => (
           <article class="surface-card principle-card">
