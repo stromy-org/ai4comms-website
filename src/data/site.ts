@@ -14,9 +14,26 @@ export const navigation = [
 
 export const site = {
   name: company.name,
+  // Client-owned content (content-ownership shim) — title/description/footerNote.
   title: siteContent.title,
   description: siteContent.description,
-  ogImage: "/og-fallback.png",
+  // Production host (Azure SWA) — keep in sync with astro.config.mjs `site:`.
+  // Replaces the old hard-coded GitHub Pages canonical fallback.
+  url: "https://green-forest-0f795c303.7.azurestaticapps.net",
+  locale: "en",
+  entityType: "Organization" as
+    | "Organization"
+    | "ProfessionalService"
+    | "LocalBusiness"
+    | "Person",
+  logo: "", // no standalone logo asset yet → Organization.logo omitted
+  // Default 1200×630 social card (asset is og-fallback.svg).
+  ogImage: "/og-fallback.svg",
+  defaultOgImage: "/og-fallback.svg",
+  twitterHandle: "",
+  social: {} as { linkedin?: string },
+  analytics: { provider: "none" as const },
+  features: { search: false, dynamicOg: false },
   navigation,
   footerNote: siteContent.footerNote,
 };
