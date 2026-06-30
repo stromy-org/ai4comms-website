@@ -8,7 +8,7 @@ trim, 3 mm bleed, crop marks, CMYK, fonts embedded, PDF/X-1a:2003.
 | `william-eu-print.pdf` | William Masquelier | Technology Product Lead |
 | `emma-eu-print.pdf`    | Emma van Gelder    | Co-Founder |
 | `ingo-eu-print.pdf`    | Ingo Heijnen       | Co-Founder |
-| `arien-eu-print.pdf`   | Arien Stuijt       | Co-Founder |
+| `arien-eu-print.pdf`   | Ariën Stuijt       | Co-Founder |
 
 Shared back: `../source/back-eu.svg` (AI4comms lockup + "Kies voor AI als partner,
 niet als vervanger.").
@@ -42,6 +42,6 @@ prefers.
 Emails follow the `firstname.lastname@ai4-comms.com` pattern, except William,
 who uses his Stromy address (`william.masquelier@stromy.com.au`) by request.
 Direct lines: William +32 479 83 72 97, Emma +31 6 22 00 94 23,
-Ingo +31 6 55 86 79 04, Arien +31 6 21 53 12 33.
+Ingo +31 6 55 86 79 04, Ariën +31 6 21 53 12 33.
 
 Requires `brew install librsvg ghostscript` (native tools, operator-local).
