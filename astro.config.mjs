@@ -5,7 +5,17 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://green-forest-0f795c303.7.azurestaticapps.net',
-  integrations: [mdx(), sitemap()],
+  trailingSlash: 'never',
+  // Reserve a redirects map for future use (301/302 rules go here).
+  redirects: {},
+  integrations: [
+    mdx(),
+    sitemap({
+      // Exclude utility pages from the sitemap.
+      filter: (page) =>
+        !page.endsWith('/404') && !page.endsWith('/search'),
+    }),
+  ],
   vite: {
     plugins: [tailwindcss()],
   },

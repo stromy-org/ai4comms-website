@@ -32,7 +32,7 @@ ai4comms-website/
 ├── public/
 │   └── ambient.js            ← localized decorative interaction logic
 └── scripts/
-    └── generate-tokens.mjs   ← charter → token outputs
+    └── generate-tokens.ts    ← charter → token outputs
 ```
 
 ---
@@ -117,6 +117,72 @@ no, add what's missing before closing.
 | nav/footer/meta updates | `src/data/site.ts` + layout components |
 | brand refresh or synced visuals | `src/brand/` then `npm run tokens` |
 | screenshot-based review | run dev server + capture desktop/mobile screenshots |
+| "update SEO", "meta tags", "OG image", "structured data", "JSON-LD", "hreflang" | [Update SEO](#update-seo) |
+| "SEO audit", "SEO score", "Lighthouse SEO", "validate structured data", "rich results" | [SEO audit](#seo-audit) |
+
+## Update SEO
+
+The brand-aware SEO kit lives in `src/lib/seo.ts` + `src/components/seo/{Seo,JsonLd}.astro`,
+configured from `src/data/site.ts` and wired through `BaseLayout.astro`. Full
+playbook (2026 checklist, structured-data catalog, crawler policy, hreflang):
+[`references/seo-patterns.md`](../../../references/seo-patterns.md).
+
+> **Honest ceiling.** This kit delivers crawlability + machine-parseability
+> (schema, semantic HTML, sitemap/robots, social previews, CWV). It does not
+> manufacture rankings or AI citations. Rank `llms.txt` as a hedge, not a lever,
+> and never promise GEO outcomes to a client.
+
+- **Per-page title & description** — pass `title` / `description` to `BaseLayout`
+  (which forwards them to `Seo.astro`). For content collections, edit `title` /
+  `description` in the entry frontmatter. `Seo.astro` appends ` | <site>`; do not
+  double-suffix.
+- **Structured data** — pass page-specific JSON-LD via the `jsonLd` prop using the
+  `src/lib/seo.ts` builders: `articleSchema` + `breadcrumbSchema` on
+  blog/insight/case-study pages; `localBusinessSchema`/`personSchema` on the
+  relevant identity page. Identity + `WebSite` are emitted once on the homepage
+  (`isHome`) — never duplicate them per page.
+- **`noindex`** — pass `noindex={true}` to `BaseLayout`/`Seo` for thank-you,
+  search, and staging pages (the `404` already sets it). A `noindex` page still
+  self-canonicals.
+- **OG image** — `Seo.astro` always resolves `og:image` (page `image` prop →
+  `site.defaultOgImage`), so no page ships a blank card. With `enable_dynamic_og`,
+  register a page in `src/pages/og/[...route].ts`'s `pages` map to get a generated
+  branded 1200×630 card, then point that page's `image` at `/og/<route>.png`.
+- **Sitemap & robots** — `@astrojs/sitemap` generates `/sitemap-index.xml`;
+  `public/robots.txt` references it and carries the AI-crawler policy. Keep
+  `astro.config.mjs` `site:` equal to `src/data/site.ts` `url` — a mismatch ships
+  wrong canonicals.
+- **hreflang** (bilingual sites) — pass reciprocal `alternates` from the site's
+  i18n source; every language version lists itself + alternates.
+- **RSS** — set `rss_collection` (Copier) / `site.features.rssCollection` to a real
+  collection key to emit `/rss.xml`; omitted otherwise.
+- **Pagefind search** — `enable_site_search` adds `/search` + a
+  `pagefind --site dist` postbuild; mark the content root `data-pagefind-body` and
+  exclude chrome/`/404`/`/search`.
+- **Analytics (Plausible)** — set `site.analytics.provider='plausible'` **and**
+  `plausibleScriptSrc` to the per-site URL from the Plausible installation screen
+  (a domain alone emits no script); `BaseLayout` injects it conditionally.
+
+---
+
+## SEO audit
+
+Run when the user asks to audit SEO, check the SEO score, or validate structured
+data on a page or the whole site.
+
+1. `npm run build && npm run preview` (or use the running dev server).
+2. With the `chrome-devtools` MCP, run a **Lighthouse SEO** audit on the target
+   page(s); target score ≥ 95. (Fallback: the playwright capture snippets below.)
+3. Inspect the rendered `<head>`: one `<title>`/canonical/description, full
+   OG/Twitter set, one `application/ld+json` graph, correct `noindex` where
+   intended.
+4. Validate the JSON-LD with the Schema Markup Validator (whole graph) and
+   Google's Rich Results Test (Google-supported types only — Article, Breadcrumb,
+   Organization/LocalBusiness).
+5. Report the score + a prioritized fix list, citing
+   [`references/seo-patterns.md`](../../../references/seo-patterns.md).
+
+---
 
 ## Visual Review Workflow
 
