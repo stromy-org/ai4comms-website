@@ -7,6 +7,9 @@
     "compiler": "1.0"
   },
   "tier": "producer",
+  "warnings": [
+    "no small-title `label` type-role (eyebrow/kicker) — capture charter.fonts.label so small titles don't default to mono (Component L)"
+  ],
   "colors": {
     "primary": "#15311A",
     "secondary": "#214C28",
@@ -395,6 +398,5 @@
     "resolution": "1920x1080",
     "fps": 30
   },
-  "fallbacksUsed": [],
-  "warnings": []
+  "fallbacksUsed": []
 }
