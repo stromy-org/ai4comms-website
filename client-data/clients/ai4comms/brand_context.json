@@ -3,7 +3,7 @@
   "schemaVersion": 1,
   "version": "1.0",
   "generatedFrom": {
-    "charterSha": "74ddae31b4cf05e6bd60b4ff9491133152090f9094c16f8a7403cd22d519b9a8",
+    "charterSha": "d26c2a2b5e34d080264d7cff655d5ad40c15ae7ecd7d9fb3c907dc4d691ace7e",
     "compiler": "1.0"
   },
   "tier": "producer",
@@ -265,6 +265,12 @@
           "tier": "live-site"
         },
         "selected": "canopy-paper",
+        "cssTokens": {
+          "--bg-canopy": "#15311A",
+          "--bg-pine": "#214C28",
+          "--bg-paper": "#FFFFFF",
+          "--bg-mist": "#F8FAFC"
+        },
         "spec": {
           "canvases": [
             {
@@ -308,6 +314,11 @@
           "tier": "live-site"
         },
         "selected": "soft-forest",
+        "cssTokens": {
+          "--gradient-header": "linear-gradient(135deg,#F8FAFC 0%,#ECECEC 100%)",
+          "--gradient-cta": "linear-gradient(90deg,#15311A 0%,#9EC187 100%)",
+          "--gradient-canopy-hero": "linear-gradient(160deg,#15311A 0%,#214C28 100%)"
+        },
         "spec": {
           "gradients": [
             {
@@ -341,6 +352,12 @@
           "tier": "live-site"
         },
         "selected": "spacious-symmetric",
+        "cssTokens": {
+          "--grid-max": "1320px",
+          "--section-gap": "96px",
+          "--grid-margin": "6vw",
+          "--rule-divider": "1px solid #9EC187"
+        },
         "spec": {
           "columns": "12-col symmetric; centered text blocks + alternating 1/2 image·1/2 text splits",
           "contentWidth": "1320px max",
@@ -390,6 +407,11 @@
           "tier": "live-site"
         },
         "selected": "rounded-outline",
+        "cssTokens": {
+          "--radius-card": "12px",
+          "--radius-pill": "999px",
+          "--border-hairline": "1px solid #ECECEC"
+        },
         "spec": {
           "shadows": "none/minimal — depth via border + generous radius",
           "borders": "1px hairline #ECECEC on white cards",

@@ -494,7 +494,13 @@
               "tier": "proposed"
             }
           }
-        ]
+        ],
+        "cssTokens": {
+          "--bg-canopy": "#15311A",
+          "--bg-pine": "#214C28",
+          "--bg-paper": "#FFFFFF",
+          "--bg-mist": "#F8FAFC"
+        }
       },
       "gradients": {
         "status": "approved",
@@ -564,7 +570,12 @@
               "tier": "proposed"
             }
           }
-        ]
+        ],
+        "cssTokens": {
+          "--gradient-header": "linear-gradient(135deg,#F8FAFC 0%,#ECECEC 100%)",
+          "--gradient-cta": "linear-gradient(90deg,#15311A 0%,#9EC187 100%)",
+          "--gradient-canopy-hero": "linear-gradient(160deg,#15311A 0%,#214C28 100%)"
+        }
       },
       "grid": {
         "status": "approved",
@@ -617,7 +628,13 @@
               "tier": "proposed"
             }
           }
-        ]
+        ],
+        "cssTokens": {
+          "--grid-max": "1320px",
+          "--section-gap": "96px",
+          "--grid-margin": "6vw",
+          "--rule-divider": "1px solid #9EC187"
+        }
       },
       "iconography": {
         "status": "approved",
@@ -731,7 +748,12 @@
               "tier": "proposed"
             }
           }
-        ]
+        ],
+        "cssTokens": {
+          "--radius-card": "12px",
+          "--radius-pill": "999px",
+          "--border-hairline": "1px solid #ECECEC"
+        }
       },
       "motifs": {
         "status": "approved",
