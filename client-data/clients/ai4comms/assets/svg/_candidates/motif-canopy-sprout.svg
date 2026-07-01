@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Canopy sprout mark">
+  <!-- minimal sprout: canopy stem + two sage leaves — 'growth / enablement' -->
+  <path d="M32 56 V30" fill="none" stroke="#15311A" stroke-width="3" stroke-linecap="round"/>
+  <path d="M32 34 C22 34 16 27 16 18 C26 18 32 25 32 34 Z" fill="#9EC187"/>
+  <path d="M32 30 C42 30 48 23 48 14 C38 14 32 21 32 30 Z" fill="#214C28"/>
+</svg>

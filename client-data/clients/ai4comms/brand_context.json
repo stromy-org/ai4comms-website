@@ -3,12 +3,12 @@
   "schemaVersion": 1,
   "version": "1.0",
   "generatedFrom": {
-    "charterSha": "57ba67b1e3aecef2e7a7779853585f6335d279c8e78315e6880fc24489fee97e",
+    "charterSha": "74ddae31b4cf05e6bd60b4ff9491133152090f9094c16f8a7403cd22d519b9a8",
     "compiler": "1.0"
   },
   "tier": "producer",
   "warnings": [
-    "no small-title `label` type-role (eyebrow/kicker) — capture charter.fonts.label so small titles don't default to mono (Component L)"
+    "visual_grammar.motion: candidates present but no `selected` — dimension degrades"
   ],
   "colors": {
     "primary": "#15311A",
@@ -37,9 +37,22 @@
       "family": "JetBrains Mono",
       "weight": "500",
       "fallback": "\"SFMono-Regular\", Consolas, monospace"
+    },
+    "label": {
+      "family": "Montserrat",
+      "weight": "600",
+      "case": "uppercase",
+      "tracking": "0.12em"
+    },
+    "smallTitle": {
+      "face": "label",
+      "case": "uppercase",
+      "tracking": "0.12em",
+      "marker": "64px sage hairline rule (1px, #9EC187) below the overline",
+      "usage": "eyebrows/overlines above headings — Montserrat 600 caps pine + sage hairline"
     }
   },
-  "tokens_css": "/* ============================================================================\n * AI4comms — Design Tokens\n * Direction: Practical AI enablement partner (Sage + Caregiver)\n * Light-first, accessible, deployed-identity-aligned.\n *\n * Source of truth: ai4-comms.com live site (Divi global presets + verified\n * inline styles, captured 2026-05-18).\n *\n * Aspirational dark-mode \"Signal Authority\" tokens archived at\n * .build-history/aspirational-2026-04-05/tokens.css.\n * ============================================================================ */\n\n:root {\n  /* ---------- Primary palette ---------- */\n  --brand-canopy: #15311A;        /* primary deep brand green (logo wordmark) */\n  --brand-pine:   #214C28;        /* secondary mid brand green */\n  --brand-sage:   #9EC187;        /* accent — light sage green (active/highlight) */\n  --brand-paper:  #F8FAFC;        /* warm near-white surface */\n  --brand-mist:   #ECECEC;        /* secondary surface band */\n  --brand-white:  #FFFFFF;        /* primary surface */\n  --brand-ink:    #1F1F1F;        /* primary body text */\n\n  /* ---------- Pine scale (brand greens, light-mode oriented) ---------- */\n  --pine-50:  #EEF5EF;\n  --pine-100: #D5E7D8;\n  --pine-200: #A9CFB0;\n  --pine-300: #7AB488;\n  --pine-400: #509964;\n  --pine-500: #3B7A4E;\n  --pine-600: #2D5E3C;\n  --pine-700: #214C28;   /* secondary */\n  --pine-800: #15311A;   /* primary */\n  --pine-900: #0C1410;\n\n  /* ---------- Sage scale (accent) ---------- */\n  --sage-50:  #F1F6EC;\n  --sage-100: #E1EDD7;\n  --sage-200: #C9DEB5;\n  --sage-300: #B0CE93;\n  --sage-400: #9EC187;   /* accent */\n  --sage-500: #82AE68;\n  --sage-600: #678F4F;\n  --sage-700: #4F6F3D;\n  --sage-800: #3A522D;\n  --sage-900: #243620;\n\n  /* ---------- Neutral scale (cool grays, matches deployed site) ---------- */\n  --n-0:   #FFFFFF;\n  --n-50:  #F8FAFC;   /* deployed --gcid-jd3gym30fa */\n  --n-100: #ECECEC;   /* deployed --gcid-v6w1ho8m1g */\n  --n-200: #DDDDDD;\n  --n-300: #C4C4C4;\n  --n-400: #A1A1A1;\n  --n-500: #7A7A7A;\n  --n-600: #4E4E4E;   /* textLight */\n  --n-700: #3A3A3A;\n  --n-800: #2A2A2A;\n  --n-900: #1F1F1F;   /* text */\n\n  /* ---------- Semantic colors (palette-aligned, muted) ---------- */\n  --success:       #3B7A4E;\n  --success-light: #E2F0E6;\n  --warning:       #C89B3E;\n  --warning-light: #F6ECD4;\n  --error:         #B85648;\n  --error-light:   #F6DCD6;\n  --info:          #4F6F3D;\n  --info-light:    #E1EDD7;\n\n  /* ---------- Charter semantic mappings ---------- */\n  --color-primary:        var(--brand-canopy);\n  --color-secondary:      var(--brand-pine);\n  --color-accent:         var(--brand-sage);\n  --color-background:     var(--brand-white);\n  --color-background-alt: var(--brand-paper);\n  --color-text:           var(--n-900);\n  --color-text-light:     var(--n-600);\n  --color-text-on-dark:   var(--brand-white);\n  --color-text-on-accent: var(--brand-canopy);\n  --color-rule:           var(--n-100);\n  --color-rule-strong:    var(--n-200);\n\n  /* ---------- Typography ---------- */\n  --font-heading: \"Montserrat\", \"Helvetica Neue\", Arial, sans-serif;\n  --font-body:    \"Montserrat\", \"Helvetica Neue\", Arial, sans-serif;\n  --font-mono:    \"JetBrains Mono\", \"SFMono-Regular\", Consolas, monospace;\n\n  --weight-regular:  400;\n  --weight-medium:   500;\n  --weight-semibold: 600;\n  --weight-bold:     700;\n\n  --line-height-tight: 1.2;\n  --line-height-snug:  1.4;\n  --line-height-base:  1.7;     /* matches deployed --et_global_body_font_height */\n  --line-height-loose: 1.9;\n\n  --letter-spacing-tight:  -0.01em;\n  --letter-spacing-normal: 0;\n  --letter-spacing-wide:   0.04em;\n  --letter-spacing-label:  0.12em;\n\n  /* ---------- Type scale ---------- */\n  --fs-xs:   12px;\n  --fs-sm:   13px;\n  --fs-base: 14px;    /* matches deployed --et_global_body_font_size */\n  --fs-md:   16px;\n  --fs-lg:   18px;\n  --fs-xl:   22px;\n  --fs-2xl:  28px;\n  --fs-3xl:  34px;\n  --fs-4xl:  44px;\n  --fs-5xl:  56px;\n  --fs-display: 72px;\n\n  /* ---------- Spacing scale ---------- */\n  --space-1:  4px;\n  --space-2:  8px;\n  --space-3:  12px;\n  --space-4:  16px;\n  --space-5:  24px;\n  --space-6:  32px;\n  --space-7:  48px;\n  --space-8:  64px;\n  --space-9:  96px;\n  --space-10: 128px;\n\n  /* ---------- Radii ---------- */\n  --radius-sm: 4px;\n  --radius-md: 6px;\n  --radius-lg: 12px;\n  --radius-pill: 999px;\n\n  /* ---------- Elevation ---------- */\n  --shadow-sm: 0 1px 2px rgba(15, 30, 18, 0.06);\n  --shadow-md: 0 4px 12px rgba(15, 30, 18, 0.08);\n  --shadow-lg: 0 12px 32px rgba(15, 30, 18, 0.12);\n\n  /* ---------- Motif tokens (light-mode hairline rules) ---------- */\n  --motif-line-weight: 1px;\n  --motif-line-color:  var(--brand-canopy);\n  --motif-rule-color:  var(--n-200);\n  --motif-pattern-opacity: 0.05;\n\n  /* ---------- Overlay tokens (for hero photography, if reintroduced) ---------- */\n  --overlay-canopy-80: rgba(21, 49, 26, 0.8);\n  --overlay-canopy-70: rgba(21, 49, 26, 0.7);\n  --overlay-canopy-55: rgba(21, 49, 26, 0.55);\n\n  /* ---------- Layout ---------- */\n  --content-max:  1320px;\n  --content-narrow: 760px;\n  --gutter:       24px;\n  --section-gap:  96px;\n}\n\n/* ============================================================================\n * Utility classes — light-mode base\n * ============================================================================ */\n\n.brand-button-primary {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  padding: 12px 24px;\n  background: var(--brand-canopy);\n  color: var(--brand-white);\n  font-family: var(--font-body);\n  font-weight: var(--weight-semibold);\n  font-size: var(--fs-base);\n  letter-spacing: var(--letter-spacing-wide);\n  text-transform: uppercase;\n  border: none;\n  border-radius: var(--radius-md);\n  text-decoration: none;\n  transition: background 160ms ease;\n}\n.brand-button-primary:hover { background: var(--brand-pine); }\n\n.brand-button-ghost {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  padding: 12px 24px;\n  background: transparent;\n  color: var(--brand-canopy);\n  font-family: var(--font-body);\n  font-weight: var(--weight-semibold);\n  font-size: var(--fs-base);\n  letter-spacing: var(--letter-spacing-wide);\n  text-transform: uppercase;\n  border: 1px solid var(--brand-canopy);\n  border-radius: var(--radius-md);\n  text-decoration: none;\n  transition: background 160ms ease, color 160ms ease;\n}\n.brand-button-ghost:hover { background: var(--brand-canopy); color: var(--brand-white); }\n\n.brand-overline {\n  font-family: var(--font-body);\n  font-size: var(--fs-xs);\n  font-weight: var(--weight-semibold);\n  text-transform: uppercase;\n  letter-spacing: var(--letter-spacing-label);\n  color: var(--brand-pine);\n}\n\n.brand-heading {\n  font-family: var(--font-heading);\n  font-weight: var(--weight-bold);\n  line-height: var(--line-height-tight);\n  letter-spacing: var(--letter-spacing-tight);\n  color: var(--brand-canopy);\n}\n\n.brand-body {\n  font-family: var(--font-body);\n  font-weight: var(--weight-regular);\n  font-size: var(--fs-base);\n  line-height: var(--line-height-base);\n  color: var(--n-900);\n}\n\n.brand-rule {\n  border: none;\n  border-top: var(--motif-line-weight) solid var(--motif-rule-color);\n  margin: var(--space-6) 0;\n}\n\n.brand-rule-accent {\n  border: none;\n  border-top: 2px solid var(--brand-canopy);\n  width: 64px;\n  margin: var(--space-5) 0;\n}\n\n.brand-card {\n  background: var(--brand-white);\n  border: 1px solid var(--n-100);\n  border-radius: var(--radius-lg);\n  padding: var(--space-6);\n}\n\n.brand-card-tinted {\n  background: var(--brand-paper);\n  border-radius: var(--radius-lg);\n  padding: var(--space-6);\n}\n\n.brand-section-light    { background: var(--brand-white);  color: var(--n-900); }\n.brand-section-mist     { background: var(--brand-paper);  color: var(--n-900); }\n.brand-section-canopy   { background: var(--brand-canopy); color: var(--brand-white); }\n.brand-section-canopy .brand-heading { color: var(--brand-white); }\n.brand-section-canopy .brand-overline { color: var(--brand-sage); }\n",
+  "tokens_css": "/* ============================================================================\n * AI4comms — Design Tokens\n * Direction: Practical AI enablement partner (Sage + Caregiver)\n * Light-first, accessible, deployed-identity-aligned.\n *\n * Source of truth: ai4-comms.com live site (Divi global presets + verified\n * inline styles, captured 2026-05-18).\n *\n * Aspirational dark-mode \"Signal Authority\" tokens archived at\n * .build-history/aspirational-2026-04-05/tokens.css.\n * ============================================================================ */\n\n:root {\n  /* ---------- Primary palette ---------- */\n  --brand-canopy: #15311A;        /* primary deep brand green (logo wordmark) */\n  --brand-pine:   #214C28;        /* secondary mid brand green */\n  --brand-sage:   #9EC187;        /* accent — light sage green (active/highlight) */\n  --brand-paper:  #F8FAFC;        /* warm near-white surface */\n  --brand-mist:   #ECECEC;        /* secondary surface band */\n  --brand-white:  #FFFFFF;        /* primary surface */\n  --brand-ink:    #1F1F1F;        /* primary body text */\n\n  /* ---------- Pine scale (brand greens, light-mode oriented) ---------- */\n  --pine-50:  #EEF5EF;\n  --pine-100: #D5E7D8;\n  --pine-200: #A9CFB0;\n  --pine-300: #7AB488;\n  --pine-400: #509964;\n  --pine-500: #3B7A4E;\n  --pine-600: #2D5E3C;\n  --pine-700: #214C28;   /* secondary */\n  --pine-800: #15311A;   /* primary */\n  --pine-900: #0C1410;\n\n  /* ---------- Sage scale (accent) ---------- */\n  --sage-50:  #F1F6EC;\n  --sage-100: #E1EDD7;\n  --sage-200: #C9DEB5;\n  --sage-300: #B0CE93;\n  --sage-400: #9EC187;   /* accent */\n  --sage-500: #82AE68;\n  --sage-600: #678F4F;\n  --sage-700: #4F6F3D;\n  --sage-800: #3A522D;\n  --sage-900: #243620;\n\n  /* ---------- Neutral scale (cool grays, matches deployed site) ---------- */\n  --n-0:   #FFFFFF;\n  --n-50:  #F8FAFC;   /* deployed --gcid-jd3gym30fa */\n  --n-100: #ECECEC;   /* deployed --gcid-v6w1ho8m1g */\n  --n-200: #DDDDDD;\n  --n-300: #C4C4C4;\n  --n-400: #A1A1A1;\n  --n-500: #7A7A7A;\n  --n-600: #4E4E4E;   /* textLight */\n  --n-700: #3A3A3A;\n  --n-800: #2A2A2A;\n  --n-900: #1F1F1F;   /* text */\n\n  /* ---------- Semantic colors (palette-aligned, muted) ---------- */\n  --success:       #3B7A4E;\n  --success-light: #E2F0E6;\n  --warning:       #C89B3E;\n  --warning-light: #F6ECD4;\n  --error:         #B85648;\n  --error-light:   #F6DCD6;\n  --info:          #4F6F3D;\n  --info-light:    #E1EDD7;\n\n  /* ---------- Charter semantic mappings ---------- */\n  --color-primary:        var(--brand-canopy);\n  --color-secondary:      var(--brand-pine);\n  --color-accent:         var(--brand-sage);\n  --color-background:     var(--brand-white);\n  --color-background-alt: var(--brand-paper);\n  --color-text:           var(--n-900);\n  --color-text-light:     var(--n-600);\n  --color-text-on-dark:   var(--brand-white);\n  --color-text-on-accent: var(--brand-canopy);\n  --color-rule:           var(--n-100);\n  --color-rule-strong:    var(--n-200);\n\n  /* ---------- Typography ---------- */\n  --font-heading: \"Montserrat\", \"Helvetica Neue\", Arial, sans-serif;\n  --font-body:    \"Montserrat\", \"Helvetica Neue\", Arial, sans-serif;\n  --font-mono:    \"JetBrains Mono\", \"SFMono-Regular\", Consolas, monospace;\n\n  --weight-regular:  400;\n  --weight-medium:   500;\n  --weight-semibold: 600;\n  --weight-bold:     700;\n\n  --line-height-tight: 1.2;\n  --line-height-snug:  1.4;\n  --line-height-base:  1.7;     /* matches deployed --et_global_body_font_height */\n  --line-height-loose: 1.9;\n\n  --letter-spacing-tight:  -0.01em;\n  --letter-spacing-normal: 0;\n  --letter-spacing-wide:   0.04em;\n  --letter-spacing-label:  0.12em;\n\n  /* ---------- Type scale ---------- */\n  --fs-xs:   12px;\n  --fs-sm:   13px;\n  --fs-base: 14px;    /* matches deployed --et_global_body_font_size */\n  --fs-md:   16px;\n  --fs-lg:   18px;\n  --fs-xl:   22px;\n  --fs-2xl:  28px;\n  --fs-3xl:  34px;\n  --fs-4xl:  44px;\n  --fs-5xl:  56px;\n  --fs-display: 72px;\n\n  /* ---------- Spacing scale ---------- */\n  --space-1:  4px;\n  --space-2:  8px;\n  --space-3:  12px;\n  --space-4:  16px;\n  --space-5:  24px;\n  --space-6:  32px;\n  --space-7:  48px;\n  --space-8:  64px;\n  --space-9:  96px;\n  --space-10: 128px;\n\n  /* ---------- Radii ---------- */\n  --radius-sm: 4px;\n  --radius-md: 6px;\n  --radius-lg: 12px;\n  --radius-pill: 999px;\n\n  /* ---------- Elevation ---------- */\n  --shadow-sm: 0 1px 2px rgba(15, 30, 18, 0.06);\n  --shadow-md: 0 4px 12px rgba(15, 30, 18, 0.08);\n  --shadow-lg: 0 12px 32px rgba(15, 30, 18, 0.12);\n\n  /* ---------- Motif tokens (light-mode hairline rules) ---------- */\n  --motif-line-weight: 1px;\n  --motif-line-color:  var(--brand-canopy);\n  --motif-rule-color:  var(--n-200);\n  --motif-pattern-opacity: 0.05;\n\n  /* ---------- Overlay tokens (for hero photography, if reintroduced) ---------- */\n  --overlay-canopy-80: rgba(21, 49, 26, 0.8);\n  --overlay-canopy-70: rgba(21, 49, 26, 0.7);\n  --overlay-canopy-55: rgba(21, 49, 26, 0.55);\n\n  /* ---------- Layout ---------- */\n  --content-max:  1320px;\n  --content-narrow: 760px;\n  --gutter:       24px;\n  --section-gap:  96px;\n}\n\n/* ============================================================================\n * Utility classes — light-mode base\n * ============================================================================ */\n\n.brand-button-primary {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  padding: 12px 24px;\n  background: var(--brand-canopy);\n  color: var(--brand-white);\n  font-family: var(--font-body);\n  font-weight: var(--weight-semibold);\n  font-size: var(--fs-base);\n  letter-spacing: var(--letter-spacing-wide);\n  text-transform: uppercase;\n  border: none;\n  border-radius: var(--radius-md);\n  text-decoration: none;\n  transition: background 160ms ease;\n}\n.brand-button-primary:hover { background: var(--brand-pine); }\n\n.brand-button-ghost {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  padding: 12px 24px;\n  background: transparent;\n  color: var(--brand-canopy);\n  font-family: var(--font-body);\n  font-weight: var(--weight-semibold);\n  font-size: var(--fs-base);\n  letter-spacing: var(--letter-spacing-wide);\n  text-transform: uppercase;\n  border: 1px solid var(--brand-canopy);\n  border-radius: var(--radius-md);\n  text-decoration: none;\n  transition: background 160ms ease, color 160ms ease;\n}\n.brand-button-ghost:hover { background: var(--brand-canopy); color: var(--brand-white); }\n\n.brand-overline {\n  font-family: var(--font-body);\n  font-size: var(--fs-xs);\n  font-weight: var(--weight-semibold);\n  text-transform: uppercase;\n  letter-spacing: var(--letter-spacing-label);\n  color: var(--brand-pine);\n}\n\n.brand-heading {\n  font-family: var(--font-heading);\n  font-weight: var(--weight-bold);\n  line-height: var(--line-height-tight);\n  letter-spacing: var(--letter-spacing-tight);\n  color: var(--brand-canopy);\n}\n\n.brand-body {\n  font-family: var(--font-body);\n  font-weight: var(--weight-regular);\n  font-size: var(--fs-base);\n  line-height: var(--line-height-base);\n  color: var(--n-900);\n}\n\n.brand-rule {\n  border: none;\n  border-top: var(--motif-line-weight) solid var(--motif-rule-color);\n  margin: var(--space-6) 0;\n}\n\n.brand-rule-accent {\n  border: none;\n  border-top: 2px solid var(--brand-canopy);\n  width: 64px;\n  margin: var(--space-5) 0;\n}\n\n.brand-card {\n  background: var(--brand-white);\n  border: 1px solid var(--n-100);\n  border-radius: var(--radius-lg);\n  padding: var(--space-6);\n}\n\n.brand-card-tinted {\n  background: var(--brand-paper);\n  border-radius: var(--radius-lg);\n  padding: var(--space-6);\n}\n\n.brand-section-light    { background: var(--brand-white);  color: var(--n-900); }\n.brand-section-mist     { background: var(--brand-paper);  color: var(--n-900); }\n.brand-section-canopy   { background: var(--brand-canopy); color: var(--brand-white); }\n.brand-section-canopy .brand-heading { color: var(--brand-white); }\n.brand-section-canopy .brand-overline { color: var(--brand-sage); }\n\n/* --- visual grammar tokens (brand-visual-grammar; 2026-07-01) ---\n   backgrounds / gradients / grid / iconography / elevation. Applied\n   downstream, reference-not-bind. --- */\n:root {\n  --canvas-canopy: #15311A;\n  --canvas-paper:  #FFFFFF;\n  --canvas-mist:   #F8FAFC;\n  --gradient-header:      linear-gradient(135deg,#F8FAFC 0%,#ECECEC 100%);\n  --gradient-cta:         linear-gradient(90deg,#15311A 0%,#9EC187 100%);\n  --gradient-canopy-hero: linear-gradient(160deg,#15311A 0%,#214C28 100%);\n  --content-width: 1320px;\n  --section-gap:   96px;\n  --icon-stroke:   2px;\n  --card-radius:   12px;\n  --pill-radius:   999px;\n  --elev-border:   1px solid #ECECEC;\n}\n\n/* --- image treatment system (Component T; ORG-PLAN-045) ---\n   Definition of record: charter.expression.treatments. Applied downstream\n   (format-MCP + website .img-treatment), never pre-baked. --- */\n:root {\n  --treatment-default: documentary-warm;\n  --treatment-documentary-warm-filter:  saturate(0.82) contrast(1.02);\n  --treatment-documentary-warm-grain:   0.04;\n  --treatment-canopy-duotone-filter:    grayscale(1) contrast(1.04);\n  --treatment-canopy-duotone-shadow:    #15311A;\n  --treatment-canopy-duotone-mid:       #3F6B47;\n  --treatment-canopy-duotone-highlight: #EDF3E7;\n  --treatment-canopy-duotone-strength:  0.38;\n  --treatment-canopy-duotone-grain:     0.04;\n  --treatment-sage-graded-filter:       saturate(0.55) contrast(1.03);\n  --treatment-sage-graded-shadow:       #1E3A24;\n  --treatment-sage-graded-mid:          #5E8A63;\n  --treatment-sage-graded-highlight:    #DCEBD2;\n  --treatment-sage-graded-strength:     0.28;\n  --treatment-sage-graded-grain:        0.04;\n  --treatment-paper-soft-filter:        saturate(0.85) contrast(0.96) brightness(1.05);\n  --treatment-paper-soft-grain:         0.03;\n}\n",
   "identity": {
     "essence": "AI4comms turns AI from abstract hype into usable operating practice for communications teams — in Dutch, on the ground, one routekaart at a time.",
     "positioning": "For Dutch-speaking communications professionals under pressure to adopt AI responsibly, AI4comms is the enablement partner that translates AI tooling into practical routines — so teams gain impact without losing their craft or their judgment.",
@@ -240,10 +253,272 @@
       "Multiple typeface families — single-typeface constraint is a deliberate discipline, not a gap"
     ],
     "requiredMotifs": [
-      "Sage hairline rule (1px, 64px wide, #9EC187) under section overlines",
-      "Header gradient (linear-gradient(135deg, #F8FAFC 0%, #ECECEC 100%)) on page/section openers",
-      "Canopy (#15311A) as the mandatory dark-section background when dark contrast is required"
-    ]
+      "divider-full",
+      "divider-short",
+      "divider-minimal"
+    ],
+    "visual_grammar": {
+      "backgrounds": {
+        "status": "approved",
+        "required": true,
+        "evidence": {
+          "tier": "live-site"
+        },
+        "selected": "canopy-paper",
+        "spec": {
+          "canvases": [
+            {
+              "name": "canopy",
+              "role": "primary-dark",
+              "css": "#15311A"
+            },
+            {
+              "name": "pine",
+              "role": "secondary-dark",
+              "css": "#214C28"
+            },
+            {
+              "name": "paper",
+              "role": "primary-light",
+              "css": "#FFFFFF"
+            },
+            {
+              "name": "mist",
+              "role": "surface-light",
+              "css": "#F8FAFC"
+            }
+          ],
+          "rhythm": "alternating canopy-dark / paper-light (the deployed section rhythm)",
+          "darkFrequency": 3,
+          "photo": {
+            "treatment": "documentary-muted, rounded corners",
+            "overlay": "canopy #15311A scrim on hero, never neon"
+          }
+        },
+        "tokens": [
+          "--canvas-canopy",
+          "--canvas-paper",
+          "--canvas-mist"
+        ]
+      },
+      "gradients": {
+        "status": "approved",
+        "required": false,
+        "evidence": {
+          "tier": "live-site"
+        },
+        "selected": "soft-forest",
+        "spec": {
+          "gradients": [
+            {
+              "name": "header",
+              "stops": "linear-gradient(135deg,#F8FAFC 0%,#ECECEC 100%)",
+              "usage": "page/section opener (light)"
+            },
+            {
+              "name": "cta",
+              "stops": "linear-gradient(90deg,#15311A 0%,#9EC187 100%)",
+              "usage": "primary CTA pill"
+            },
+            {
+              "name": "canopy-hero",
+              "stops": "linear-gradient(160deg,#15311A 0%,#214C28 100%)",
+              "usage": "dark hero field"
+            }
+          ],
+          "geometry": "soft directional; low-contrast washes, never high-chroma"
+        },
+        "tokens": [
+          "--gradient-header",
+          "--gradient-cta",
+          "--gradient-canopy-hero"
+        ]
+      },
+      "grid": {
+        "status": "approved",
+        "required": false,
+        "evidence": {
+          "tier": "live-site"
+        },
+        "selected": "spacious-symmetric",
+        "spec": {
+          "columns": "12-col symmetric; centered text blocks + alternating 1/2 image·1/2 text splits",
+          "contentWidth": "1320px max",
+          "sectionGap": "96px",
+          "density": "spacious",
+          "margins": "generous",
+          "symmetry": "symmetric",
+          "dividers": "64px sage hairline under overlines"
+        },
+        "tokens": [
+          "--content-width",
+          "--section-gap"
+        ]
+      },
+      "iconography": {
+        "status": "approved",
+        "required": false,
+        "evidence": {
+          "tier": "proposed"
+        },
+        "selected": "rounded-sage-fill",
+        "spec": {
+          "style": "stroke-led geometric, generous rounded corners (echoes the rounded logo panel + pills)",
+          "strokeWeight": "2px",
+          "caps": "round",
+          "joins": "round",
+          "fillVsLine": "canopy line-dominant + a soft SAGE FILL accent (leaf/dot/tick) — a fill, not a dot-terminal (distinct from stromy/amaris)",
+          "extensible": true,
+          "setPolicy": "OPEN set — icons drawn to this STYLE on demand per slide/section need. The sample is representative, not a closed brand-bound set; the agent may add/select as many icons as a deck requires, keeping the style.",
+          "sample": [
+            "route-map (routekaart)",
+            "handshake",
+            "shield-check",
+            "growth-arrow",
+            "chat-bubble",
+            "gears-people"
+          ]
+        },
+        "tokens": [
+          "--icon-stroke"
+        ]
+      },
+      "elevation": {
+        "status": "approved",
+        "required": false,
+        "evidence": {
+          "tier": "live-site"
+        },
+        "selected": "rounded-outline",
+        "spec": {
+          "shadows": "none/minimal — depth via border + generous radius",
+          "borders": "1px hairline #ECECEC on white cards",
+          "radius": "12px cards; FULLY-rounded (999px) pills/CTAs",
+          "surface": "matte",
+          "signature": "the fully-rounded pill is the elevation signature"
+        },
+        "tokens": [
+          "--card-radius",
+          "--pill-radius",
+          "--elev-border"
+        ]
+      },
+      "motifs": {
+        "status": "approved",
+        "required": false,
+        "evidence": {
+          "tier": "live-site"
+        },
+        "selected": "sage-highlight",
+        "spec": {
+          "family": "typographic",
+          "elements": [
+            "two-tone heading — key phrase in sage #9EC187 within a canopy heading (verified on live site)",
+            "64px sage hairline rule (1px) under Montserrat-600 caps overlines",
+            "rounded-panel / fully-rounded pill shape language"
+          ],
+          "prominence": "accent",
+          "note": "honest to the 'typographic-led, imagery supplementary' principle; no invented graphical motif"
+        },
+        "assets": [
+          "assets/svg/divider-full.svg",
+          "assets/svg/divider-short.svg",
+          "assets/svg/divider-minimal.svg"
+        ]
+      },
+      "patterns": {
+        "status": "approved",
+        "required": false,
+        "evidence": {
+          "tier": "source-artifact"
+        },
+        "selected": "restrained-tile",
+        "spec": {
+          "name": "Low-opacity tile",
+          "usage": "<=8% texture panels only, sparingly (typographic-led brand)",
+          "tile": "assets/svg/pattern-tile.svg"
+        },
+        "assets": [
+          "assets/svg/pattern-tile.svg"
+        ]
+      },
+      "photo": {
+        "status": "approved",
+        "required": false,
+        "evidence": {
+          "tier": "live-site"
+        },
+        "selected": "documentary-rounded",
+        "spec": {
+          "treatment": "documentary-muted, warm-neutral grade",
+          "corners": "rounded (12px)",
+          "usage": "image+text splits (supplementary, not structural per principle); canopy scrim on hero",
+          "subjects": "real communications professionals in real settings; never abstract data-texture or architectural (anti-pattern)"
+        }
+      },
+      "motion": {
+        "status": "deferred",
+        "required": false,
+        "evidence": {
+          "tier": "derived",
+          "source": "live site uses calm fade-in-on-scroll; full motion spec deferred to P6 (PLAN_motion-capability.md)"
+        }
+      }
+    },
+    "treatments": {
+      "default": "documentary-warm",
+      "note": "Named brand house looks applied to photography DOWNSTREAM (format-MCP + website), never pre-baked. Restrained, warm-neutral; canopy-duotone is the forest signature. Imagery is supplementary (typographic-led brand). Overlay = canopy #15311A scrim, never neon. ORG-PLAN-045.",
+      "looks": {
+        "documentary-warm": {
+          "label": "Documentary Warm",
+          "usage": "Natural warm-neutral, lightly desaturated — the default for content + image/text splits. Matches the deployed muted comms photography.",
+          "css_filter": "saturate(0.82) contrast(1.02)",
+          "grain": {
+            "opacity": 0.04,
+            "blend": "overlay"
+          }
+        },
+        "canopy-duotone": {
+          "label": "Canopy Duotone",
+          "usage": "Signature forest duotone for hero + covers — deep canopy shadows through pine mids to sage-tinted paper highlights. The AI4comms nature signature.",
+          "css_filter": "grayscale(1) contrast(1.04)",
+          "duotone": {
+            "shadows": "#15311A",
+            "mid": "#3F6B47",
+            "highlights": "#EDF3E7",
+            "strength": 0.38
+          },
+          "grain": {
+            "opacity": 0.04,
+            "blend": "overlay"
+          }
+        },
+        "sage-graded": {
+          "label": "Sage Graded",
+          "usage": "Soft green cinematic grade for section imagery — cool-green shadows, sage highlights. Restrained, calm.",
+          "css_filter": "saturate(0.55) contrast(1.03)",
+          "duotone": {
+            "shadows": "#1E3A24",
+            "mid": "#5E8A63",
+            "highlights": "#DCEBD2",
+            "strength": 0.28
+          },
+          "grain": {
+            "opacity": 0.04,
+            "blend": "overlay"
+          }
+        },
+        "paper-soft": {
+          "label": "Paper Soft",
+          "usage": "High-key lifted grade for airy light sections — low contrast, bright. Use where whitespace leads.",
+          "css_filter": "saturate(0.85) contrast(0.96) brightness(1.05)",
+          "grain": {
+            "opacity": 0.03,
+            "blend": "overlay"
+          }
+        }
+      }
+    }
   },
   "surfaceExpression": {
     "presentation": {

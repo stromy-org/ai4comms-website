@@ -252,3 +252,44 @@
 .brand-section-canopy   { background: var(--brand-canopy); color: var(--brand-white); }
 .brand-section-canopy .brand-heading { color: var(--brand-white); }
 .brand-section-canopy .brand-overline { color: var(--brand-sage); }
+
+/* --- visual grammar tokens (brand-visual-grammar; 2026-07-01) ---
+   backgrounds / gradients / grid / iconography / elevation. Applied
+   downstream, reference-not-bind. --- */
+:root {
+  --canvas-canopy: #15311A;
+  --canvas-paper:  #FFFFFF;
+  --canvas-mist:   #F8FAFC;
+  --gradient-header:      linear-gradient(135deg,#F8FAFC 0%,#ECECEC 100%);
+  --gradient-cta:         linear-gradient(90deg,#15311A 0%,#9EC187 100%);
+  --gradient-canopy-hero: linear-gradient(160deg,#15311A 0%,#214C28 100%);
+  --content-width: 1320px;
+  --section-gap:   96px;
+  --icon-stroke:   2px;
+  --card-radius:   12px;
+  --pill-radius:   999px;
+  --elev-border:   1px solid #ECECEC;
+}
+
+/* --- image treatment system (Component T; ORG-PLAN-045) ---
+   Definition of record: charter.expression.treatments. Applied downstream
+   (format-MCP + website .img-treatment), never pre-baked. --- */
+:root {
+  --treatment-default: documentary-warm;
+  --treatment-documentary-warm-filter:  saturate(0.82) contrast(1.02);
+  --treatment-documentary-warm-grain:   0.04;
+  --treatment-canopy-duotone-filter:    grayscale(1) contrast(1.04);
+  --treatment-canopy-duotone-shadow:    #15311A;
+  --treatment-canopy-duotone-mid:       #3F6B47;
+  --treatment-canopy-duotone-highlight: #EDF3E7;
+  --treatment-canopy-duotone-strength:  0.38;
+  --treatment-canopy-duotone-grain:     0.04;
+  --treatment-sage-graded-filter:       saturate(0.55) contrast(1.03);
+  --treatment-sage-graded-shadow:       #1E3A24;
+  --treatment-sage-graded-mid:          #5E8A63;
+  --treatment-sage-graded-highlight:    #DCEBD2;
+  --treatment-sage-graded-strength:     0.28;
+  --treatment-sage-graded-grain:        0.04;
+  --treatment-paper-soft-filter:        saturate(0.85) contrast(0.96) brightness(1.05);
+  --treatment-paper-soft-grain:         0.03;
+}

@@ -16,7 +16,13 @@
       "secondary": "Caregiver"
     },
     "protection_class": "protected",
-    "protected_assets": { "heading_font": true, "body_font": false, "primary_color": true, "accent_color": true, "motif_family": true }
+    "protected_assets": {
+      "heading_font": true,
+      "body_font": false,
+      "primary_color": true,
+      "accent_color": true,
+      "motif_family": true
+    }
   },
   "colors": {
     "primary": "#15311A",
@@ -45,6 +51,15 @@
       "family": "JetBrains Mono",
       "fallback": "\"SFMono-Regular\", Consolas, monospace",
       "weight": "500"
+    },
+    "label": {
+      "family": "Montserrat",
+      "cssName": "Montserrat",
+      "weight": "600",
+      "case": "uppercase",
+      "tracking": "0.12em",
+      "role": "eyebrow / kicker / overline",
+      "note": "Montserrat 600 uppercase 12px, letter-spacing 0.12em, in pine (#214C28), paired with the 64px sage hairline. From the deployed site."
     }
   },
   "logo": {
@@ -387,7 +402,537 @@
         "freshness": "current"
       }
     ],
-    "_migration_note": "The deployed ai4-comms.com site runs on WordPress with the Divi builder (theme: bureau-peppr-child). Divi global font presets (body 14px / lh 1.7) and inline CSS custom properties (--gcid-jd3gym30fa, --gcid-v6w1ho8m1g) were the source of truth for tokens.css. This is a platform-specific deployment detail — it does NOT become a hard expression axis and is not an Astro schema requirement. The charter.json website block describes the schema-valid Astro target the org's website-builder would produce."
+    "_migration_note": "The deployed ai4-comms.com site runs on WordPress with the Divi builder (theme: bureau-peppr-child). Divi global font presets (body 14px / lh 1.7) and inline CSS custom properties (--gcid-jd3gym30fa, --gcid-v6w1ho8m1g) were the source of truth for tokens.css. This is a platform-specific deployment detail — it does NOT become a hard expression axis and is not an Astro schema requirement. The charter.json website block describes the schema-valid Astro target the org's website-builder would produce.",
+    "visual_grammar": {
+      "backgrounds": {
+        "status": "approved",
+        "required": true,
+        "evidence": {
+          "tier": "live-site",
+          "source": "ai4-comms.com: canopy-green hero + mission sections alternating with white/paper interior sections; light header gradient"
+        },
+        "selected": "canopy-paper",
+        "candidates": [
+          {
+            "id": "canopy-paper",
+            "label": "Canopy & paper (alternating)",
+            "spec": {
+              "canvases": [
+                {
+                  "name": "canopy",
+                  "role": "primary-dark",
+                  "css": "#15311A"
+                },
+                {
+                  "name": "pine",
+                  "role": "secondary-dark",
+                  "css": "#214C28"
+                },
+                {
+                  "name": "paper",
+                  "role": "primary-light",
+                  "css": "#FFFFFF"
+                },
+                {
+                  "name": "mist",
+                  "role": "surface-light",
+                  "css": "#F8FAFC"
+                }
+              ],
+              "rhythm": "alternating canopy-dark / paper-light (the deployed section rhythm)",
+              "darkFrequency": 3,
+              "photo": {
+                "treatment": "documentary-muted, rounded corners",
+                "overlay": "canopy #15311A scrim on hero, never neon"
+              }
+            },
+            "tokens": [
+              "--canvas-canopy",
+              "--canvas-paper",
+              "--canvas-mist"
+            ],
+            "evidence": {
+              "tier": "live-site"
+            }
+          },
+          {
+            "id": "paper-forward",
+            "label": "Paper-forward (light-first)",
+            "spec": {
+              "canvases": [
+                {
+                  "name": "paper",
+                  "role": "primary-light",
+                  "css": "#FFFFFF"
+                },
+                {
+                  "name": "canopy",
+                  "role": "accent-dark",
+                  "css": "#15311A"
+                }
+              ],
+              "rhythm": "light-dominant; canopy is the deliberate exception (the charter principle)"
+            },
+            "evidence": {
+              "tier": "source-artifact"
+            }
+          },
+          {
+            "id": "canopy-immersive",
+            "label": "Canopy immersive (green-forward)",
+            "spec": {
+              "canvases": [
+                {
+                  "name": "canopy",
+                  "role": "primary-dark",
+                  "css": "#15311A"
+                }
+              ],
+              "rhythm": "green-dominant throughout; warmer, more branded, less airy"
+            },
+            "evidence": {
+              "tier": "proposed"
+            }
+          }
+        ]
+      },
+      "gradients": {
+        "status": "approved",
+        "required": false,
+        "evidence": {
+          "tier": "live-site",
+          "source": "light header gradient (135deg #F8FAFC->#ECECEC) + canopy->sage CTA pill gradient + muted canopy hero"
+        },
+        "selected": "soft-forest",
+        "candidates": [
+          {
+            "id": "soft-forest",
+            "label": "Soft forest",
+            "spec": {
+              "gradients": [
+                {
+                  "name": "header",
+                  "stops": "linear-gradient(135deg,#F8FAFC 0%,#ECECEC 100%)",
+                  "usage": "page/section opener (light)"
+                },
+                {
+                  "name": "cta",
+                  "stops": "linear-gradient(90deg,#15311A 0%,#9EC187 100%)",
+                  "usage": "primary CTA pill"
+                },
+                {
+                  "name": "canopy-hero",
+                  "stops": "linear-gradient(160deg,#15311A 0%,#214C28 100%)",
+                  "usage": "dark hero field"
+                }
+              ],
+              "geometry": "soft directional; low-contrast washes, never high-chroma"
+            },
+            "tokens": [
+              "--gradient-header",
+              "--gradient-cta",
+              "--gradient-canopy-hero"
+            ],
+            "evidence": {
+              "tier": "live-site"
+            }
+          },
+          {
+            "id": "light-only",
+            "label": "Light header only",
+            "spec": {
+              "gradients": [
+                {
+                  "name": "header",
+                  "stops": "linear-gradient(135deg,#F8FAFC,#ECECEC)",
+                  "usage": "the single light opener; flat elsewhere"
+                }
+              ]
+            },
+            "evidence": {
+              "tier": "source-artifact"
+            }
+          },
+          {
+            "id": "flat-none",
+            "label": "Flat, no gradient",
+            "spec": {
+              "policy": "flat fields only",
+              "note": "the deployed site DOES use soft gradients — contrast option only"
+            },
+            "evidence": {
+              "tier": "proposed"
+            }
+          }
+        ]
+      },
+      "grid": {
+        "status": "approved",
+        "required": false,
+        "evidence": {
+          "tier": "live-site",
+          "source": "1320px max-width, 96px section gap, centered symmetric + alternating image/text splits, spacious"
+        },
+        "selected": "spacious-symmetric",
+        "candidates": [
+          {
+            "id": "spacious-symmetric",
+            "label": "Spacious symmetric",
+            "spec": {
+              "columns": "12-col symmetric; centered text blocks + alternating 1/2 image·1/2 text splits",
+              "contentWidth": "1320px max",
+              "sectionGap": "96px",
+              "density": "spacious",
+              "margins": "generous",
+              "symmetry": "symmetric",
+              "dividers": "64px sage hairline under overlines"
+            },
+            "tokens": [
+              "--content-width",
+              "--section-gap"
+            ],
+            "evidence": {
+              "tier": "live-site"
+            }
+          },
+          {
+            "id": "centered-only",
+            "label": "Centered only",
+            "spec": {
+              "columns": "single centered measure",
+              "note": "loses the image/text split rhythm"
+            },
+            "evidence": {
+              "tier": "proposed"
+            }
+          },
+          {
+            "id": "wide-split",
+            "label": "Wide alternating split",
+            "spec": {
+              "columns": "strong 1/2·1/2 alternating image+text throughout",
+              "symmetry": "balanced-asymmetry"
+            },
+            "evidence": {
+              "tier": "proposed"
+            }
+          }
+        ]
+      },
+      "iconography": {
+        "status": "approved",
+        "required": false,
+        "evidence": {
+          "tier": "proposed",
+          "source": "DESIGNED from scratch — no icon system exists on the live site; seeded from Sage/Caregiver + rounded + calm + sage accent; OPEN/extensible (operator directive)"
+        },
+        "selected": "rounded-sage-fill",
+        "candidates": [
+          {
+            "id": "rounded-sage-fill",
+            "label": "Rounded line + sage fill",
+            "spec": {
+              "style": "stroke-led geometric, generous rounded corners (echoes the rounded logo panel + pills)",
+              "strokeWeight": "2px",
+              "caps": "round",
+              "joins": "round",
+              "fillVsLine": "canopy line-dominant + a soft SAGE FILL accent (leaf/dot/tick) — a fill, not a dot-terminal (distinct from stromy/amaris)",
+              "extensible": true,
+              "setPolicy": "OPEN set — icons drawn to this STYLE on demand per slide/section need. The sample is representative, not a closed brand-bound set; the agent may add/select as many icons as a deck requires, keeping the style.",
+              "sample": [
+                "route-map (routekaart)",
+                "handshake",
+                "shield-check",
+                "growth-arrow",
+                "chat-bubble",
+                "gears-people"
+              ]
+            },
+            "tokens": [
+              "--icon-stroke"
+            ],
+            "evidence": {
+              "tier": "proposed"
+            }
+          },
+          {
+            "id": "rounded-square-frame",
+            "label": "Rounded-square framed",
+            "spec": {
+              "style": "each glyph in a rounded-square canopy frame (literal logo-panel echo), sage glyph inside",
+              "note": "strong brand tie but heavier; competes with cards",
+              "extensible": true
+            },
+            "evidence": {
+              "tier": "proposed"
+            }
+          },
+          {
+            "id": "flat-minimal",
+            "label": "Flat minimal line",
+            "spec": {
+              "style": "thin 1.5px square-cap line, monochrome canopy, no fill",
+              "note": "rejected — too cold/rectilinear for a Caregiver/warm brand",
+              "extensible": true
+            },
+            "evidence": {
+              "tier": "proposed"
+            }
+          }
+        ]
+      },
+      "elevation": {
+        "status": "approved",
+        "required": false,
+        "evidence": {
+          "tier": "live-site",
+          "source": "outlined cards (1px #ECECEC, 12px radius) + fully-rounded pill CTAs; minimal shadow; rounded corners throughout"
+        },
+        "selected": "rounded-outline",
+        "candidates": [
+          {
+            "id": "rounded-outline",
+            "label": "Rounded outline",
+            "spec": {
+              "shadows": "none/minimal — depth via border + generous radius",
+              "borders": "1px hairline #ECECEC on white cards",
+              "radius": "12px cards; FULLY-rounded (999px) pills/CTAs",
+              "surface": "matte",
+              "signature": "the fully-rounded pill is the elevation signature"
+            },
+            "tokens": [
+              "--card-radius",
+              "--pill-radius",
+              "--elev-border"
+            ],
+            "evidence": {
+              "tier": "live-site"
+            }
+          },
+          {
+            "id": "soft-lift",
+            "label": "Soft card lift",
+            "spec": {
+              "shadows": "subtle soft shadow on cards",
+              "note": "adds warmth but the deployed site is flat-outline"
+            },
+            "evidence": {
+              "tier": "proposed"
+            }
+          },
+          {
+            "id": "flat-fill",
+            "label": "Flat filled panels",
+            "spec": {
+              "surface": "solid mist/canopy fills, no border, no shadow",
+              "note": "heavier, less airy"
+            },
+            "evidence": {
+              "tier": "proposed"
+            }
+          }
+        ]
+      },
+      "motifs": {
+        "status": "approved",
+        "required": false,
+        "evidence": {
+          "tier": "live-site",
+          "source": "the two-tone sage-highlight heading + 64px sage hairline + rounded-panel/pill shape language are the real signatures; a drawn graphical mark is DESIGNED here (thin brand)"
+        },
+        "selected": "sage-highlight",
+        "candidates": [
+          {
+            "id": "sage-highlight",
+            "label": "Sage-highlight + hairline (typographic)",
+            "spec": {
+              "family": "typographic",
+              "elements": [
+                "two-tone heading — key phrase in sage #9EC187 within a canopy heading (verified on live site)",
+                "64px sage hairline rule (1px) under Montserrat-600 caps overlines",
+                "rounded-panel / fully-rounded pill shape language"
+              ],
+              "prominence": "accent",
+              "note": "honest to the 'typographic-led, imagery supplementary' principle; no invented graphical motif"
+            },
+            "assets": [
+              "assets/svg/divider-full.svg",
+              "assets/svg/divider-short.svg",
+              "assets/svg/divider-minimal.svg"
+            ],
+            "evidence": {
+              "tier": "live-site"
+            }
+          },
+          {
+            "id": "canopy-sprout",
+            "label": "Canopy sprout mark (organic)",
+            "spec": {
+              "family": "organic",
+              "construction": "a minimal 2-3 stroke sprout/leaf growing from a baseline — references the forest palette + 'enablement/growth' story; sage leaf on canopy stem",
+              "prominence": "accent",
+              "usage": "divider glyph, section marker, favicon echo",
+              "note": "adds a distinctive graphical mark the brand currently lacks — a designer proposal"
+            },
+            "assets": [
+              "assets/svg/_candidates/motif-canopy-sprout.svg"
+            ],
+            "evidence": {
+              "tier": "proposed"
+            }
+          },
+          {
+            "id": "rounded-node",
+            "label": "Rounded-node network",
+            "spec": {
+              "family": "geometric",
+              "construction": "soft rounded nodes linked by calm curved lines — the 'AI-as-partner network', rounded not technical",
+              "note": "on-theme (comms network) but risks the forbidden 'data-texture' anti-pattern if too busy"
+            },
+            "assets": [
+              "assets/svg/_candidates/motif-rounded-node.svg"
+            ],
+            "evidence": {
+              "tier": "proposed"
+            }
+          }
+        ]
+      },
+      "patterns": {
+        "status": "approved",
+        "required": false,
+        "evidence": {
+          "tier": "source-artifact",
+          "source": "existing assets/svg/pattern-tile.svg"
+        },
+        "selected": "restrained-tile",
+        "candidates": [
+          {
+            "id": "restrained-tile",
+            "label": "Restrained tile",
+            "spec": {
+              "name": "Low-opacity tile",
+              "usage": "<=8% texture panels only, sparingly (typographic-led brand)",
+              "tile": "assets/svg/pattern-tile.svg"
+            },
+            "assets": [
+              "assets/svg/pattern-tile.svg"
+            ],
+            "evidence": {
+              "tier": "source-artifact"
+            }
+          },
+          {
+            "id": "none",
+            "label": "No pattern",
+            "spec": {
+              "policy": "n-a — whitespace carries the page",
+              "note": "valid for a purely typographic brand"
+            },
+            "evidence": {
+              "tier": "proposed"
+            }
+          }
+        ]
+      },
+      "photo": {
+        "status": "approved",
+        "required": false,
+        "evidence": {
+          "tier": "live-site",
+          "source": "REAL structural use on ai-4comms.com: documentary comms-professional photography in rounded-corner image/text splits (comms-env library)"
+        },
+        "selected": "documentary-rounded",
+        "candidates": [
+          {
+            "id": "documentary-rounded",
+            "label": "Documentary, rounded",
+            "spec": {
+              "treatment": "documentary-muted, warm-neutral grade",
+              "corners": "rounded (12px)",
+              "usage": "image+text splits (supplementary, not structural per principle); canopy scrim on hero",
+              "subjects": "real communications professionals in real settings; never abstract data-texture or architectural (anti-pattern)"
+            },
+            "evidence": {
+              "tier": "live-site"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "status": "deferred",
+        "required": false,
+        "evidence": {
+          "tier": "derived",
+          "source": "live site uses calm fade-in-on-scroll; full motion spec deferred to P6 (PLAN_motion-capability.md)"
+        },
+        "selected": null,
+        "candidates": []
+      }
+    },
+    "typography": {
+      "smallTitle": {
+        "face": "label",
+        "case": "uppercase",
+        "tracking": "0.12em",
+        "marker": "64px sage hairline rule (1px, #9EC187) below the overline",
+        "usage": "eyebrows/overlines above headings — Montserrat 600 caps pine + sage hairline"
+      }
+    },
+    "treatments": {
+      "default": "documentary-warm",
+      "note": "Named brand house looks applied to photography DOWNSTREAM (format-MCP + website), never pre-baked. Restrained, warm-neutral; canopy-duotone is the forest signature. Imagery is supplementary (typographic-led brand). Overlay = canopy #15311A scrim, never neon. ORG-PLAN-045.",
+      "looks": {
+        "documentary-warm": {
+          "label": "Documentary Warm",
+          "usage": "Natural warm-neutral, lightly desaturated — the default for content + image/text splits. Matches the deployed muted comms photography.",
+          "css_filter": "saturate(0.82) contrast(1.02)",
+          "grain": {
+            "opacity": 0.04,
+            "blend": "overlay"
+          }
+        },
+        "canopy-duotone": {
+          "label": "Canopy Duotone",
+          "usage": "Signature forest duotone for hero + covers — deep canopy shadows through pine mids to sage-tinted paper highlights. The AI4comms nature signature.",
+          "css_filter": "grayscale(1) contrast(1.04)",
+          "duotone": {
+            "shadows": "#15311A",
+            "mid": "#3F6B47",
+            "highlights": "#EDF3E7",
+            "strength": 0.38
+          },
+          "grain": {
+            "opacity": 0.04,
+            "blend": "overlay"
+          }
+        },
+        "sage-graded": {
+          "label": "Sage Graded",
+          "usage": "Soft green cinematic grade for section imagery — cool-green shadows, sage highlights. Restrained, calm.",
+          "css_filter": "saturate(0.55) contrast(1.03)",
+          "duotone": {
+            "shadows": "#1E3A24",
+            "mid": "#5E8A63",
+            "highlights": "#DCEBD2",
+            "strength": 0.28
+          },
+          "grain": {
+            "opacity": 0.04,
+            "blend": "overlay"
+          }
+        },
+        "paper-soft": {
+          "label": "Paper Soft",
+          "usage": "High-key lifted grade for airy light sections — low contrast, bright. Use where whitespace leads.",
+          "css_filter": "saturate(0.85) contrast(0.96) brightness(1.05)",
+          "grain": {
+            "opacity": 0.03,
+            "blend": "overlay"
+          }
+        }
+      }
+    }
   },
   "_audit": {
     "source": "_build/brand-intelligence/ai4comms/audit.md",
